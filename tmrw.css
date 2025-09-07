@@ -1,11 +1,28 @@
-
 :root {
-    --primary-color: #000000;
-    --accent-color: #000000;
+    --primary-color: #0000007d;
+    --accent-color: #f2090996;
     --text-color: #333;
     --light-bg: #f9f9f9;
 }
 
+/* Bauhaus 93 font for nav (self-hosted) */
+@font-face {
+    font-family: 'Bauhaus 93';
+    src: url('fonts/Bauhaus 93 Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Impact';
+    src: url('fonts/impact.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Tw Cen MT';
+    src: url('fonts/Tw Cen MT.ttf') format('truetype');
+}
 * {
     margin: 0;
     padding: 0;
@@ -18,12 +35,11 @@ body {
     color: var(--text-color);
     background-color: var(--light-bg);
 }
-
 .header {
-    background: var(--primary-color) url('tmrw crew/crew photo.jpg') center top/cover no-repeat;
+    background: var(--primary-color) url('media/header.png') center bottom/cover no-repeat;
     color: white;
-    padding: 14rem 1rem 8rem 1rem; /* Even more top and bottom padding */
-    min-height: 540px; /* Increased minimum height */
+    padding: 14rem 1rem 8rem 1rem;
+    min-height: 540px;
     text-align: center;
 }
 
@@ -38,8 +54,10 @@ body {
     color:#000000;
     text-decoration: none;
     margin: 0 1.5rem;
-    font-weight: 500;
+    font-weight: 200;
     transition: color 0.3s ease;
+    font-family: 'Bauhaus 93', Arial, Helvetica, sans-serif;
+    font-size: 2rem;  /* Increase font size */
 }
 
 .nav a:hover {
@@ -63,9 +81,11 @@ body {
 
 .section-title {
     text-align: center;
-    color: var(--primary-color);
+    color: black;
     margin-bottom: 3rem;
     font-size: 2rem;
+    font-family: 'Bauhaus 93', Arial, Helvetica, sans-serif;
+
 }
 
 .member-card {
@@ -114,15 +134,22 @@ body {
 
 .member-name {
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: black;
     margin-bottom: 0.75rem;
+    font-family: 'TW Cen MT', Arial, Helvetica, sans-serif;
 }
 
 .member-role {
-    color: var(--accent-color);
+    color: #000000;
     font-weight: 600;
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
+    font-family: 'TW Cen MT', Arial, Helvetica, sans-serif;
+}
+
+.member-role p {
+    margin-bottom: 1em;
+    font-family: inherit;
 }
 
 .social-links {
@@ -139,11 +166,34 @@ body {
 }
 
 .footer {
-    background: var(--primary-color);
-    color: white;
+    
+    color: rgba(0, 0, 0, 0.894);
     text-align: center;
     padding: 2rem 1rem;
     margin-top: 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('tmrw crew/crew photo landscape.jpg');
+    background-size: cover;
+    background-position: top center; /* Stick the top of the photo */
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.footer p, .footer .social-links {
+    position: relative;
+    z-index: 1;
+    font-family: 'Impact', Arial, Helvetica, sans-serif;
+
 }
 
 .footer .social-links {
@@ -181,16 +231,19 @@ body {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color: var(--primary-color);
+    color: black;
     letter-spacing: 1px;
+    font-family: 'Impact', Arial, Helvetica, sans-serif;
+
 }
 
 .about-subtitle {
     font-size: 1.3rem;
-    color: var(--accent-color);
+    color: black;
     font-weight: 500;
     margin-bottom: 1.5rem;
     letter-spacing: 0.5px;
+    font-family: 'Impact', Arial, Helvetica, sans-serif;
 }
 
 .about-divider {
@@ -204,13 +257,15 @@ body {
     max-width: 900px;
     margin: 0 auto;
     text-align: left;
-    font-size: 1.18rem;
+    font-size: 1.3rem;
     line-height: 1.8;
-    color: #222;
+    color: #222222d2;
 }
 
 .about-text p {
     margin-bottom: 1.5rem;
+    font-family: 'TW Cen MT', Arial, Helvetica, sans-serif;
+
 }
 
 .about-quote {
@@ -287,9 +342,10 @@ body {
     .footer {
         padding: 1rem 0.5rem;
         font-size: 0.95rem;
+        
     }
     .responsive-logo {
-        max-width: 180px;
+        max-width: 400px;
     }
 }
 
@@ -380,5 +436,5 @@ body {
   right: 10px;
   font-size: 2rem;
   color: white;
-  cursor: pointer;
 }
+

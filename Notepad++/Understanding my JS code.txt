@@ -1,0 +1,7 @@
+Understanding my JS code
+
+<a href="#" onclick="openVideo('1MmkhMqEqpI_QhcZJj8iWaiQWi3RElAAj'); return false;">
+
+The reason it has to return false is to counteract its natural behaviour of <a> to goto #
+if it were true openVideo would still run but it would jump to the top of the document 
+simpler term : return false; Stops the link from doing anything after JS runs

@@ -7,63 +7,63 @@
   <link rel="stylesheet" href="tmrw.css">
 </head>
 <body>
-  <header style="background: none; box-shadow: none; text-align: center; padding: 2rem 0 0 0;">
-    <div style="text-align: center;">
-      <img src="tmrw crew/TMRW crew text.png" alt="TMRW Crew Logo" style="max-width: 220px; height: auto; display: block; margin: 0 auto;">
-      <p style="margin-top: 1rem; font-size: 1.3rem; color: var(--primary-color);">Explore our videos and photos</p>
-    </div>
+
+   <header class="header">
+        <img src="tmrw crew/TMRW crew text.png" alt="TMRW Crew Logo" class="responsive-logo">
+    </header>
+  
     <nav class="nav" style="margin-top: 1.5rem;">
       <a href="index.html">About</a>
       <a href="team.html">Team</a>
       <a href="team.html#contact">Contact</a>
       <a href ="Portfolio.html">Portfolio</a>
     </nav>
-  </header>
+  
 
   <main class="media-gallery" style="text-align: center;">
-    
-      <!-- Sample video -->
-   
+    <!-- Videos Section -->
+    <section id="videos">
+      <h2 class="section-title" style="margin-bottom:2rem;">Videos</h2>
+      <div class="video-thumbnails">
+        <!-- Example for Elevate -->
+        <div class="video-thumbnail-container">
+          <a href="#" onclick="openVideo('1MmkhMqEqpI_QhcZJj8iWaiQWi3RElAAj'); return false;">
+            <img src="media/elevate thumbnail.png" alt="Elevate" class="video-thumbnail">
+          </a>
+        </div>
+        <div class="video-thumbnail-container">
+          <a href="#" onclick="openVideo('1wRPJt_JjgNId1IxUTSWQzEvn2Id6CV4C'); return false;">
+            <img src="media/limpBiz thumbnail.png" alt="Video Thumbnail" class="video-thumbnail">
+          </a>
+        </div>
+        <div class="video-thumbnail-container">
+          <a href="#" onclick="openVideo('1SOA72xw7qhD2e9uioaiaR1jkV_gel851'); return false;">
+            <img src="media/tmrw crew video 1 thumbnail.png" alt="TMRW Crew Video 1" class="video-thumbnail">
+          </a>
+        </div>
+        <!-- Add more video thumbnails as needed -->
+      </div>
+      <!-- Modal for video -->
+      <div id="videoModal" class="video-modal" style="display:none;">
+        <div class="video-frame">
+          <span class="close" onclick="closeVideo()">×</span>
+          <iframe id="videoFrame" width="100%" height="480" allowfullscreen allow="autoplay"></iframe>
+        </div>
+      </div>
+    </section>
 
-      <!-- Example for Laugh Now Cry Later -->
-<!-- <div class="video-thumbnail-container">
-  <a href="#" onclick="openVideo('16f4QE162s2UNRVBVjLzpVH4BGhUVd9IE'); return false;">
-    <img src="media/laugh now cry later thumbnail.png" alt="Laugh Now Cry Later" class="video-thumbnail">
-  </a>
-</div> -->
-
-<!-- Example for Elevate -->
-<div class="video-thumbnail-container">
-  <a href="#" onclick="openVideo('1MmkhMqEqpI_QhcZJj8iWaiQWi3RElAAj'); return false;">
-    <img src="media/elevate thumbnail.png" alt="Elevate" class="video-thumbnail">
-  </a>
-</div>
-
-<div class="video-thumbnail-container">
-  <a href="#" onclick="openVideo('1wRPJt_JjgNId1IxUTSWQzEvn2Id6CV4C'); return false;">
-    <img src="media/limpBiz thumbnail.png" alt="Video Thumbnail" class="video-thumbnail">
-  </a>
-</div>
-
-<!-- Modal for video -->
-<div id="videoModal" class="video-modal" style="display:none;">
-  <div class="video-frame">
-    <span class="close" onclick="closeVideo()">×</span>
-    <iframe id="videoFrame" width="100%" height="480" allowfullscreen allow="autoplay"></iframe>
-  </div>
-</div>
-
-         <!-- Example for TMRW Crew Video 1 -->
-<div class="video-thumbnail-container">
-  <a href="#" onclick="openVideo('1SOA72xw7qhD2e9uioaiaR1jkV_gel851/'); return false;">
-    <img src="media/tmrw crew video 1 thumbnail.png" alt="TMRW Crew Video 1" class="video-thumbnail">
-  </a>
-</div>
-      <!-- Add more photos and videos below -->
-    </div>
+    <!-- Photos Section -->
+    <section id="photos" style="margin-top:3rem;">
+      <h2 class="section-title" style="margin-bottom:2rem;">Photos</h2>
+      <div id="slideshow-container" style="position:relative; max-width:600px; margin:0 auto;">
+        <img id="slideshow-image" src="media/photo1.jpg" alt="Slideshow Photo" style="width:100%; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <button id="prevBtn" onclick="changeSlide(-1)" style="position:absolute;top:50%;left:10px;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;border-radius:50%;width:40px;height:40px;font-size:1.5rem;cursor:pointer;">&#8249;</button>
+        <button id="nextBtn" onclick="changeSlide(1)" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;border-radius:50%;width:40px;height:40px;font-size:1.5rem;cursor:pointer;">&#8250;</button>
+      </div>
+      <!-- Optionally, add dots for navigation -->
+      <div id="slideshow-dots" style="margin-top:1rem;"></div>
+    </section>
   </main>
-</body>
-</html>  </main>
   <script>
     function openVideo(fileId) {
       const modal = document.getElementById("videoModal");
@@ -78,6 +78,54 @@
       frame.src = "";
       modal.style.display = "none";
     }
+
+    // Slideshow logic
+    const photos = [
+      "media/header.png",
+      "tmrw crew/crew photo.jpg",
+      "media/elevate 2.png",
+      "media/shok spinning.png",
+      "media/needle 1.png"
+
+      // Add more photo paths as needed
+    ];
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      const img = document.getElementById('slideshow-image');
+      const dots = document.getElementById('slideshow-dots');
+      if (index < 0) currentSlide = photos.length - 1;
+      else if (index >= photos.length) currentSlide = 0;
+      else currentSlide = index;
+      img.src = photos[currentSlide];
+
+      // Dots
+      if (dots) {
+        dots.innerHTML = '';
+        for (let i = 0; i < photos.length; i++) {
+          const dot = document.createElement('span');
+          dot.style.display = 'inline-block';
+          dot.style.width = '12px';
+          dot.style.height = '12px';
+          dot.style.margin = '0 4px';
+          dot.style.borderRadius = '50%';
+          dot.style.background = i === currentSlide ? '#333' : '#bbb';
+          dot.style.cursor = 'pointer';
+          dot.onclick = () => showSlide(i);
+          dots.appendChild(dot);
+        }
+      }
+    }
+
+    function changeSlide(n) {
+      showSlide(currentSlide + n);
+    }
+
+    // Initialize slideshow
+    document.addEventListener('DOMContentLoaded', function() {
+      showSlide(0);
+    });
   </script>
 </body>
 </html>
+
