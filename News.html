@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TMRW Crew - Edinburgh Dance Collective</title>
+	<link rel="stylesheet" href="tmrw.css">
+	<script src="tmrw.js" defer></script>
+</head>
+<body>
+	<header class="header">
+		<img src="tmrw crew/TMRW crew text.png" alt="TMRW Crew Logo" class="responsive-logo">
+	</header>
+
+	<nav class="nav" style="margin-top: 1.5rem;">
+      <a href="index.html">About</a>
+      <a href="team.html">Team</a>
+      <a href="team.html#contact">Contact</a>
+      <a href ="Portfolio.html">Portfolio</a>
+      <a href ="News.html" class="active">News</a>
+    </nav>
+
+	<main class="news-page">
+		<section class="news-hero">
+			<div class="wrap">
+				<h1>News & Updates</h1>
+				<p>Latest from TMRW Crew — events, workshops, and member highlights.</p>
+			</div>
+		</section>
+
+		<section class="news-list wrap" aria-labelledby="news-heading">
+			<h2 id="news-heading" class="sr-only">Latest News</h2>
+
+			<div class="news-grid">
+				<article class="news-card" aria-labelledby="n1-title">
+					<div class="card-media" role="img" aria-hidden="true">
+						<img src="media\about photo 2.png" alt="Levels Crew performance at Liquid Rooms" class="news-image" loading="lazy" />
+					</div>
+					<div class="card-body">
+						<time datetime="2025-10-01" class="news-date">Nov 8 2025</time>
+						<h3 id="n1-title" class="news-title">Levels Crew Performance at Liquid Rooms Edinburgh</h3>
+						<p class="news-excerpt">Come see the crew perform along other amazing groups based in Scotland. This is a community night. Come Show your support and be amazed by the talent</p>
+
+						<!-- centered controls: Tickets button + Instagram -->
+						<div class="card-controls" role="group" aria-label="Event actions">
+							<a href="https://www.tickettailor.com/events/levelsdanceshow/1871524?fbclid=PAZXh0bgNhZW0CMTEAAachS9fdbr7_dXwd-MBZutuy5lQDpXkRVI4tsTN4i5zcsZ_GhdlpKXGQdFgAWg_aem_bsUqwamHlCbP565sG-kA2g" class="tickets-btn" aria-label="Buy tickets">Tickets</a>
+
+							<a href="https://www.instagram.com/levels.danceshow?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-icon" aria-label="Levels Dance Show Instagram">
+								<img src="tmrw crew/instagram logo.png" alt="Instagram logo" />
+							</a>
+						</div>
+					</div>
+				</article>
+
+	</main>
+
+	<footer class="footer" id="contact">
+		<p>Connect with us</p>
+		<div class="social-links">
+			<a href="https://www.instagram.com/tmrwcrew2020/" target="_blank" class="social-icon" aria-label="TMRW Crew Instagram">
+				<img src="tmrw crew/instagram logo.png" alt="Instagram logo" style="width:100px; height:100px;" />
+			</a>
+		</div>
+		<p>© 2020 TMRW Crew. Celebrating Diversity Through Movement.</p>
+	</footer>
+
+	<!-- Back to Top Button -->
+	<button id="backToTopBtn" onclick="scrollToTop()" title="Back to top">↑</button>
+
+</body>
+</html>

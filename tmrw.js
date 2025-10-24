@@ -128,3 +128,22 @@ window.openVideo = openVideo;
 window.closeVideo = closeVideo;
 window.changeSlide = _tmrw_changeSlide;
 window.scrollToTop = scrollToTop;
+
+(function () {
+	const backBtn = document.getElementById('backToTopBtn');
+
+	// Smooth scroll to top
+	window.scrollToTop = function () {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	};
+
+	// Toggle visibility of back-to-top button
+	function onScroll() {
+		if (!backBtn) return;
+		backBtn.style.display = (window.scrollY > 300) ? 'flex' : 'none';
+	}
+
+	window.addEventListener('scroll', onScroll, { passive: true });
+	// run once on load
+	onScroll();
+})();
