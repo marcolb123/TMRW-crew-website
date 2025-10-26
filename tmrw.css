@@ -44,9 +44,19 @@ body {
 .header {
     background: var(--primary-color) url('media/header.png') center bottom/cover no-repeat;
     color: white;
-    padding: 14rem 1rem 8rem 1rem;
-    min-height: 540px;
+    padding: 6rem 1rem 4rem 1rem; /* reduced top/bottom padding */
+    min-height: 300px;            /* smaller minimum height */
+    max-height: 60vh;            /* prevent it from taking the whole screen */
     text-align: center;
+}
+
+/* smaller header on narrow screens */
+@media (max-width: 768px) {
+    .header {
+        padding: 3.5rem 1rem 2rem 1rem;
+        min-height: 200px;
+        max-height: 45vh;
+    }
 }
 
 /* === 5) Navigation === */
@@ -121,6 +131,73 @@ body {
     transform: translateY(-5px);
 }
 
+/* Compact class placeholders (appear under Workshops & Classes) */
+.class-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(220px, 1fr));
+	gap: 1rem;
+	max-width: 500px;
+	margin: 1.25rem auto 2rem auto;
+	padding: 0 1rem;
+	justify-items: stretch;
+}
+
+.class-card {
+	background: var(--card-bg, #fff);
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+	display: flex;
+	flex-direction: column;
+	min-height: 240px; /* raised to fit square thumbnail + text */
+	width: 100%;
+}
+
+.class-media {
+	/* square thumbnails for compact class cards */
+	width: 100%;
+	aspect-ratio: 1 / 1;
+	max-height: 360px;
+	overflow: hidden;
+	background: linear-gradient(90deg, rgba(0,0,0,0.03), rgba(0,0,0,0.01));
+}
+
+.class-media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.class-body {
+	padding: 0.75rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.35rem;
+}
+
+.class-body h4 {
+	margin: 0;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.class-body .news-excerpt {
+	font-size: 0.95rem;
+	color: var(--muted, #555);
+	margin-top: auto;
+}
+
+/* responsive: stack class placeholders on narrow screens */
+@media (max-width: 600px) {
+	.class-grid {
+		grid-template-columns: 1fr;
+	}
+	.class-media {
+		max-height: none;
+	}
+}
+
 /* 10) News section */
 .news-hero {
 	padding: 3rem 0;
@@ -160,24 +237,28 @@ body {
 	width: 100%;
 }
 
-.card-media { height: 160px; display:flex; align-items:center; justify-content:center; background: linear-gradient(90deg, rgba(0,0,0,0.03), rgba(0,0,0,0.01)); }
+.card-media { height: 200px; display:flex; align-items:flex-start; justify-content:center; background: linear-gradient(90deg, rgba(0,0,0,0.03), rgba(0,0,0,0.01)); overflow: hidden;}
 .placeholder-img {
-	width: 100%; height: 100%; display:flex; align-items:center; justify-content:center;
+	width: 100%; height: 100%; display:flex; align-items:flex-start; justify-content:center;
 	background: repeating-linear-gradient(45deg, #f3f3f3 0 8px, #fafafa 8px 16px);
 	color:#999; font-weight:600; font-size:1rem;
+    
 }
 
 .card-body { padding: 1rem; display:flex; flex-direction:column; gap:0.5rem; flex:1; }
 .news-date { font-size: 0.85rem; color: var(--muted, #777); }
 .news-title { margin: 0; font-size: 1.05rem; }
-.news-excerpt { margin: 0; color: var(--muted, #555); flex:1; }
+.news-excerpt { margin: 0; color: var(--muted, #555); flex:1;justify-content: center; }
 
-.read-more {
-	margin-top: 0.5rem;
-	color: var(--accent, #0077cc);
-	text-decoration: none;
-	font-weight: 600;
+.card-media img,
+.placeholder-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center; /* stick the visual to the top */
+    display: block;
 }
+
 
 /* === 8) Member profile image / info blocks === */
 .member-profile {
@@ -480,7 +561,6 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   margin: 0 auto 2rem auto;
-  display: block;
 }
 
 /* === 18) Video thumbnail & modal styles === */
@@ -611,10 +691,58 @@ html {
 .news-hero h1,
 .news-title,
 .tickets-btn {
-	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	font-family: 'TW Cen MT', Arial, Helvetica, sans-serif;
 	letter-spacing: 0.5px;
 }
 
 /* slightly adjust button weight to match the display face */
 .tickets-btn { font-weight: 800; }
+/* 19) Contact page */
+.contact-grid {
+	display: grid;
+	grid-template-columns: 1fr 320px;
+	gap: 2rem;
+	align-items: start;
+}
+
+.contact-form {
+	background: #fff;
+	padding: 1.25rem;
+	border-radius: 8px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+	display:flex;
+	flex-direction:column;
+	gap:0.75rem;
+}
+
+.contact-form label { font-weight:700; font-size:0.9rem; color:#222; }
+.contact-form input,
+.contact-form textarea {
+	padding: 0.6rem 0.75rem;
+	border: 1px solid #e5e5e5;
+	border-radius: 6px;
+	font-size:1rem;
+	width:100%;
+	background: #fafafa;
+}
+
+.contact-form textarea { resize: vertical; min-height:120px; }
+
+.contact-info {
+	background: transparent;
+	padding: 0.5rem 0;
+	font-size: 0.95rem;
+	color:#222;
+}
+
+.contact-info a { color: var(--accent-color, #f20909cc); text-decoration: none; font-weight:600; }
+
+.contact-form .tickets-btn { align-self: flex-start; }
+
+/* Responsive: stack on small screens */
+@media (max-width: 880px) {
+	.contact-grid { grid-template-columns: 1fr; }
+	.contact-form { order: 1; }
+	.contact-info { order: 2; margin-top: 1rem; }
+}
 

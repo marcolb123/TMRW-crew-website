@@ -15,7 +15,7 @@
 	<nav class="nav" style="margin-top: 1.5rem;">
       <a href="index.html">About</a>
       <a href="team.html">Team</a>
-      <a href="team.html#contact">Contact</a>
+      <a href="contacts.html">Contact</a>
       <a href ="Portfolio.html">Portfolio</a>
       <a href ="News.html" class="active">News</a>
     </nav>
@@ -31,27 +31,85 @@
 		<section class="news-list wrap" aria-labelledby="news-heading">
 			<h2 id="news-heading" class="sr-only">Latest News</h2>
 
-			<div class="news-grid">
-				<article class="news-card" aria-labelledby="n1-title">
-					<div class="card-media" role="img" aria-hidden="true">
-						<img src="media\about photo 2.png" alt="Levels Crew performance at Liquid Rooms" class="news-image" loading="lazy" />
-					</div>
-					<div class="card-body">
-						<time datetime="2025-10-01" class="news-date">Nov 8 2025</time>
-						<h3 id="n1-title" class="news-title">Levels Crew Performance at Liquid Rooms Edinburgh</h3>
-						<p class="news-excerpt">Come see the crew perform along other amazing groups based in Scotland. This is a community night. Come Show your support and be amazed by the talent</p>
-
-						<!-- centered controls: Tickets button + Instagram -->
-						<div class="card-controls" role="group" aria-label="Event actions">
-							<a href="https://www.tickettailor.com/events/levelsdanceshow/1871524?fbclid=PAZXh0bgNhZW0CMTEAAachS9fdbr7_dXwd-MBZutuy5lQDpXkRVI4tsTN4i5zcsZ_GhdlpKXGQdFgAWg_aem_bsUqwamHlCbP565sG-kA2g" class="tickets-btn" aria-label="Buy tickets">Tickets</a>
-
-							<a href="https://www.instagram.com/levels.danceshow?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-icon" aria-label="Levels Dance Show Instagram">
-								<img src="tmrw crew/instagram logo.png" alt="Instagram logo" />
-							</a>
+			<!-- New: Performances section -->
+			<section id="performances" class="news-section" aria-labelledby="performances-heading">
+				<h2 id="performances-heading" class="section-title">Performances</h2>
+				<div class="news-grid" role="list">
+					<!-- moved: existing performance card -->
+					<article class="news-card" role="listitem" aria-labelledby="n1-title">
+						<div class="card-media" role="img" aria-hidden="true">
+							<img src="media/news 1.png" alt="Levels Crew performance at Liquid Rooms" class="news-image" loading="lazy" />
 						</div>
-					</div>
-				</article>
+						<div class="card-body">
+							<time datetime="2025-10-01" class="news-date">Nov 8 2025 - 7:30pm - Liquid Rooms Edinburgh</time>
+							<h3 id="n1-title" class="news-title">Levels Crew Performance</h3>
+							<p class="news-excerpt">Come see the crew perform along other amazing groups based in Scotland. This is a community night. Come Show your support and be amazed by the talent</p>
 
+							<!-- centered controls: Tickets button + Instagram -->
+							<div class="card-controls" role="group" aria-label="Event actions">
+								<a href="https://www.tickettailor.com/events/levelsdanceshow/1871524?fbclid=PAZXh0bgNhZW0CMTEAAachS9fdbr7_dXwd-MBZutuy5lQDpXkRVI4tsTN4i5zcsZ_GhdlpKXGQdFgAWg_aem_bsUqwamHlCbP565sG-kA2g" class="tickets-btn" aria-label="Buy tickets">Tickets</a>
+
+								<a href="https://www.instagram.com/levels.danceshow?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-icon" aria-label="Levels Dance Show Instagram">
+									<img src="tmrw crew/instagram logo.png" alt="Instagram logo" />
+								</a>
+							</div>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<!-- New: Workshops & Classes section -->
+			<section id="workshops" class="news-section" aria-labelledby="workshops-heading">
+				<h2 id="workshops-heading" class="section-title">Workshops &amp; Classes</h2>
+				<div class="news-grid" role="list">
+					<!-- example workshop card; duplicate/update as needed -->
+					<article class="news-card" role="listitem" aria-labelledby="w1-title">
+						<div class="card-media" role="img" aria-hidden="true">
+							<img src="media/workshop-1.png" alt="Open hip hop workshop" class="news-image" loading="lazy" />
+						</div>
+						<div class="card-body">
+							<time datetime="2025-11-15" class="news-date">Nov 15 2025</time>
+							<h3 id="w1-title" class="news-title">Open Hip Hop Workshop</h3>
+							<p class="news-excerpt">Join our weekly hip hop class for all levels. Bring trainers and water. Booking via Instagram.</p>
+
+							<div class="card-controls" role="group" aria-label="Workshop actions">
+								<a href="https://www.instagram.com/tmrwcrew2020/" target="_blank" class="social-icon" aria-label="TMRW Crew Instagram">
+									<img src="tmrw crew/instagram logo.png" alt="Instagram logo" />
+								</a>
+							</div>
+						</div>
+					</article>
+					<!-- add more workshop cards here -->
+				</div>
+
+				<!-- NEW: compact placeholders for regular classes (side-by-side, half size) -->
+				<h3 class="sr-only" id="classes-heading">Regular Classes</h3>
+				<div class="class-grid" aria-labelledby="classes-heading" role="list">
+					<article class="class-card" role="listitem" aria-labelledby="c1-title">
+						<div class="class-media" aria-hidden="true">
+							<img src="media/workshop-1.png" alt="Beginner Locking class" loading="lazy" />
+						</div>
+						<div class="class-body">
+							<h4 id="c1-title">Beginner Locking</h4>
+							<time datetime="2025-11-20" class="news-date">Wednesdays • 6:30pm</time>
+							<p class="news-excerpt">Intro session for newcomers — fun, supportive, and focused on fundamentals.</p>
+						</div>
+					</article>
+
+					<article class="class-card" role="listitem" aria-labelledby="c2-title">
+						<div class="class-media" aria-hidden="true">
+							<img src="media/workshop-1.png" alt="Open Freestyle class" loading="lazy" />
+						</div>
+						<div class="class-body">
+							<h4 id="c2-title">Open Freestyle</h4>
+							<time datetime="2025-11-22" class="news-date">Fridays • 7:30pm</time>
+							<p class="news-excerpt">Drop-in freestyle session suitable for all levels. Bring trainers and energy.</p>
+						</div>
+					</article>
+				</div>
+			</section>
+
+		</section>
 	</main>
 
 	<footer class="footer" id="contact">
@@ -66,6 +124,13 @@
 
 	<!-- Back to Top Button -->
 	<button id="backToTopBtn" onclick="scrollToTop()" title="Back to top">↑</button>
+
+	<!-- Inline helper script (keeps the page self-contained if tmrw.js is empty) -->
+	<script>
+		function scrollToTop() {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+		}
+	</script>
 
 </body>
 </html>
