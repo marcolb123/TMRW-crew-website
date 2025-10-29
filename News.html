@@ -8,109 +8,180 @@
 	<script src="tmrw.js" defer></script>
 </head>
 <body>
-	<header class="header">
-		<img src="tmrw crew/TMRW crew text.png" alt="TMRW Crew Logo" class="responsive-logo">
-	</header>
+        <a class="skip-link" href="#main-content">Skip to news content</a>
 
-	<nav class="nav" style="margin-top: 1.5rem;">
-      <a href="index.html">About</a>
-      <a href="team.html">Team</a>
-      <a href="News.html" class="active">News</a>
-      <a href="Portfolio.html">Portfolio</a>
-      <a href="contacts.html">Contact</a>
-    </nav>
+        <header class="header">
+                <img src="tmrw crew/TMRW crew text.png" alt="TMRW Crew Logo" class="responsive-logo">
+        </header>
 
-	<main class="news-page">
-		<section class="news-hero">
-			<div class="wrap">
-				<h1>News & Updates</h1>
-				<p>Latest from TMRW Crew — events, workshops, and member highlights.</p>
-			</div>
-		</section>
+        <nav class="nav" style="margin-top: 1.5rem;">
+                <a href="index.html">About</a>
+                <a href="team.html">Team</a>
+                <a href="News.html" class="active">News</a>
+                <a href="Portfolio.html">Portfolio</a>
+                <a href="contacts.html">Contact</a>
+        </nav>
+
+        <main id="main-content" class="news-page">
+                <section class="news-hero">
+                        <div class="wrap">
+                                <h1>News &amp; Updates</h1>
+                                <p>The latest from TMRW Crew &mdash; events, workshops, and the people who make the community special.</p>
+                                <ul class="hero-links" aria-label="Quick links to news categories">
+                                        <li><a href="#performances">Upcoming Performances</a></li>
+                                        <li><a href="#workshops">Workshops &amp; Classes</a></li>
+                                        <li><a href="#highlights">Crew Highlights</a></li>
+                                </ul>
+                        </div>
+                </section>
 
 		<section class="news-list wrap" aria-labelledby="news-heading">
 			<h2 id="news-heading" class="sr-only">Latest News</h2>
 
-			<!-- New: Performances section -->
-			<section id="performances" class="news-section" aria-labelledby="performances-heading">
-				<h2 id="performances-heading" class="section-title">Performances</h2>
-				<div class="news-grid" role="list">
-					<!-- moved: existing performance card -->
-					<article class="news-card" role="listitem" aria-labelledby="n1-title">
-						<div class="card-media" role="img" aria-hidden="true">
-							<img src="media/news 1.png" alt="Levels Crew performance at Liquid Rooms" class="news-image" loading="lazy" />
-						</div>
-						<div class="card-body">
-							<time datetime="2025-10-01" class="news-date">Nov 8 2025 - 7:30pm - Liquid Rooms Edinburgh</time>
-							<h3 id="n1-title" class="news-title">Levels Crew Performance</h3>
-							<p class="news-excerpt">Come see the crew perform along other amazing groups based in Scotland. This is a community night. Come Show your support and be amazed by the talent</p>
+                        <section id="performances" class="news-section" aria-labelledby="performances-heading">
+                                <h2 id="performances-heading" class="section-title">Performances</h2>
+                                <div class="news-grid" role="list">
+                                        <article class="news-card" role="listitem" aria-labelledby="n1-title">
+                                                <div class="card-media" role="img" aria-hidden="true">
+                                                        <img src="media/news 1.png" alt="TMRW Crew dancers on stage at the Liquid Rooms" class="news-image" loading="lazy" />
+                                                </div>
+                                                <div class="card-body">
+                                                        <time datetime="2025-11-08" class="news-date">8 November 2025 &bull; 7:30pm &bull; Liquid Rooms, Edinburgh</time>
+                                                        <h3 id="n1-title" class="news-title">Levels Crew Performance</h3>
+                                                        <p class="news-excerpt">Cheer on TMRW Crew alongside Scotland's top street dance collectives. Expect cyphers, special guests, and a full-community celebration of hip hop culture.</p>
+                                                        <div class="card-controls" role="group" aria-label="Event actions">
+                                                                <a href="https://www.tickettailor.com/events/levelsdanceshow/1871524?fbclid=PAZXh0bgNhZW0CMTEAAachS9fdbr7_dXwd-MBZutuy5lQDpXkRVI4tsTN4i5zcsZ_GhdlpKXGQdFgAWg_aem_bsUqwamHlCbP565sG-kA2g" class="tickets-btn" aria-label="Buy tickets for Levels Crew Performance">Tickets</a>
+                                                                <a href="https://www.instagram.com/levels.danceshow?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-icon" aria-label="Levels Dance Show on Instagram">
+                                                                        <img src="tmrw crew/instagram logo.png" alt="Instagram logo" loading="lazy" />
+                                                                </a>
+                                                        </div>
+                                                </div>
+                                        </article>
 
-							<!-- centered controls: Tickets button + Instagram -->
-							<div class="card-controls" role="group" aria-label="Event actions">
-								<a href="https://www.tickettailor.com/events/levelsdanceshow/1871524?fbclid=PAZXh0bgNhZW0CMTEAAachS9fdbr7_dXwd-MBZutuy5lQDpXkRVI4tsTN4i5zcsZ_GhdlpKXGQdFgAWg_aem_bsUqwamHlCbP565sG-kA2g" class="tickets-btn" aria-label="Buy tickets">Tickets</a>
+                                        <article class="news-card" role="listitem" aria-labelledby="n2-title">
+                                                <div class="card-media" role="img" aria-hidden="true">
+                                                        <img src="media/elevate 2.png" alt="Street dancers performing outdoors" class="news-image" loading="lazy" />
+                                                </div>
+                                                <div class="card-body">
+                                                        <time datetime="2025-12-12" class="news-date">12 December 2025 &bull; 6:00pm &bull; The Yard, Edinburgh</time>
+                                                        <h3 id="n2-title" class="news-title">Winter Block Party Showcase</h3>
+                                                        <p class="news-excerpt">An end-of-year showcase featuring freestyle battles, live DJs, and an open floor for community cyphers. Free entry &mdash; donations for Edinburgh Food Project welcomed.</p>
+                                                        <div class="card-controls" role="group" aria-label="Showcase actions">
+                                                                <a href="https://www.instagram.com/tmrwcrew2020/" target="_blank" class="tickets-btn alt" aria-label="RSVP on Instagram">RSVP</a>
+                                                                <a href="https://www.instagram.com/tmrwcrew2020/" target="_blank" class="social-icon" aria-label="TMRW Crew on Instagram">
+                                                                        <img src="tmrw crew/instagram logo.png" alt="Instagram logo" loading="lazy" />
+                                                                </a>
+                                                        </div>
+                                                </div>
+                                        </article>
+                                </div>
+                        </section>
 
-								<a href="https://www.instagram.com/levels.danceshow?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="social-icon" aria-label="Levels Dance Show Instagram">
-									<img src="tmrw crew/instagram logo.png" alt="Instagram logo" />
-								</a>
-							</div>
-						</div>
-					</article>
-				</div>
-			</section>
+                        <section id="workshops" class="news-section" aria-labelledby="workshops-heading">
+                                <h2 id="workshops-heading" class="section-title">Workshops &amp; Classes</h2>
+                                <div class="news-grid" role="list">
+                                        <article class="news-card" role="listitem" aria-labelledby="w1-title">
+                                                <div class="card-media" role="img" aria-hidden="true">
+                                                        <img src="media/elevate thumbnail.png" alt="Participants learning choreography during a workshop" class="news-image" loading="lazy" />
+                                                </div>
+                                                <div class="card-body">
+                                                        <time datetime="2025-11-15" class="news-date">15 November 2025</time>
+                                                        <h3 id="w1-title" class="news-title">Open Hip Hop Workshop</h3>
+                                                        <p class="news-excerpt">A foundations-focused session led by Mel with drills, choreography, and time to ask questions. Open to every level &mdash; just bring trainers, water, and curiosity.</p>
+                                                        <div class="card-controls" role="group" aria-label="Workshop actions">
+                                                                <a href="https://www.instagram.com/tmrwcrew2020/" target="_blank" class="social-icon" aria-label="TMRW Crew Instagram">
+                                                                        <img src="tmrw crew/instagram logo.png" alt="Instagram logo" />
+                                                                </a>
+                                                        </div>
+                                                </div>
+                                        </article>
 
-			<!-- New: Workshops & Classes section -->
-			<section id="workshops" class="news-section" aria-labelledby="workshops-heading">
-				<h2 id="workshops-heading" class="section-title">Workshops &amp; Classes</h2>
-				<div class="news-grid" role="list">
-					<!-- example workshop card; duplicate/update as needed -->
-					<article class="news-card" role="listitem" aria-labelledby="w1-title">
-						<div class="card-media" role="img" aria-hidden="true">
-							<img src="media/workshop-1.png" alt="Open hip hop workshop" class="news-image" loading="lazy" />
-						</div>
-						<div class="card-body">
-							<time datetime="2025-11-15" class="news-date">Nov 15 2025</time>
-							<h3 id="w1-title" class="news-title">Open Hip Hop Workshop</h3>
-							<p class="news-excerpt">Join our weekly hip hop class for all levels. Bring trainers and water. Booking via Instagram.</p>
+                                        <article class="news-card" role="listitem" aria-labelledby="w2-title">
+                                                <div class="card-media" role="img" aria-hidden="true">
+                                                        <img src="media/about photo 2.png" alt="Dance studio with mirrors and warm lighting" class="news-image" loading="lazy" />
+                                                </div>
+                                                <div class="card-body">
+                                                        <time datetime="2026-01-05" class="news-date">5 January 2026</time>
+                                                        <h3 id="w2-title" class="news-title">Choreography Lab Series</h3>
+                                                        <p class="news-excerpt">A three-week intensive exploring musicality, staging, and creative direction. Limited spaces to keep feedback personal &mdash; sign-ups open now.</p>
+                                                        <div class="card-controls" role="group" aria-label="Choreography lab actions">
+                                                                <a href="mailto:tmrwcrew@gmail.com?subject=Choreography%20Lab%20Series" class="tickets-btn" aria-label="Email to reserve a space">Reserve a Space</a>
+                                                        </div>
+                                                </div>
+                                        </article>
+                                </div>
 
-							<div class="card-controls" role="group" aria-label="Workshop actions">
-								<a href="https://www.instagram.com/tmrwcrew2020/" target="_blank" class="social-icon" aria-label="TMRW Crew Instagram">
-									<img src="tmrw crew/instagram logo.png" alt="Instagram logo" />
-								</a>
-							</div>
-						</div>
-					</article>
-					<!-- add more workshop cards here -->
-				</div>
-
-				<!-- NEW: compact placeholders for regular classes (side-by-side, half size) -->
-				<h3 class="sr-only" id="classes-heading">Regular Classes</h3>
-				<div class="class-grid" aria-labelledby="classes-heading" role="list">
-					<article class="class-card" role="listitem" aria-labelledby="c1-title">
-						<div class="class-media" aria-hidden="true">
-							<img src="media/workshop-1.png" alt="Beginner Locking class" loading="lazy" />
+                                <h3 class="sr-only" id="classes-heading">Regular Classes</h3>
+                                <div class="class-grid" aria-labelledby="classes-heading" role="list">
+                                        <article class="class-card" role="listitem" aria-labelledby="c1-title">
+                                                <div class="class-media" aria-hidden="true">
+                                                        <img src="media/about photo 1.png" alt="Beginner Locking class" loading="lazy" />
 						</div>
 						<div class="class-body">
 							<h4 id="c1-title">Beginner Locking</h4>
 							<time datetime="2025-11-20" class="news-date">Wednesdays • 6:30pm</time>
 							<p class="news-excerpt">Intro session for newcomers — fun, supportive, and focused on fundamentals.</p>
-						</div>
-					</article>
+                                                </div>
+                                        </article>
 
-					<article class="class-card" role="listitem" aria-labelledby="c2-title">
-						<div class="class-media" aria-hidden="true">
-							<img src="media/workshop-1.png" alt="Open Freestyle class" loading="lazy" />
+                                        <article class="class-card" role="listitem" aria-labelledby="c2-title">
+                                                <div class="class-media" aria-hidden="true">
+                                                        <img src="media/shok spinning.png" alt="Open Freestyle class" loading="lazy" />
 						</div>
 						<div class="class-body">
 							<h4 id="c2-title">Open Freestyle</h4>
 							<time datetime="2025-11-22" class="news-date">Fridays • 7:30pm</time>
 							<p class="news-excerpt">Drop-in freestyle session suitable for all levels. Bring trainers and energy.</p>
-						</div>
-					</article>
-				</div>
-			</section>
+                                                </div>
+                                        </article>
+                                        <article class="class-card" role="listitem" aria-labelledby="c3-title">
+                                                <div class="class-media" aria-hidden="true">
+                                                        <img src="media/needle 1.png" alt="Creative session with dancers in conversation" loading="lazy" />
+                                                </div>
+                                                <div class="class-body">
+                                                        <h4 id="c3-title">Sunday Sessions</h4>
+                                                        <time datetime="2025-11-24" class="news-date">Sundays &bull; 11:00am</time>
+                                                        <p class="news-excerpt">Community-led practice slot rotating through popping, house, and freestyle tasks. Drop in, collaborate, and share ideas.</p>
+                                                </div>
+                                        </article>
+                                </div>
+                        </section>
 
-		</section>
-	</main>
+                        <section id="highlights" class="news-section" aria-labelledby="highlights-heading">
+                                <h2 id="highlights-heading" class="section-title">Crew Highlights</h2>
+                                <div class="news-grid" role="list">
+                                        <article class="news-card" role="listitem" aria-labelledby="h1-title">
+                                                <div class="card-media" role="img" aria-hidden="true">
+                                                        <img src="media/tmrw crew video 1 thumbnail.png" alt="Portrait of crew member Jay" class="news-image" loading="lazy" />
+                                                </div>
+                                                <div class="card-body">
+                                                        <time datetime="2025-10-18" class="news-date">18 October 2025</time>
+                                                        <h3 id="h1-title" class="news-title">Member Spotlight: Jay</h3>
+                                                        <p class="news-excerpt">Jay has been leading our freestyle warm-ups and recently placed in the top 8 at Just Jam. Read the interview on musicality, confidence, and finding your voice.</p>
+                                                        <div class="card-controls" role="group" aria-label="Member spotlight actions">
+                                                                <a href="https://www.instagram.com/p/C_TMRWJAY/" target="_blank" class="tickets-btn alt" aria-label="Read the full spotlight on Instagram">Read Spotlight</a>
+                                                        </div>
+                                                </div>
+                                        </article>
+
+                                        <article class="news-card" role="listitem" aria-labelledby="h2-title">
+                                                <div class="card-media" role="img" aria-hidden="true">
+                                                        <img src="media/laugh now cry later thumbnail.png" alt="Group photo from the Roots to Routes programme" class="news-image" loading="lazy" />
+                                                </div>
+                                                <div class="card-body">
+                                                        <time datetime="2025-09-30" class="news-date">30 September 2025</time>
+                                                        <h3 id="h2-title" class="news-title">Roots to Routes Award</h3>
+                                                        <p class="news-excerpt">We&rsquo;re thrilled to be recipients of the Roots to Routes community fund, supporting youth-focused movement workshops across Edinburgh in 2026.</p>
+                                                        <div class="card-controls" role="group" aria-label="Award announcement actions">
+                                                                <a href="https://tmrwcrew.co.uk" target="_blank" class="tickets-btn" aria-label="Learn more about Roots to Routes programme">Learn More</a>
+                                                        </div>
+                                                </div>
+                                        </article>
+                                </div>
+                        </section>
+
+                </section>
+        </main>
 
 	<footer class="footer" id="contact">
 		<p>Connect with us</p>
