@@ -10,21 +10,28 @@
 
   <!-- Team page -->
   <url>
-    <loc>https://tmrwcrew.com/team/</loc>
+    <loc>https://tmrwcrew.com/team.html</loc>
     <lastmod>2025-09-07</lastmod>
     <priority>0.8</priority>
   </url>
 
   <!-- Portfolio -->
   <url>
-    <loc>https://tmrwcrew.com/portfolio/</loc>
+    <loc>https://tmrwcrew.com/Portfolio.html</loc>
     <lastmod>2025-09-07</lastmod>
     <priority>0.8</priority>
   </url>
 
     <!-- Contact page -->
     <url>
-      <loc>https://tmrwcrew.com/contact/</loc>
+      <loc>https://tmrwcrew.com/contacts.html</loc>
+      <lastmod>2025-09-07</lastmod>
+      <priority>0.8</priority>
+    </url>
+
+    <!-- News page -->
+    <url>
+      <loc>https://tmrwcrew.com/News.html</loc>
       <lastmod>2025-09-07</lastmod>
       <priority>0.8</priority>
     </url>
