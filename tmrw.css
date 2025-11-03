@@ -805,3 +805,94 @@ html {
 	.contact-info { order: 2; margin-top: 1rem; }
 }
 
+/* Add this as a new numbered section after your existing sections */
+
+/* X) Workshop slideshow and layout */
+.workshops-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.workshop-slideshow-wrapper {
+    flex: 0 0 450px;
+    max-width: 450px;
+}
+
+.workshop-classes-wrapper {
+    flex: 1;
+    min-width: 0;
+}
+
+#workshop-slideshow-container {
+    position: relative;
+    margin: 0 0 1rem 0;
+}
+
+#workshop-slideshow-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.slideshow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.slideshow-btn:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+.slideshow-btn.prev {
+    left: 10px;
+}
+
+.slideshow-btn.next {
+    right: 10px;
+}
+
+#workshop-slideshow-dots {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.slideshow-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.slideshow-dot.active {
+    background: #333;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 768px) {
+    .workshops-layout {
+        flex-direction: column;
+    }
+    
+    .workshop-slideshow-wrapper {
+        flex: 1 1 auto;
+        max-width: 100%;
+    }
+}
+
