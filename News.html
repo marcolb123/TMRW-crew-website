@@ -20,7 +20,7 @@
                 <a href="index.html">About</a>
                 <a href="team.html">Team</a>
                 <a href="News.html" class="active">News</a>
-                <a href="Portfolio.html">Portfolio</a>
+                <a href="Portfolio.html">Media</a>
                 <a href="contacts.html">Contact</a>
         </nav>
 
@@ -28,11 +28,11 @@
                 <section class="news-hero">
                         <div class="wrap">
                                 <h1>News &amp; Updates</h1>
-                                <p>The latest from TMRW Crew &mdash; events, workshops, and the people who make the community special.</p>
+                                <p>The latest from TMRW Crew &mdash; events, workshops, and regular classes by the crew members.</p>
                                 <ul class="hero-links" aria-label="Quick links to news categories">
                                         <li><a href="#performances">Upcoming Performances</a></li>
                                         <li><a href="#workshops">Workshops &amp; Classes</a></li>
-                                        <li><a href="#highlights">Crew Highlights</a></li>
+                                        <!-- <li><a href="#highlights">Crew Highlights</a></li> -->
                                 </ul>
                         </div>
                 </section>
@@ -81,95 +81,159 @@
                         <section id="workshops" class="news-section" aria-labelledby="workshops-heading">
     <h2 id="workshops-heading" class="section-title">Workshops &amp; Classes</h2>
     
-    <div class="workshops-layout">
-        <!-- Left side: Workshop slideshow -->
-        <div class="workshop-slideshow-wrapper">
-            <div id="workshop-slideshow-container">
-                <img id="workshop-slideshow-image" src="events/fall workshops/1. Page 1 with location.png" alt="Workshop Photo" loading="lazy">
-                <button onclick="changeWorkshopSlide(-1)" class="slideshow-btn prev" aria-label="Previous workshop image">&#8249;</button>
-                <button onclick="changeWorkshopSlide(1)" class="slideshow-btn next" aria-label="Next workshop image">&#8250;</button>
-            </div>
-            <div id="workshop-slideshow-dots"></div>
+    <!-- Workshop slideshow on top -->
+    <div class="workshop-slideshow-wrapper">
+        <div id="workshop-slideshow-container">
+            <img id="workshop-slideshow-image" src="events/fall workshops/1. Page 1 with location.png" alt="Workshop Photo" loading="lazy">
+            <button onclick="changeWorkshopSlide(-1)" class="slideshow-btn prev" aria-label="Previous workshop image">&#8249;</button>
+            <button onclick="changeWorkshopSlide(1)" class="slideshow-btn next" aria-label="Next workshop image">&#8250;</button>
         </div>
+        <div id="workshop-slideshow-dots"></div>
+    </div>
 
-        <!-- Right side: Regular classes -->
-        <div class="workshop-classes-wrapper">
-            
-            <div class="class-grid" aria-labelledby="classes-heading" role="list">
-    <article class="class-card" role="listitem" aria-labelledby="c1-title">
-        <div class="class-media" aria-hidden="true">
-            <img src="tmrw crew/marco.jpg" alt="Beginner Locking class" loading="lazy" />
-        </div>
-        <div class="class-body">
-            <h4 id="c1-title">House open level</h4>
-            <time datetime="2025-11-20" class="news-date">Tuesdays • 6pm • The Dancehouse, Ocean Terminal, Edinburgh</time>
-            <p class="news-excerpt">Join Marco for some high energy and fun house class focusing on foundational steps and social dancing.</p>
-            <div class="card-controls" role="group" aria-label="House class booking">
-                <a href="https://www.dancehousescotland.com/shop-book/Adults-Class-Bookings-c57887017" target="_blank" class="tickets-btn" aria-label="Book House open level class">Book Now</a>
-            </div>
-        </div>
-    </article>
+    <!-- Regular classes below -->
+    <div class="workshop-classes-wrapper">
+       
+        <div class="class-grid" aria-labelledby="classes-heading" role="list">
+            <article class="class-card" role="listitem" aria-labelledby="c1-title">
+                <div class="class-media" aria-hidden="true">
+                    <img src="tmrw crew/marco.jpg" alt="House open level class" loading="lazy" />
+                </div>
+                <div class="class-body">
+                    <h4 id="c1-title">House open level</h4>
+                    <time datetime="2025-11-20" class="news-date">Tuesdays • 6pm • The Dancehouse, Ocean Terminal, Edinburgh</time>
+                    <p class="news-excerpt">Join Marco for some high energy and fun house class focusing on foundational steps and social dancing.</p>
+                    <div class="card-controls" role="group" aria-label="House class booking">
+                        <a href="https://www.dancehousescotland.com/shop-book/Adults-Class-Bookings-c57887017" target="_blank" class="tickets-btn" aria-label="Book House open level class">Book Now</a>
+                    </div>
+                </div>
+            </article>
 
-    <article class="class-card" role="listitem" aria-labelledby="c2-title">
-        <div class="class-media" aria-hidden="true">
-            <img src="media/shok spinning.png" alt="Open Freestyle class" loading="lazy" />
-        </div>
-        <div class="class-body">
-            <h4 id="c2-title">Open Freestyle</h4>
-            <time datetime="2025-11-22" class="news-date">Saturdays • 6-9pm • The Dancehouse, Ocean Terminal, Edinburgh</time>
-            <p class="news-excerpt">Drop-in freestyle session suitable for all levels. Alternating between Oscar and Nevil leading the sessions.</p>
-        </div>
-    </article>
+            <article class="class-card" role="listitem" aria-labelledby="c2-title">
+                <div class="class-media" aria-hidden="true">
+                    <img src="media/shok spinning.png" alt="Open Freestyle class" loading="lazy" />
+                </div>
+                <div class="class-body">
+                    <h4 id="c2-title">Cypher Saturdays</h4>
+                    <time datetime="2025-11-22" class="news-date">Saturdays • 6-9pm • The Dancehouse, Ocean Terminal, Edinburgh</time>
+                    <p class="news-excerpt">Drop-in freestyle session suitable for all levels. Alternating between Oscar and Nevil leading the sessions.</p>
+                    <div class="card-controls" role="group" aria-label="Open Freestyle info">
+                        <span class="tickets-btn" aria-label="Free entry">Free Entry</span>
+                    </div>
+                </div>
+            </article>
 
-    <article class="class-card" role="listitem" aria-labelledby="c3-title">
-        <div class="class-media" aria-hidden="true">
-            <img src="tmrw crew/oscar headshot.png" alt="Popping and Locking class" loading="lazy" />
+            <article class="class-card" role="listitem" aria-labelledby="c3-title">
+                <div class="class-media" aria-hidden="true">
+                    <img src="tmrw crew/oscar headshot.png" alt="Popping and Locking class" loading="lazy" />
+                </div>
+                <div class="class-body">
+                    <h4 id="c3-title">Popping/Locking</h4>
+                    <time datetime="2025-11-24" class="news-date">Sundays &bull; 5pm &bull; The Dancehouse, Ocean Terminal, Edinburgh</time>
+                    <p class="news-excerpt">Learn foundational popping and locking techniques with Oscar. Perfect for dancers looking to expand their funk styles vocabulary. Popping runs on 1st & 3rd (& 5th) Saturday of each month, alternating with Locking class</p>
+                    <div class="card-controls" role="group" aria-label="Popping/Locking class booking">
+                        <a href="https://www.dancehousescotland.com/shop-book/Adults-Class-Bookings-c57887017" target="_blank" class="tickets-btn" aria-label="Book Popping/Locking class">Book Now</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="class-card" role="listitem" aria-labelledby="c4-title">
+                <div class="class-media" aria-hidden="true">
+                    <img src="events/three60_hiphop.png" alt="Hip Hop session with TMRW Crew" loading="lazy" />
+                </div>
+                <div class="class-body">
+                    <h4 id="c4-title">Three60 x TMRW Crew Hip Hop Session Glasgow</h4>
+                    <time datetime="2025-11-20" class="news-date">Thursdays &bull; 7-9pm &bull; 60 / 80 Washington Street Glasgow</time>
+                    <p class="news-excerpt">Come through for a double session designed for dancers of all levels:
+                    <br><br>
+                    <strong>Hour 1 – Foundations</strong><br>
+                    A led session focusing on hip-hop foundations — perfect for beginners or anyone wanting to revisit the basics and sharpen their technique.
+                    <br><br>
+                    <strong>Hour 2 – Open Training</strong><br>
+                    An open space for dancers to train, exchange, and vibe together. All styles, all levels welcome.</p>
+                    <div class="card-controls" role="group" aria-label="Hip Hop session booking">
+                        <a href="contacts.html" class="tickets-btn" aria-label="Contact us to book Hip Hop session">Contact to Book</a>
+                        <a href="https://www.instagram.com/p/DPJVdzhDEKk/?__pwa=1" target="_blank" class="tickets-btn" aria-label="Get directions to the studio">How to Find the Studio</a>
+                    </div>
+                </div>
+            </article>
+            <article class="class-card" role="listitem" aria-labelledby="c4-title">
+                <div class="class-media" aria-hidden="true">
+                    <img src="tmrw crew\ursula .jpg" alt="Hip Hop session with TMRW Crew" loading="lazy" />
+                </div>
+                <div class="class-body">
+                    <h3 id="c4-title">Hip-hop with Ursula</h3>
+                    <!-- <time datetime="2025-11-20" class="news-date">Thursdays &bull; 7-8pm &bull; The Dancehouse, Ocean Terminal, Edinburgh</time>
+                    <time datetime="2025-11-20" class="news-date">Fridays &bull; 7-7:45pm &bull; Pleasance Courtyard, Edinburgh</time> -->
+                                       Ursula’s Hip-Hop class blends groove, foundation, and musicality, creating a welcoming space for all levels to explore freestyle, build confidence, and connect through movement and rhythm.
+
+                    <strong>Thursdays &bull; 7-8pm &bull; The Dancehouse, Ocean Terminal, Edinburgh</strong>
+                    <div class="card-controls" role="group" aria-label="House class booking">
+                        <a href="https://www.dancehousescotland.com/shop-book/Adults-Class-Bookings-c57887017" target="_blank" class="tickets-btn" aria-label="Book House open level class">Book Now</a>
+                    </div>
+                    <strong>Fridays &bull; 7-7:45pm &bull; Pleasance Courtyard, Edinburgh, Quaker Studio</strong>
+                    Edinburgh University Modern Dance Society offers hip-hop classes<br> Beginner hip hop 6 - 6.50 pm<br>
+Advance hip hop at 6.55 to 7.45pm
+
+                    <div class="card-controls" role="group" aria-label="Hip Hop session booking">
+                        <a href="https://www.instagram.com/direct/t/105568700834522/?__pwa=1" target="_blank" class="tickets-btn" aria-label="Get directions to the studio">Contact to book</a>
+                    </div>
+                </div>
+            </article>
         </div>
-        <div class="class-body">
-            <h4 id="c3-title">Popping/Locking</h4>
-            <time datetime="2025-11-24" class="news-date">Sundays &bull; 5pm &bull; The Dancehouse, Ocean Terminal, Edinburgh</time>
-            <p class="news-excerpt">Learn foundational popping and locking techniques with Oscar. Perfect for dancers looking to expand their funk styles vocabulary. Popping runs on 1st & 3rd (& 5th) Saturday of each month, alternating with Locking class</p>
-            <div class="card-controls" role="group" aria-label="Popping/Locking class booking">
-                <a href="https://www.dancehousescotland.com/shop-book/Adults-Class-Bookings-c57887017" target="_blank" class="tickets-btn" aria-label="Book Popping/Locking class">Book Now</a>
-            </div>
-        </div>
-    </article>
+    </div>
 </section>
-<!-- 
-                        <section id="highlights" class="news-section" aria-labelledby="highlights-heading">
-                                <h2 id="highlights-heading" class="section-title">Crew Highlights</h2>
-                                <div class="news-grid" role="list">
-                                        <article class="news-card" role="listitem" aria-labelledby="h1-title">
-                                                <div class="card-media" role="img" aria-hidden="true">
-                                                        <img src="media/tmrw crew video 1 thumbnail.png" alt="Portrait of crew member Jay" class="news-image" loading="lazy" />
-                                                </div>
-                                                <div class="card-body">
-                                                        <time datetime="2025-10-18" class="news-date">18 October 2025</time>
-                                                        <h3 id="h1-title" class="news-title">Member Spotlight: Jay</h3>
-                                                        <p class="news-excerpt">Jay has been leading our freestyle warm-ups and recently placed in the top 8 at Just Jam. Read the interview on musicality, confidence, and finding your voice.</p>
-                                                        <div class="card-controls" role="group" aria-label="Member spotlight actions">
-                                                                <a href="https://www.instagram.com/p/C_TMRWJAY/" target="_blank" class="tickets-btn alt" aria-label="Read the full spotlight on Instagram">Read Spotlight</a>
-                                                        </div>
-                                                </div>
-                                        </article>
 
-                                        <article class="news-card" role="listitem" aria-labelledby="h2-title">
-                                                <div class="card-media" role="img" aria-hidden="true">
-                                                        <img src="media/laugh now cry later thumbnail.png" alt="Group photo from the Roots to Routes programme" class="news-image" loading="lazy" />
-                                                </div>
-                                                <div class="card-body">
-                                                        <time datetime="2025-09-30" class="news-date">30 September 2025</time>
-                                                        <h3 id="h2-title" class="news-title">Roots to Routes Award</h3>
-                                                        <p class="news-excerpt">We&rsquo;re thrilled to be recipients of the Roots to Routes community fund, supporting youth-focused movement workshops across Edinburgh in 2026.</p>
-                                                        <div class="card-controls" role="group" aria-label="Award announcement actions">
-                                                                <a href="https://tmrwcreu.co.uk" target="_blank" class="tickets-btn" aria-label="Learn more about Roots to Routes programme">Learn More</a>
-                                                        </div>
-                                                </div>
-                                        </article>
-                                </div>
-                        </section>
+<!-- <section id="highlights" class="news-section" aria-labelledby="highlights-heading">
+    <h2 id="highlights-heading" class="section-title">Crew Highlights</h2>
+    <div class="news-grid" role="list">
+        <article class="news-card" role="listitem" aria-labelledby="h1-title">
+            <div class="card-media instagram-embed-container" role="img" aria-label="Instagram reel embed">
+                <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DQKt75bjdDo/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+            <div style="padding:16px;">
+                <a href="https://www.instagram.com/reel/DQKt75bjdDo/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
+                    <div style="display: flex; flex-direction: row; align-items: center;">
+                        <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div>
+                        <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                            <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div>
+                            <div style="background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div>
+                        </div>
+                    </div>
+                    <div style="padding: 19% 0;"></div>
+                    <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
+                        <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg>
+                            </div>
+                            <div style="padding-top: 8px;">
+                                <div style="color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div>
+                            </div>
+                        </a>
+                    </div>
+                </blockquote>
+            </div>
+            <div class="card-body">
+                <time datetime="2025-10-18" class="news-date">Recent</time>
+                <h3 id="h1-title" class="news-title">Crew in Action</h3>
+                <p class="news-excerpt">Check out our latest reel showcasing the energy and talent of TMRW Crew members in training and performance.</p>
+            </div>
+        </article>
 
-                </section> -->
+        <article class="news-card" role="listitem" aria-labelledby="h2-title">
+            <div class="card-media" role="img" aria-hidden="true">
+                <img src="media/tmrw crew video 1 thumbnail.png" alt="Portrait of crew member" class="news-image" loading="lazy" />
+            </div>
+            <div class="card-body">
+                <time datetime="2025-10-18" class="news-date">18 October 2025</time>
+                <h3 id="h2-title" class="news-title">Member Spotlight</h3>
+                <p class="news-excerpt">Get to know the dancers behind TMRW Crew. Read about their journey, inspirations, and what keeps them moving.</p>
+                <div class="card-controls" role="group" aria-label="Member spotlight actions">
+                    <a href="https://www.instagram.com/tmrwcrew2020/" target="_blank" class="tickets-btn alt" aria-label="Read the full spotlight on Instagram">Read Spotlight</a>
+                </div>
+            </div>
+        </article>
+    </div>
+</section> -->
+
+                </section> 
         </main>
 
     <footer class="footer" id="contact">
@@ -256,6 +320,6 @@
             updateWorkshopDots();
         });
     </script>
-
+    <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>

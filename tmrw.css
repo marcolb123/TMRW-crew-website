@@ -134,9 +134,9 @@ body {
 /* Compact class placeholders (appear under Workshops & Classes) */
 .class-grid {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(220px, 1fr));
-	gap: 1rem;
-	max-width: 500px;
+	grid-template-columns: repeat(2, minmax(280px, 1fr));
+	gap: 1.5rem;
+	max-width: 900px; /* increased from 500px */
 	margin: 1.25rem auto 2rem auto;
 	padding: 0 1rem;
 	justify-items: stretch;
@@ -672,30 +672,43 @@ html {
         flex-wrap: wrap;
 }
 
-.tickets-btn {
+.tickets-btn,
+span.tickets-btn {
+	display: inline-block;
 	background: var(--accent, #0077cc);
 	color: #fff;
 	padding: 0.5rem 1rem;
 	border-radius: 999px;
 	text-decoration: none;
 	font-weight: 700;
+	font-family: 'TW Cen MT', Arial, Helvetica, sans-serif;
+	letter-spacing: 0.5px;
 	box-shadow: 0 6px 12px rgba(0,0,0,0.08);
 	transition: transform 120ms ease, box-shadow 120ms ease;
+	cursor: pointer;
+	border: none;
 }
 
 .tickets-btn:hover,
-.tickets-btn:focus {
+.tickets-btn:focus,
+span.tickets-btn:hover,
+span.tickets-btn:focus {
 	transform: translateY(-2px);
 	box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 	outline: none;
 }
 
-.card-controls .social-icon img {
-	width: 44px;
-	height: 44px;
-	object-fit: contain;
-	border-radius: 6px;
-	box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+.tickets-btn.alt {
+        background: transparent;
+        color: var(--accent, #0077cc);
+        border: 2px solid currentColor;
+        box-shadow: none;
+}
+.tickets-btn.alt:hover,
+.tickets-btn.alt:focus {
+        background: var(--accent, #0077cc);
+        color: #fff;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
 /* ensure cards keep left-aligned content on narrow screens */
@@ -716,8 +729,7 @@ html {
 
 /* ensure prominent elements keep a strong appearance */
 .news-hero h1,
-.news-title,
-.tickets-btn {
+.news-title {
 	font-family: 'TW Cen MT', Arial, Helvetica, sans-serif;
 	letter-spacing: 0.5px;
 }
@@ -817,7 +829,8 @@ html {
 
 .workshop-slideshow-wrapper {
     flex: 0 0 450px;
-    max-width: 450px;
+    max-width: 600px; /* increased from 450px */
+    margin: 0 auto; /* center the wrapper */
 }
 
 .workshop-classes-wrapper {
@@ -893,6 +906,61 @@ html {
     .workshop-slideshow-wrapper {
         flex: 1 1 auto;
         max-width: 100%;
+    }
+}
+
+/* X) News hero links styling */
+.hero-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-links li {
+    margin: 0;
+}
+
+.hero-links a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.hero-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+    background: linear-gradient(135deg, #ee5a6f, #ff6b6b);
+}
+
+.hero-links a:active {
+    transform: translateY(-1px);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .hero-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    
+    .hero-links a {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
     }
 }
 

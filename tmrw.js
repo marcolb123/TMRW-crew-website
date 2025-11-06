@@ -29,7 +29,6 @@ let _tmrw_currentSlide = 0;
 
 // Workshop slideshow data (point to your events folder images here)
 const _tmrw_workshop_photos = [
-  'events/1. Page 1 with location.png',
   'events/2. Page 2.png',
   'events/3. Shok Page 3.png',
   'events/4. WAAKING page 4.png',
