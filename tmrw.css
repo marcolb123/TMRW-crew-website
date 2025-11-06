@@ -741,21 +741,6 @@ span.tickets-btn:focus {
 	letter-spacing: 0.5px;
 }
 
-/* slightly adjust button weight to match the display face */
-.tickets-btn { font-weight: 800; }
-.tickets-btn.alt {
-        background: transparent;
-        color: var(--accent, #0077cc);
-        border: 2px solid currentColor;
-        box-shadow: none;
-}
-.tickets-btn.alt:hover,
-.tickets-btn.alt:focus {
-        background: var(--accent, #0077cc);
-        color: #fff;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.12);
-}
-
 .skip-link {
         position: absolute;
         left: -999px;

@@ -147,8 +147,9 @@
                     <img src="events/three60_hiphop.png" alt="Hip Hop session with TMRW Crew" loading="lazy" />
                 </div>
                 <div class="class-body">
-                    <h4 id="c4-title">Three60 x TMRW Crew Hip Hop Session Glasgow</h4>
-                    <time datetime="2025-11-20" class="news-date">Thursdays &bull; 7-9pm &bull; 60 / 80 Washington Street Glasgow</time>
+                    <h3 id="c4-title">Three60 x TMRW Crew Hip Hop Session Glasgow</h3>
+                    <h4>November 13,27, December 11</h4>
+                    <time datetime="2025-11-20" class="news-date"> 7-9pm &bull; 60 / 80 Washington Street Glasgow</time>
                     <p class="news-excerpt">Come through for a double session designed for dancers of all levels:
                     <br><br>
                     <strong>Hour 1 – Foundations</strong><br>
@@ -157,14 +158,14 @@
                     <strong>Hour 2 – Open Training</strong><br>
                     An open space for dancers to train, exchange, and vibe together. All styles, all levels welcome.</p>
                     <div class="card-controls" role="group" aria-label="Hip Hop session booking">
-                        <a href="https://www.instagram.com/direct/t/17847667617494934/" class="tickets-btn" aria-label="Contact us to book Hip Hop session">Contact to Book</a>
+                        <a href="contacts.html" class="tickets-btn" aria-label="Contact us to book Hip Hop session">Contact to Book</a>
                         <a href="https://www.instagram.com/p/DPJVdzhDEKk/?__pwa=1" target="_blank" class="tickets-btn" aria-label="Get directions to the studio">How to Find the Studio</a>
                     </div>
                 </div>
             </article>
             <article class="class-card" role="listitem" aria-labelledby="c4-title">
                 <div class="class-media" aria-hidden="true">
-                    <img src="tmrw crew\ursula .jpg" alt="Hip Hop session with TMRW Crew" loading="lazy" />
+                    <img src="tmrw crew/ursula .jpg" alt="Hip Hop session with TMRW Crew" loading="lazy" />
                 </div>
                 <div class="class-body">
                     <h3 id="c4-title">Hip-hop with Ursula</h3>
@@ -181,7 +182,7 @@
                     Advance hip hop at 6.55 to 7.45pm
 
                     <div class="card-controls" role="group" aria-label="Hip Hop session booking">
-                        <a href="https://www.instagram.com/direct/t/105568700834522/?__pwa=1" target="_blank" class="tickets-btn" aria-label="Get directions to the studio">Contact to book</a>
+                        <a href="contacts.html" class="tickets-btn" aria-label="Contact to book Ursula's class">Contact to book</a>
                     </div>
                 </div>
             </article>
@@ -254,77 +255,7 @@
     <!-- Back to Top Button -->
     <button id="backToTopBtn" onclick="scrollToTop()" title="Back to top">↑</button>
 
-    <!-- Inline helper script (keeps the page self-contained) -->
-    <script>
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Workshop slideshow functionality
-        let currentWorkshopSlide = 0;
-        const workshopImages = [
-            'events/fall workshops/1. Page 1 with location.png',
-            'events/fall workshops/2. Page 2.png',
-            'events/fall workshops/3. Page 3.png',
-            'events/fall workshops/4. Page 4.png'
-        ];
-
-        function changeWorkshopSlide(direction) {
-            currentWorkshopSlide += direction;
-            
-            if (currentWorkshopSlide >= workshopImages.length) {
-                currentWorkshopSlide = 0;
-            }
-            if (currentWorkshopSlide < 0) {
-                currentWorkshopSlide = workshopImages.length - 1;
-            }
-            
-            const imageElement = document.getElementById('workshop-slideshow-image');
-            if (imageElement) {
-                imageElement.src = workshopImages[currentWorkshopSlide];
-            }
-            
-            updateWorkshopDots();
-        }
-
-        function goToWorkshopSlide(slideIndex) {
-            currentWorkshopSlide = slideIndex;
-            const imageElement = document.getElementById('workshop-slideshow-image');
-            if (imageElement) {
-                imageElement.src = workshopImages[currentWorkshopSlide];
-            }
-            updateWorkshopDots();
-        }
-
-        function updateWorkshopDots() {
-            const dotsContainer = document.getElementById('workshop-slideshow-dots');
-            if (!dotsContainer) return;
-            
-            dotsContainer.innerHTML = '';
-            
-            for (let i = 0; i < workshopImages.length; i++) {
-                const dot = document.createElement('span');
-                dot.style.cssText = `
-                    display: inline-block;
-                    width: 12px;
-                    height: 12px;
-                    border-radius: 50%;
-                    background: ${i === currentWorkshopSlide ? '#333' : '#ccc'};
-                    margin: 0 4px;
-                    cursor: pointer;
-                    transition: background 0.3s ease;
-                `;
-                dot.onclick = () => goToWorkshopSlide(i);
-                dot.setAttribute('aria-label', `Go to workshop image ${i + 1}`);
-                dotsContainer.appendChild(dot);
-            }
-        }
-
-        // Initialize slideshow when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            updateWorkshopDots();
-        });
-    </script>
+    <!-- Inline script removed - now in tmrw.js -->
     <script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
