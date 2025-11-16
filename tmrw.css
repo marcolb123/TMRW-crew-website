@@ -169,6 +169,21 @@ body {
 	display: block;
 }
 
+/* Pop-up class images: show full image without cropping */
+#popup-classes .class-media {
+	background: #f5f5f5; /* light background so the image stands out */
+}
+
+#popup-classes .class-media img {
+	object-fit: contain !important;
+}
+
+/* Center single pop-up class cards */
+#popup-classes .class-grid {
+	grid-template-columns: minmax(280px, 450px);
+	justify-content: center;
+}
+
 .class-body {
 	padding: 0.75rem;
 	display: flex;
