@@ -44,7 +44,7 @@ body {
 
 /* === 4) Header / Hero section === */
 .header {
-    background: var(--primary-color) url('optimized/media/header.webp') center bottom/cover no-repeat;
+    background: var(--primary-color) url('optimized/media/about photo 1.webp') center bottom/cover no-repeat;
     color: white;
     padding: 6rem 1rem 4rem 1rem; /* reduced top/bottom padding */
     min-height: 300px;            /* smaller minimum height */
