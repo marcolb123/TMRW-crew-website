@@ -44,7 +44,7 @@ body {
 
 /* === 4) Header / Hero section === */
 .header {
-    background: var(--primary-color) url('optimized/media/about photo 1.webp') center bottom/cover no-repeat;
+    background: #363a3c url('uploads/tmrw-header-texture.webp') center / 600px auto repeat;
     color: white;
     padding: 6rem 1rem 4rem 1rem; /* reduced top/bottom padding */
     min-height: 300px;            /* smaller minimum height */
@@ -961,8 +961,15 @@ main:focus { outline: none; }
 
 /* === Wider layouts and compact spacing === */
 :root { --page-width: 1440px; }
-.header { padding: 0.75rem 1rem; min-height: 0; max-height: none; background-position: center 42%; }
-.responsive-logo { width: clamp(140px, 16vw, 200px); }
+.header { display: flex; align-items: center; justify-content: center; padding: 0; min-height: 140px; max-height: none; }
+.responsive-logo {
+    width: min(100%, 720px);
+    max-width: 720px;
+    height: auto;
+    mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent),
+                linear-gradient(to bottom, transparent, #000 18%, #000 82%, transparent);
+    mask-composite: intersect;
+}
 .nav { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.25rem 1.25rem; padding: 0.5rem 1rem; }
 .nav a, .nav a.active { display: inline-block; margin: 0; padding: 0.25rem 0.5rem; font-size: 1.4rem; }
 .main-content, .news-list.wrap, .portfolio-page { max-width: var(--page-width); margin: 1.5rem auto; padding: 0 1.5rem; }
