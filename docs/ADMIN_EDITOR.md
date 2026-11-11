@@ -102,7 +102,7 @@ later; it is not required for this setup.
 ## Archive, hide, delete and recover
 
 - **Archive:** switch on Show in archive for an event and Save. This keeps its
-  history available publicly. Workshop posters remain in the existing archive gallery.
+  history available publicly. There is no separate workshop gallery; historical workshop event records remain in the archive.
 - **Unpublish:** switch off Published and Save. The item stays editable but is
   hidden publicly, including in the archive. It is not a privacy control: content
   in a public GitHub repository remains publicly readable.

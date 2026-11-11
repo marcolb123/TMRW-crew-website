@@ -52,8 +52,7 @@ are `performance`, `battle`, `workshop`, `class`, and `announcement`.
 - Use `archived: true` to place an event in the archive even when its date is unknown. Announcements stay separate.
 - `gallery`, `youtube`, `instagram`, and `participants` are string arrays reserved
   for shared archive/media use; there is no separate archive copy of an event.
-- `#event-<id>` links directly to a rendered card. The workshop gallery now lives
-  in the archive. Commented-out events were not republished.
+- `#event-<id>` links directly to a rendered card. The separate Workshop Gallery has been removed. Commented-out events were not republished.
 
 Crossroads, Marco/Lisa and Three60 are confirmed completed and archived, without
 booking links or date-confirmation notices. Exact machine-readable dates remain
@@ -66,8 +65,7 @@ at desktop/mobile widths, including JSON failure and JavaScript-disabled states.
 ### Event archive
 
 `archive.html` reads the same event records and shared card renderer as News.
-The archive is one collection showing previous crew events, followed by the
-Workshop Gallery. There are no category/media filters and no automatic sorting:
+The archive is one collection showing previous crew events. There are no category/media filters and no automatic sorting:
 newly appended events appear first.
 
 Use `"archived": true` to archive a record without inventing or confirming its
@@ -78,8 +76,8 @@ Optional status values remain `scheduled`, `completed`, and `cancelled`.
 
 Archive cards can display a record's gallery, YouTube and Instagram links, and
 participants together. No third-party embeds load automatically. Use
-`archive.html#event-<id>` for event links and `archive.html#workshops` for the
-single first-page workshop poster. Extra workshop slides and controls are no longer displayed; original assets are retained.
+`archive.html#event-<id>` for event links. The standalone Workshop Gallery and poster
+have been removed; historical workshop event records remain in the event collection.
 
 ### Maintaining Portfolio media
 
@@ -143,3 +141,10 @@ An omitted Published property keeps existing content visible. Optional empty fie
 may be omitted by the editor; the site normalises those saves. A photo's `url` may
 be omitted when its uploaded `thumbnail` is also the desired original image.
 New uploads are stored in `uploads/` and should be compressed before uploading.
+
+### Page layouts
+
+Headers, navigation and section spacing are compact. Desktop pages use a wider
+content area: the story flows into two columns, Team and Archive use two-column
+layouts on large screens, and Videos/Photos sit alongside each other. Layouts
+stack on smaller screens and images keep their natural proportions.

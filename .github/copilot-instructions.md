@@ -9,10 +9,10 @@
 - `data/media.json` holds Portfolio media. `media.js` validates media/embedded URLs;
   `portfolio.js` renders only Videos and Photos, the slideshow and the native video dialog.
   Videos load only after activation; remove iframe contents when the dialog closes.
-- `tmrw.js` owns the shared back-to-top button. Archive shows one static workshop poster.
+- `tmrw.js` owns the shared back-to-top button. There is no separate workshop gallery or poster section.
   Scripts use `defer`; do not add duplicate script tags or duplicate click handlers.
 - Display newly appended events/media first (reverse JSON order), without date sorting or category-filter controls. Use
-  `archived: true` for manually archived events. Workshop posters live in Archive.
+  `archived: true` for manually archived events. Workshop event records remain in Archive.
 - Do not infer missing event dates or invent content. Existing conflicts are retained
   in public notes. See README.md for schemas, date rules and archive semantics.
 - `tmrw.css` is the shared stylesheet, with numbered sections and scoped additions.
