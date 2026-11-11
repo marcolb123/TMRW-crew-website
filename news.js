@@ -4,53 +4,7 @@
   const status = document.getElementById('news-status');
   const container = document.getElementById('event-sections');
   if (!container) return;
-  function element(tag, className, text) {
-    const node = document.createElement(tag);
-    if (className) node.className = className;
-    if (text) node.textContent = text;
-    return node;
-  }
-  function renderEvent(event) {
-    const card = element('article', 'news-card');
-    card.id = `event-${event.id}`;
-    const titleId = `${card.id}-title`;
-    card.setAttribute('aria-labelledby', titleId);
-    if (event.cover && TMRWEvents.safeUrl(event.cover.src)) {
-      const media = element('div', 'card-media');
-      const image = element('img', 'news-image');
-      image.src = event.cover.src;
-      image.alt = event.cover.alt;
-      image.loading = 'lazy';
-      image.decoding = 'async';
-      media.append(image);
-      card.append(media);
-    }
-    const body = element('div', 'card-body');
-    const heading = element('h3', 'news-title', event.title);
-    heading.id = titleId;
-    body.append(heading);
-    if (event.date) {
-      const date = element('time', 'news-date', event.date + (event.endDate ? ` – ${event.endDate}` : ''));
-      date.dateTime = event.date;
-      body.append(date);
-    }
-    if (event.location) body.append(element('p', 'news-date', event.location));
-    for (const line of event.schedule) body.append(element('p', 'news-date', line));
-    for (const field of ['dateNote', 'scheduleNote']) {
-      if (event[field]) body.append(element('p', 'event-note', event[field]));
-    }
-    for (const paragraph of event.description) body.append(element('p', 'news-excerpt', paragraph));
-    const controls = element('div', 'card-controls');
-    for (const link of event.links) {
-      if (!TMRWEvents.safeUrl(link.url)) continue;
-      const anchor = element('a', 'tickets-btn', link.label);
-      anchor.href = link.url;
-      controls.append(anchor);
-    }
-    body.append(controls);
-    card.append(body);
-    return card;
-  }
+  const { element, renderEvent } = TMRWEvents;
   function render(events) {
     const groups = TMRWEvents.group(events);
     const fragment = document.createDocumentFragment();

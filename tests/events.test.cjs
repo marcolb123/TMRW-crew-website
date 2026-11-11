@@ -30,3 +30,8 @@ test('unsafe URL protocols are rejected', () => {
   assert.equal(safeUrl('data:text/html,test'),null);
   assert.ok(safeUrl('contacts.html'));
 });
+test('explicit completion can archive an event whose date is unknown', () => {
+  const result = group([event('completed', {date:null, status:'completed'})], '2026-11-11');
+  assert.equal(result.past[0].id,'completed');
+  assert.throws(()=>validate({events:[event('bad-status', {status:'invented'})]}));
+});

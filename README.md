@@ -62,3 +62,17 @@ confirmation. No new event information has been supplied.
 Run dependency-free data/date checks with `node --test tests/events.test.cjs`
 (Node is only needed for these optional developer tests). Check News in a browser
 at desktop/mobile widths, including JSON failure and JavaScript-disabled states.
+
+### Event archive
+
+`archive.html` reads the same event records and shared card renderer as News.
+Past dates and an explicitly verified `"status": "completed"` place records in
+its category-filtered archive. Optional status values are `scheduled`, `completed`,
+and `cancelled`; date sorting alone never asserts that an event actually happened.
+An undated recurring class can be explicitly completed to archive it. A cancelled
+future event remains in its date section with a visible cancelled label.
+
+Archive cards additionally display the existing record's gallery, YouTube and
+Instagram links, and participants. No third-party embeds load automatically.
+Use `archive.html#event-<id>` for direct event links. Until uncertain source dates
+are confirmed or completion is verified, the archive correctly has no entries.

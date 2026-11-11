@@ -980,3 +980,10 @@ span.tickets-btn:focus {
 }
 #event-sections .news-card { min-width: 0; }
 #event-sections .card-body { overflow-wrap: anywhere; }
+
+/* === Event archive === */
+.event-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 1rem; }
+.event-gallery img { width: 100%; height: auto; border-radius: 8px; }
+#archive-events .news-card { min-width: 0; }
+#archive-events .card-body { overflow-wrap: anywhere; }
+#archive-category { font: inherit; max-width: 100%; padding: 0.5rem; margin: 0.5rem; }
