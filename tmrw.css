@@ -946,8 +946,9 @@ span.tickets-btn:focus {
 .slideshow-dot[aria-pressed="true"]::before { background: #333; }
 .media-dialog { width: min(900px, 94vw); max-width: 94vw; max-height: 90vh; margin: auto; padding: 1rem; border: 0; border-radius: 10px; overflow: auto; }
 .media-dialog::backdrop { background: rgba(0,0,0,0.8); }
-.media-dialog-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
-.media-dialog-header h2 { overflow-wrap: anywhere; min-width: 0; }
+.media-dialog-header { display: grid; gap: 0.5rem; margin-bottom: 1rem; }
+.media-dialog-header form { grid-row: 1; justify-self: end; }
+.media-dialog-header h2 { grid-row: 2; text-align: center; overflow-wrap: anywhere; min-width: 0; }
 #video-player iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: block; }
 
 /* === Keyboard access and reduced motion === */
@@ -1063,7 +1064,7 @@ main:focus { outline: none; }
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    text-align: left;
+    text-align: center;
     transition: border-color 150ms ease, box-shadow 150ms ease;
 }
 .media-card:hover, .media-card:focus-within {
@@ -1075,7 +1076,7 @@ main:focus { outline: none; }
 .media-card h3 { margin: 0.85rem 0 0; font-size: 1.05rem; line-height: 1.4; }
 .media-card > a:hover h3 { text-decoration: underline; text-underline-offset: 3px; }
 .media-card .tickets-btn {
-    align-self: flex-start;
+    align-self: center;
     margin-top: 0.85rem;
     padding: 0.55rem 0.9rem;
     border: 1px solid #222;
