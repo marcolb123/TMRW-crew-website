@@ -7,6 +7,7 @@
       "category": "performance",
       "archived": true,
       "recurring": false,
+      "status": "completed",
       "location": "The Yard, Coatbridge",
       "schedule": [
         "13 December 2025 • 7:00pm • The Yard,Coatbridge"
@@ -25,8 +26,7 @@
           "label": "Instagram",
           "url": "https://www.instagram.com/_xrossroads/"
         }
-      ],
-      "status": "completed"
+      ]
     },
     {
       "id": "marco-lisa-choreography",
@@ -35,6 +35,7 @@
       "category": "workshop",
       "archived": true,
       "recurring": false,
+      "status": "completed",
       "location": "The Dancehouse, Ocean Terminal, Edinburgh",
       "schedule": [
         "17 November 2025 • 8-9pm • The Dancehouse, Ocean Terminal, Edinburgh"
@@ -48,12 +49,10 @@
         "width": 1408,
         "height": 1426
       },
-      "links": [],
       "participants": [
         "Marco",
         "Lisa"
-      ],
-      "status": "completed"
+      ]
     },
     {
       "id": "house-open-level",
@@ -81,29 +80,6 @@
           "url": "https://www.dancehousescotland.com/shop-book/Adults-Class-Bookings-c57887017"
         }
       ],
-      "scheduleNote": "Schedule not reconfirmed. Please check with the organiser before attending."
-    },
-    {
-      "id": "cypher-saturdays",
-      "title": "Cypher Saturdays",
-      "published": true,
-      "category": "class",
-      "archived": false,
-      "recurring": true,
-      "location": "The Dancehouse, Ocean Terminal, Edinburgh",
-      "schedule": [
-        "Saturdays • 6-9pm • The Dancehouse, Ocean Terminal, Edinburgh"
-      ],
-      "description": [
-        "Drop-in freestyle session suitable for all levels. Alternating between Oscar and Nevil leading the sessions.",
-        "Free Entry"
-      ],
-      "cover": {
-        "src": "optimized/media/shok spinning.webp",
-        "alt": "Open Freestyle class",
-        "width": 1174,
-        "height": 1528
-      },
       "scheduleNote": "Schedule not reconfirmed. Please check with the organiser before attending."
     },
     {
@@ -142,6 +118,7 @@
       "category": "workshop",
       "archived": true,
       "recurring": false,
+      "status": "completed",
       "location": "60 / 80 Washington Street, Glasgow",
       "schedule": [
         "November 13, 27, December 11",
@@ -161,8 +138,7 @@
           "label": "How to Find the Studio",
           "url": "https://www.instagram.com/p/DPJVdzhDEKk/?__pwa=1"
         }
-      ],
-      "status": "completed"
+      ]
     },
     {
       "id": "ursula-hip-hop",
@@ -172,9 +148,7 @@
       "archived": false,
       "recurring": true,
       "schedule": [
-        "Thursdays • 7–8pm • The Dancehouse, Ocean Terminal, Edinburgh",
-        "Fridays • 7–7:45pm • Pleasance Courtyard, Edinburgh, Quaker Studio",
-        "Beginner hip hop 6–6.50pm; Advance hip hop 6.55–7.45pm"
+        "Thursdays • 7–8pm • The Dancehouse, Ocean Terminal, Edinburgh"
       ],
       "description": [
         "Ursula’s Hip-Hop class blends groove, foundation, and musicality, creating a welcoming space for all levels to explore freestyle, build confidence, and connect through movement and rhythm."
@@ -187,11 +161,7 @@
       },
       "links": [
         {
-          "label": "Book Now",
-          "url": "https://www.dancehousescotland.com/shop-book/Adults-Class-Bookings-c57887017"
-        },
-        {
-          "label": "Contact to book",
+          "label": "Contact to see if it's on",
           "url": "contacts.html"
         }
       ],
