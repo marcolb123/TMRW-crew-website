@@ -54,7 +54,7 @@
   }
   function group(events, day = today()) {
     const groups = { upcoming: [], past: [], regular: [], announcements: [], unconfirmed: [] };
-    for (const event of events) {
+    for (const event of [...events].reverse()) {
       if (event.published === false) continue;
       let key;
       if (event.archived === true || event.status === 'completed') key = 'past';

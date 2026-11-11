@@ -49,7 +49,7 @@ token or secret value needs to be sent in chat or copied into the website.
    UK calendar dates as `YYYY-MM-DD`; time details stay in the schedule lines.
 5. For a regular class, enable **Regular / recurring class**. For previous work,
    enable **Show in archive**. The archive stays one collection without category
-   filters. Source order is retained. Past dated/completed events also go there.
+   filters. Newly added entries appear first. Past dated/completed events also go there.
 6. In **Poster / cover → Image**, upload or select the poster. Add an image
    description. Uploads default to `uploads/`; existing optimized assets are also
    selectable. Clear optional width/height values if replacing an image of a
@@ -61,7 +61,9 @@ token or secret value needs to be sent in chat or copied into the website.
    Saving on `main` makes the content available to your automatic deployment.
    Check the deployment finishes, then refresh News/Archive to see the result.
 
-Reorder entries with the list's move/drag controls. Unpublished entries remain in
+New list entries are appended in JSON and displayed first on the website. If you
+reorder entries with the move/drag controls, the last JSON entry appears first.
+Unpublished entries remain in
 JSON but are not shown on News or Archive. There is no public draft-preview mode.
 Avoid editing the same JSON file in two browser tabs or editors at once; reload
 and review any conflict rather than overwriting someone else's save.

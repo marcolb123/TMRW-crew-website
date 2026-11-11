@@ -922,7 +922,12 @@ span.tickets-btn:focus {
 #archive-events + #workshops { margin-top: 3rem; }
 .event-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 160px), 1fr)); gap: 1rem; }
 .event-gallery img { width: 100%; height: auto; border-radius: 8px; }
-#archive-events .news-card { min-width: 0; }
+#archive-events { grid-template-columns: 1fr; gap: 2rem; }
+#archive-events .news-card { min-width: 0; max-width: 900px; }
+#archive-events .card-media { height: auto; overflow: visible; background: transparent; }
+#archive-events .card-media .news-image { width: 100%; height: auto; object-fit: contain; }
+.archive-workshop-poster { max-width: 800px; margin: 0 auto; }
+.archive-workshop-poster img { display: block; width: 100%; height: auto; border-radius: 8px; }
 #archive-events .card-body { overflow-wrap: anywhere; }
 
 /* === Portfolio sections, filters and playback === */
@@ -930,12 +935,12 @@ span.tickets-btn:focus {
 .portfolio-page > section, #media-sections > section { margin-top: 3rem; }
 .media-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 1.5rem; }
 .media-card { background: #fff; border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); min-width: 0; overflow-wrap: anywhere; }
-.media-card img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; }
+.media-card img { width: 100%; height: auto; object-fit: contain; border-radius: 8px; }
 .media-card h3 { margin: 0.75rem 0; }
 .media-card > a { display: block; }
 .media-card button { font: inherit; cursor: pointer; }
 .photo-slideshow { max-width: 600px; margin: auto; }
-.photo-slideshow > a > img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; border-radius: 10px; }
+.photo-slideshow > a > img { width: 100%; height: auto; object-fit: contain; border-radius: 10px; }
 .photo-controls { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 1rem 0; }
 .photo-controls button, .media-dialog button { font: inherit; padding: 0.5rem 1rem; cursor: pointer; }
 .slideshow-dots, #workshop-slideshow-dots { display: flex; justify-content: center; gap: 0.25rem; flex-wrap: wrap; }

@@ -12,9 +12,9 @@ test('current event records validate and reference existing local cover images',
     }
   }
 });
-test('date boundaries and ranges preserve the record order', () => {
+test('date boundaries and ranges show newest additions first', () => {
   const result = group([event('future', { date: '2026-12-01' }), event('today'), event('range', {date: '2026-11-01', endDate: '2026-11-11'}), event('old', {date:'2026-11-10'})], '2026-11-11');
-  assert.deepEqual(result.upcoming.map(e => e.id), ['future', 'today', 'range']);
+  assert.deepEqual(result.upcoming.map(e => e.id), ['range', 'today', 'future']);
   assert.deepEqual(result.past.map(e => e.id), ['old']);
 });
 test('unknown dates, recurring classes, expired classes and announcements stay distinct', () => {
@@ -39,9 +39,9 @@ test('explicit completion can archive an event whose date is unknown', () => {
   assert.throws(()=>validate({events:[event('bad-status', {status:'invented'})]}));
 });
 
-test('manually archived records need no invented dates and retain their source order', () => {
+test('manually archived records show newest additions first without inventing dates', () => {
   const records = [event('later', {date:'2026-12-01', archived:true}), event('unknown', {date:null, archived:true}), event('older', {date:'2025-01-01', archived:true})];
-  assert.deepEqual(group(records, '2026-11-11').past.map(item=>item.id), ['later', 'unknown', 'older']);
+  assert.deepEqual(group(records, '2026-11-11').past.map(item=>item.id), ['older', 'unknown', 'later']);
   assert.throws(()=>validate({events:[event('bad-archive', {archived:'yes'})]}));
 });
 test('unpublished events remain stored but are excluded from public sections', () => {
@@ -49,4 +49,10 @@ test('unpublished events remain stored but are excluded from public sections', (
   assert.equal(records.length,2);
   assert.deepEqual(group(records, '2026-11-11').upcoming.map(item=>item.id), ['live']);
   assert.throws(()=>validate({events:[event('bad',{published:'yes'})]}));
+});
+
+test('newly appended events appear first without changing stored record order', () => {
+  const records=[event('first',{date:'2026-12-01'}),event('newest',{date:'2026-11-12'})];
+  assert.equal(group(records,'2026-11-11').upcoming[0].id,'newest');
+  assert.deepEqual(records.map(item=>item.id),['first','newest']);
 });

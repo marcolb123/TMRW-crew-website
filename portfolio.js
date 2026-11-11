@@ -150,7 +150,7 @@
     if (!response.ok) throw new Error('Unable to load media.');
     return response.json();
   }).then(data => {
-    items = TMRWMedia.validate(data).filter(item => item.published !== false);
+    items = TMRWMedia.validate(data).filter(item => item.published !== false).reverse();
     if (items.some(item => !safeUrl(item.url) || (item.thumbnail && !safeUrl(item.thumbnail)))) throw new Error('Unsupported media URL.');
     render();
     const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));

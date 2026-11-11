@@ -44,7 +44,7 @@ are `performance`, `battle`, `workshop`, `class`, and `announcement`.
   without HTML. `schedule` is an array of human-readable schedule lines.
 - `date` and optional `endDate` are verified `YYYY-MM-DD` dates, or `null` when
   unknown. Upcoming includes today and events through their end date, using
-  Europe/London. Earlier events appear in the archive. Records keep their JSON order; there is no automatic date sorting. This says
+  Europe/London. Earlier events appear in the archive. New additions appear first (reverse JSON order); there is no event-date sorting. This says
   nothing about whether a past event actually took place.
 - `recurring: true` keeps classes in Regular Classes until a known `endDate` has
   passed. Do not invent dates for a weekly schedule. `scheduleNote` and `dateNote`
@@ -55,9 +55,9 @@ are `performance`, `battle`, `workshop`, `class`, and `announcement`.
 - `#event-<id>` links directly to a rendered card. The workshop gallery now lives
   in the archive. Commented-out events were not republished.
 
-The migrated records retain conflicting source dates in notes rather than choosing
-one. Crossroads, Marco/Lisa, Three60, Popping/Locking and Ursula need organiser
-confirmation. No new event information has been supplied.
+Crossroads, Marco/Lisa and Three60 are confirmed completed and archived, without
+booking links or date-confirmation notices. Exact machine-readable dates remain
+blank where uncertain. Popping/Locking and Ursula retain their schedule review notes.
 
 Run dependency-free data/date checks with `node --test tests/events.test.cjs`
 (Node is only needed for these optional developer tests). Check News in a browser
@@ -68,18 +68,18 @@ at desktop/mobile widths, including JSON failure and JavaScript-disabled states.
 `archive.html` reads the same event records and shared card renderer as News.
 The archive is one collection showing previous crew events, followed by the
 Workshop Gallery. There are no category/media filters and no automatic sorting:
-events retain their order in `data/events.json`.
+newly appended events appear first.
 
 Use `"archived": true` to archive a record without inventing or confirming its
 date. Crossroads, Marco/Lisa and Three60 have been moved there by request. Their
-original date notes remain intact. Past dated events and explicitly completed
+completion has since been confirmed and their booking links removed. Past dated events and explicitly completed
 records also appear here. The four regular class listings remain on News.
 Optional status values remain `scheduled`, `completed`, and `cancelled`.
 
 Archive cards can display a record's gallery, YouTube and Instagram links, and
 participants together. No third-party embeds load automatically. Use
 `archive.html#event-<id>` for event links and `archive.html#workshops` for the
-workshop posters. The gallery preserves its previous/next controls and dots.
+single first-page workshop poster. Extra workshop slides and controls are no longer displayed; original assets are retained.
 
 ### Maintaining Portfolio media
 
@@ -90,7 +90,7 @@ optional `thumbnail`, and intrinsic `width`/`height` where known. Existing
 `featured`, `category` and `eventId` metadata is retained for future editing,
 but does not create any sections, filters or event links in the gallery.
 
-The Media page contains only **Videos** and **Photos**, in JSON order. Videos
+The Media page contains only **Videos** and **Photos**, with newly appended items first. Videos
 from all providers share the same section. There are no featured, event archive,
 provider, performance, battle or workshop sections and no sorting controls.
 

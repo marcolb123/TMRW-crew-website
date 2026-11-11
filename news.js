@@ -7,7 +7,7 @@
   const { element, renderEvent } = TMRWEvents;
   function render(events) {
     const groups = TMRWEvents.group(events);
-    groups.upcoming = events.filter(event => groups.upcoming.includes(event) || groups.unconfirmed.includes(event));
+    groups.upcoming = [...events].reverse().filter(event => groups.upcoming.includes(event) || groups.unconfirmed.includes(event));
     const fragment = document.createDocumentFragment();
     const sections = [
       ['upcoming', 'performances', 'Upcoming Events', 'No upcoming events are listed.'],

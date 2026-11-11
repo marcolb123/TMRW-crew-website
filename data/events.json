@@ -30,8 +30,8 @@
       "youtube": [],
       "instagram": [],
       "participants": [],
-      "dateNote": "Date to confirm: 12 or 13 December 2025. Please check with the organiser.",
-      "archived": true
+      "archived": true,
+      "status": "completed"
     },
     {
       "id": "marco-lisa-choreography",
@@ -53,12 +53,7 @@
         "width": 1408,
         "height": 1426
       },
-      "links": [
-        {
-          "label": "Book Now",
-          "url": "https://www.dancehousescotland.com/shop-book/Open-Choreo-Class-Int-Adv-Level-8-9-pm-Tues-18th-November-with-Marco-&-Lisa-p236524424"
-        }
-      ],
+      "links": [],
       "gallery": [],
       "youtube": [],
       "instagram": [],
@@ -66,8 +61,8 @@
         "Marco",
         "Lisa"
       ],
-      "dateNote": "Date to confirm: 17 or 18 November 2025. Please check with the organiser.",
-      "archived": true
+      "archived": true,
+      "status": "completed"
     },
     {
       "id": "house-open-level",
@@ -171,7 +166,7 @@
       "recurring": false,
       "location": "60 / 80 Washington Street, Glasgow",
       "schedule": [
-        "November 13, 27, December 11 (year to confirm)",
+        "November 13, 27, December 11",
         "7-9pm • 60 / 80 Washington Street Glasgow"
       ],
       "description": [
@@ -185,10 +180,6 @@
       },
       "links": [
         {
-          "label": "Contact to Book",
-          "url": "contacts.html"
-        },
-        {
           "label": "How to Find the Studio",
           "url": "https://www.instagram.com/p/DPJVdzhDEKk/?__pwa=1"
         }
@@ -197,8 +188,8 @@
       "youtube": [],
       "instagram": [],
       "participants": [],
-      "dateNote": "Dates to confirm: the listing gives November 13, 27 and December 11, and also 20 November 2025. Please check session dates and year with the organiser.",
-      "archived": true
+      "archived": true,
+      "status": "completed"
     },
     {
       "id": "ursula-hip-hop",
