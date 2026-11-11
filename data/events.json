@@ -186,6 +186,19 @@
           "url": "https://www.instagram.com/p/DdtBq9nCF54/?img_index=1"
         }
       ]
+    },
+    {
+      "id": "levels",
+      "title": "Levels Performance",
+      "published": true,
+      "category": "performance",
+      "archived": true,
+      "recurring": false,
+      "date": "2025-11-15",
+      "location": "Liquid Rooms Edinburgh",
+      "cover": {
+        "src": "screenshot-2026-11-11-163531.png"
+      }
     }
   ]
 }
