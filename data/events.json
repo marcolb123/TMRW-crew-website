@@ -3,9 +3,9 @@
     {
       "id": "crossroads",
       "title": "Crossroads",
+      "published": true,
       "category": "performance",
-      "date": null,
-      "endDate": null,
+      "archived": true,
       "recurring": false,
       "location": "The Yard, Coatbridge",
       "schedule": [
@@ -26,19 +26,14 @@
           "url": "https://www.instagram.com/_xrossroads/"
         }
       ],
-      "gallery": [],
-      "youtube": [],
-      "instagram": [],
-      "participants": [],
-      "archived": true,
       "status": "completed"
     },
     {
       "id": "marco-lisa-choreography",
       "title": "Choreography Collab with Marco and Lisa",
+      "published": true,
       "category": "workshop",
-      "date": null,
-      "endDate": null,
+      "archived": true,
       "recurring": false,
       "location": "The Dancehouse, Ocean Terminal, Edinburgh",
       "schedule": [
@@ -54,22 +49,18 @@
         "height": 1426
       },
       "links": [],
-      "gallery": [],
-      "youtube": [],
-      "instagram": [],
       "participants": [
         "Marco",
         "Lisa"
       ],
-      "archived": true,
       "status": "completed"
     },
     {
       "id": "house-open-level",
       "title": "House open level",
+      "published": true,
       "category": "class",
-      "date": null,
-      "endDate": null,
+      "archived": false,
       "recurring": true,
       "location": "The Dancehouse, Ocean Terminal, Edinburgh",
       "schedule": [
@@ -90,18 +81,14 @@
           "url": "https://www.dancehousescotland.com/shop-book/Adults-Class-Bookings-c57887017"
         }
       ],
-      "gallery": [],
-      "youtube": [],
-      "instagram": [],
-      "participants": [],
       "scheduleNote": "Schedule not reconfirmed. Please check with the organiser before attending."
     },
     {
       "id": "cypher-saturdays",
       "title": "Cypher Saturdays",
+      "published": true,
       "category": "class",
-      "date": null,
-      "endDate": null,
+      "archived": false,
       "recurring": true,
       "location": "The Dancehouse, Ocean Terminal, Edinburgh",
       "schedule": [
@@ -117,19 +104,14 @@
         "width": 1174,
         "height": 1528
       },
-      "links": [],
-      "gallery": [],
-      "youtube": [],
-      "instagram": [],
-      "participants": [],
       "scheduleNote": "Schedule not reconfirmed. Please check with the organiser before attending."
     },
     {
       "id": "popping-locking",
       "title": "Popping/Locking",
+      "published": true,
       "category": "class",
-      "date": null,
-      "endDate": null,
+      "archived": false,
       "recurring": true,
       "location": "The Dancehouse, Ocean Terminal, Edinburgh",
       "schedule": [
@@ -150,19 +132,15 @@
           "url": "https://www.dancehousescotland.com/shop-book/Adults-Class-Bookings-c57887017"
         }
       ],
-      "gallery": [],
-      "youtube": [],
-      "instagram": [],
-      "participants": [],
-      "scheduleNote": "Schedule not reconfirmed. Please check with the organiser before attending.",
-      "dateNote": "Schedule to confirm: the existing heading says Sundays, while the description says Saturdays."
+      "dateNote": "Schedule to confirm: the existing heading says Sundays, while the description says Saturdays.",
+      "scheduleNote": "Schedule not reconfirmed. Please check with the organiser before attending."
     },
     {
       "id": "three60-hip-hop",
       "title": "Three60 x TMRW Crew Hip Hop Session Glasgow",
+      "published": true,
       "category": "workshop",
-      "date": null,
-      "endDate": null,
+      "archived": true,
       "recurring": false,
       "location": "60 / 80 Washington Street, Glasgow",
       "schedule": [
@@ -184,21 +162,15 @@
           "url": "https://www.instagram.com/p/DPJVdzhDEKk/?__pwa=1"
         }
       ],
-      "gallery": [],
-      "youtube": [],
-      "instagram": [],
-      "participants": [],
-      "archived": true,
       "status": "completed"
     },
     {
       "id": "ursula-hip-hop",
       "title": "Hip-hop with Ursula",
+      "published": true,
       "category": "class",
-      "date": null,
-      "endDate": null,
+      "archived": false,
       "recurring": true,
-      "location": "",
       "schedule": [
         "Thursdays • 7–8pm • The Dancehouse, Ocean Terminal, Edinburgh",
         "Fridays • 7–7:45pm • Pleasance Courtyard, Edinburgh, Quaker Studio",
@@ -223,12 +195,31 @@
           "url": "contacts.html"
         }
       ],
-      "gallery": [],
-      "youtube": [],
-      "instagram": [],
-      "participants": [],
-      "scheduleNote": "Schedule not reconfirmed. Please check with the organiser before attending.",
-      "dateNote": "Friday times differ in the original listing; confirm with the organiser."
+      "dateNote": "Friday times differ in the original listing; confirm with the organiser.",
+      "scheduleNote": "Schedule not reconfirmed. Please check with the organiser before attending."
+    },
+    {
+      "id": "tmrwcrew-battle",
+      "title": "Own The Circle Battle",
+      "published": true,
+      "category": "battle",
+      "archived": true,
+      "recurring": false,
+      "date": "2026-10-18",
+      "status": "completed",
+      "location": "Dance Base Edinburgh",
+      "description": [
+        "TMRW Crew's first ever all-styles battle. With over 40 dancers participating."
+      ],
+      "cover": {
+        "src": "screenshot-2026-11-11-155418.png"
+      },
+      "links": [
+        {
+          "label": "Insta post",
+          "url": "https://www.instagram.com/p/DdtBq9nCF54/?img_index=1"
+        }
+      ]
     }
   ]
 }

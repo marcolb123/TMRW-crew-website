@@ -21,7 +21,7 @@ and an image upload browser. It does not add an admin login to the public site.
    you select. `feature/github-content-editor` is also available for a rehearsal;
    changes saved there do not affect a production deployment that uses `main`.
 4. The dashboard should show **News and archived events** and **Videos and photos**.
-   Open each and check that your existing seven event/class records and eight
+   Open each and check that your existing event/class records and
    media records appear. Expand a row to edit it. If you see a request to create a
    configuration instead, check the repository/branch selection and `.pages.yml`.
 5. Check your existing hosting service. It must deploy this repository's **main**
