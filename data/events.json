@@ -59,7 +59,7 @@
       "recurring": true,
       "location": "The Dancehouse, Ocean Terminal, Edinburgh",
       "schedule": [
-        "Tuesdays • 6pm • The Dancehouse, Ocean Terminal, Edinburgh"
+        "Tuesdays • 6pm "
       ],
       "description": [
         "Join Marco for some high energy and fun house class focusing on foundational steps and social dancing."
@@ -75,8 +75,7 @@
           "label": "Book Now",
           "url": "https://www.dancehousescotland.com/shop-book/Adults-Class-Bookings-c57887017"
         }
-      ],
-      "scheduleNote": "Schedule not reconfirmed. Please check with the organiser before attending."
+      ]
     },
     {
       "id": "popping-locking",
