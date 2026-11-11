@@ -987,3 +987,28 @@ span.tickets-btn:focus {
 #archive-events .news-card { min-width: 0; }
 #archive-events .card-body { overflow-wrap: anywhere; }
 #archive-category { font: inherit; max-width: 100%; padding: 0.5rem; margin: 0.5rem; }
+
+/* === Portfolio sections, filters and playback === */
+.portfolio-page { max-width: 1100px; margin: 3rem auto; padding: 0 1rem; text-align: center; }
+.portfolio-page > section, #media-sections > section { margin-top: 3rem; }
+.media-filters { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.75rem; margin: 1rem 0; }
+.media-filters select { font: inherit; padding: 0.5rem; max-width: 100%; }
+.media-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 1.5rem; }
+.media-card { background: #fff; border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); min-width: 0; overflow-wrap: anywhere; }
+.media-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; }
+.media-card h3 { margin: 0.75rem 0; }
+.media-card > a { display: block; }
+.media-card button { font: inherit; cursor: pointer; }
+.photo-slideshow { max-width: 600px; margin: auto; }
+.photo-slideshow > img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; border-radius: 10px; }
+.photo-controls { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 1rem 0; }
+.photo-controls button, .media-dialog button { font: inherit; padding: 0.5rem 1rem; cursor: pointer; }
+.slideshow-dots, #workshop-slideshow-dots { display: flex; justify-content: center; gap: 0.25rem; flex-wrap: wrap; }
+.slideshow-dot { width: 32px; height: 32px; padding: 8px; border: 0; background: transparent; cursor: pointer; }
+.slideshow-dot::before { content: ''; display: block; width: 100%; height: 100%; border-radius: 50%; background: #bbb; }
+.slideshow-dot[aria-pressed="true"]::before { background: #333; }
+.media-dialog { width: min(900px, 94vw); max-width: 94vw; max-height: 90vh; margin: auto; padding: 1rem; border: 0; border-radius: 10px; overflow: auto; }
+.media-dialog::backdrop { background: rgba(0,0,0,0.8); }
+.media-dialog-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.media-dialog-header h2 { overflow-wrap: anywhere; min-width: 0; }
+#video-player iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: block; }

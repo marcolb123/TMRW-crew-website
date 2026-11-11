@@ -8,8 +8,12 @@
   <link rel="canonical" href="https://tmrwcrew.com/Portfolio.html">
   <link rel="stylesheet" href="tmrw.css">
   <script src="tmrw.js" defer></script>
+  <script src="events.js" defer></script>
+  <script src="media.js" defer></script>
+  <script src="portfolio.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to media content</a>
 
    <header class="header">
         <img src="tmrw crew/TMRW crew text.png" alt="TMRW Crew Logo" class="responsive-logo">
@@ -25,51 +29,42 @@
     </nav>
   
 
-  <main class="media-gallery" style="text-align: center;">
-    <!-- Videos Section -->
-    <section id="videos">
-      <h2 class="section-title" style="margin-bottom:2rem;">Videos</h2>
-      <div class="video-thumbnails">
-        <!-- Example for Elevate -->
-        <div class="video-thumbnail-container">
-          <a href="#" data-fileid="1MmkhMqEqpI_QhcZJj8iWaiQWi3RElAAj">
-            <img src="media/elevate thumbnail.png" alt="Elevate" class="video-thumbnail">
-          </a>
-        </div>
-        <div class="video-thumbnail-container">
-          <a href="#" data-fileid="1wRPJt_JjgNId1IxUTSWQzEvn2Id6CV4C">
-            <img src="media/limpBiz thumbnail.png" alt="Video Thumbnail" class="video-thumbnail">
-          </a>
-        </div>
-        <div class="video-thumbnail-container">
-          <a href="#" data-fileid="1SOA72xw7qhD2e9uioaiaR1jkV_gel851">
-            <img src="media/tmrw crew video 1 thumbnail.png" alt="TMRW Crew Video 1" class="video-thumbnail">
-          </a>
-        </div>
-        <!-- Add more video thumbnails as needed -->
-      </div>
-      <!-- Modal for video -->
-      <div id="videoModal" class="video-modal" style="display:none;">
-        <div class="video-frame">
-          <span class="close" onclick="closeVideo()">×</span>
-          <iframe id="videoFrame" width="100%" height="480" allowfullscreen allow="autoplay"></iframe>
-        </div>
-      </div>
+  <main id="main-content" class="media-gallery portfolio-page">
+    <h1 class="section-title">Media Gallery</h1>
+    <div class="media-filters">
+      <label for="media-category">Category</label>
+      <select id="media-category" disabled>
+        <option value="all">All categories</option>
+        <option value="performance">Performances</option>
+        <option value="battle">Battles</option>
+        <option value="workshop">Workshops</option>
+      </select>
+      <label for="media-format">Format</label>
+      <select id="media-format" disabled>
+        <option value="all">All formats</option>
+        <option value="photo">Photography</option>
+        <option value="google-drive">Google Drive videos</option>
+        <option value="youtube">YouTube videos</option>
+        <option value="instagram">Instagram videos</option>
+      </select>
+    </div>
+    <p id="media-status" role="status">Loading media…</p>
+    <noscript><p>Enable JavaScript to browse media. <a href="https://www.instagram.com/tmrwcrew2020/">Visit TMRW Crew on Instagram</a>.</p></noscript>
+    <div id="media-sections"></div>
+    <section id="archived-events" aria-labelledby="archived-events-heading">
+      <h2 id="archived-events-heading" class="section-title">Archived Events</h2>
+      <p id="media-archive-status" role="status">Loading archived events…</p>
+      <div id="media-archive" class="media-grid"></div>
+      <p><a href="archive.html">Explore the event archive</a></p>
     </section>
-
-    <!-- Photos Section -->
-    <section id="photos" style="margin-top:3rem;">
-      <h2 class="section-title" style="margin-bottom:2rem;">Photos</h2>
-      <div id="slideshow-container" style="position:relative; max-width:600px; margin:0 auto;">
-        <img id="slideshow-image" src="media/photo1.jpg" alt="Slideshow Photo" style="width:100%; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-        <button id="prevBtn" onclick="changeSlide(-1)" style="position:absolute;top:50%;left:10px;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;border-radius:50%;width:40px;height:40px;font-size:1.5rem;cursor:pointer;">&#8249;</button>
-        <button id="nextBtn" onclick="changeSlide(1)" style="position:absolute;top:50%;right:10px;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:none;border-radius:50%;width:40px;height:40px;font-size:1.5rem;cursor:pointer;">&#8250;</button>
+    <dialog id="videoModal" class="media-dialog" aria-labelledby="video-title">
+      <div class="media-dialog-header">
+        <h2 id="video-title">Video</h2>
+        <form method="dialog"><button type="submit" aria-label="Close video">Close ×</button></form>
       </div>
-      <!-- Optionally, add dots for navigation -->
-      <div id="slideshow-dots" style="margin-top:1rem;"></div>
-    </section>
+      <div id="video-player"></div>
+    </dialog>
   </main>
-  <script src="tmrw.js"></script>
 
    <footer class="footer" id="contact">
         <p>Connect with us</p>

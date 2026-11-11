@@ -76,3 +76,28 @@ Archive cards additionally display the existing record's gallery, YouTube and
 Instagram links, and participants. No third-party embeds load automatically.
 Use `archive.html#event-<id>` for direct event links. Until uncertain source dates
 are confirmed or completion is verified, the archive correctly has no entries.
+
+### Maintaining Portfolio media
+
+`data/media.json` contains the original three Google Drive videos and five
+slideshow photos. Each record has a unique `id`, `title`, `type` (`photo` or
+`video`), `provider` (`local`, `google-drive`, `youtube`, or `instagram`), `url`,
+optional `thumbnail`, `featured` boolean, optional `category` (`performance`,
+`battle`, `workshop`), and optional `eventId` referencing `events.json`.
+
+Set `featured: true` only for work you choose to feature. Set categories only when
+verified. No categories, featured selections, YouTube URLs, or Instagram video
+URLs were invented for the original media. The corresponding sections remain
+empty until content is supplied. Event-linked media inherits its event category
+when no media category is specified, and its event link leads to News or Archive
+according to the event's dates/status. Unknown event IDs do not create broken links.
+
+The page supports format/category filtering and keeps the photography slideshow.
+Google Drive and YouTube players load only on pressing Play. YouTube uses the
+privacy-enhanced player host. Instagram videos remain ordinary external links,
+with no embed script loaded. Closing the native video dialog (including Escape)
+unloads playback and restores keyboard focus. Original external video links remain
+available alongside Play buttons. External playback still depends on provider
+availability, permissions, and browser/network policy.
+
+Run `node --test tests/*.test.cjs` for all dependency-free data and URL tests.
