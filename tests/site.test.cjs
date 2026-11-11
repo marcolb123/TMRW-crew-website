@@ -33,12 +33,12 @@ test('all stylesheet asset paths exist', () => {
     if(target) assert.ok(fs.existsSync(path.join(root,target)),`Missing CSS asset ${target}`);
   }
 });
-test('all thumbnail and cover records include positive intrinsic dimensions', () => {
-  // Dimensions exist to reserve space before images load; browser decoding is checked separately.
-  const covers=require('../data/events.json').events.map(event=>event.cover);
-  const thumbnails=require('../data/media.json').media;
+test('optional intrinsic dimensions are positive integers when supplied', () => {
+  const covers=require('../data/events.json').events?.map(event=>event.cover).filter(Boolean) || [];
+  const thumbnails=require('../data/media.json').media || [];
   for(const image of [...covers,...thumbnails]) {
-    assert.ok(Number.isInteger(image.width)&&image.width>0);
-    assert.ok(Number.isInteger(image.height)&&image.height>0);
+    for(const key of ['width','height']) {
+      if (image[key] != null) assert.ok(Number.isInteger(image[key])&&image[key]>0);
+    }
   }
 });

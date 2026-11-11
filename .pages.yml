@@ -1,0 +1,265 @@
+# GitHub-backed editor for https://app.pagescms.org
+# Setup and daily editing: docs/ADMIN_EDITOR.md
+media:
+  input: ''
+  output: ''
+  path: uploads
+  extensions:
+  - webp
+  - jpg
+  - jpeg
+  - png
+  rename: safe
+content:
+- name: events
+  label: News and archived events
+  type: file
+  path: data/events.json
+  format: json
+  operations:
+    create: false
+    delete: false
+    rename: false
+  fields:
+  - name: events
+    label: Events and classes
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{fields.title}'
+    fields:
+    - name: id
+      label: Unique ID
+      type: string
+      required: true
+      description: Use a unique permanent lowercase ID, for example crew-workshop-2027. Do not reuse another entry ID.
+      pattern:
+        regex: ^[a-z0-9]+(?:-[a-z0-9]+)*$
+        message: Use lowercase letters/numbers separated by single hyphens.
+    - name: title
+      label: Event title
+      type: string
+      required: true
+    - name: published
+      label: Published
+      type: boolean
+      default: true
+      description: Turn off to hide this entry without deleting its history. Saving to main updates the public website after deployment.
+    - name: category
+      label: Category
+      type: select
+      options:
+        values:
+        - label: Performance
+          value: performance
+        - label: Battle
+          value: battle
+        - label: Workshop
+          value: workshop
+        - label: Class
+          value: class
+        - label: Announcement
+          value: announcement
+      required: true
+    - name: archived
+      label: Show in archive
+      type: boolean
+      default: false
+      description: Use for past work, including events whose exact date is unknown. The archive stays one collection.
+    - name: recurring
+      label: Regular / recurring class
+      type: boolean
+      default: false
+      description: Keep regular classes on News without inventing an individual event date.
+    - name: date
+      label: Date (optional)
+      type: date
+      default: ''
+      options:
+        format: yyyy-MM-dd
+      description: UK calendar date. Leave unknown dates blank; use schedule lines for local times.
+    - name: endDate
+      label: Last day (optional)
+      type: date
+      default: ''
+      options:
+        format: yyyy-MM-dd
+    - name: status
+      label: Status (optional)
+      type: select
+      options:
+        values:
+        - label: Scheduled
+          value: scheduled
+        - label: Completed
+          value: completed
+        - label: Cancelled
+          value: cancelled
+    - name: location
+      label: Location
+      type: string
+    - name: schedule
+      label: Schedule lines
+      type: string
+      list: true
+      description: One line per day/time/location. Keep recurring schedules here.
+    - name: description
+      label: Description paragraphs
+      type: text
+      list: true
+    - name: cover
+      label: Poster / cover
+      type: object
+      fields:
+      - name: src
+        label: Image
+        type: image
+        required: true
+      - name: alt
+        label: Image description
+        type: string
+        description: Briefly describe the image for screen readers.
+      - name: width
+        label: Image width (optional)
+        type: number
+        description: Clear both dimensions when replacing an image, or enter its actual pixel dimensions.
+      - name: height
+        label: Image height (optional)
+        type: number
+    - name: links
+      label: Booking and social links
+      type: object
+      list:
+        collapsible:
+          collapsed: true
+          summary: '{fields.label}'
+      fields:
+      - name: label
+        label: Button label
+        type: string
+        required: true
+      - name: url
+        label: Link URL
+        type: string
+        required: true
+        description: Use an https:// address, or an existing local page such as contacts.html.
+    - name: gallery
+      label: Archive gallery images
+      type: image
+      list: true
+    - name: youtube
+      label: YouTube links
+      type: string
+      list: true
+    - name: instagram
+      label: Instagram links
+      type: string
+      list: true
+    - name: participants
+      label: Participants / collaborators
+      type: string
+      list: true
+    - name: dateNote
+      label: Date review note
+      type: text
+    - name: scheduleNote
+      label: Schedule review note
+      type: text
+- name: portfolio
+  label: Videos and photos
+  type: file
+  path: data/media.json
+  format: json
+  operations:
+    create: false
+    delete: false
+    rename: false
+  fields:
+  - name: media
+    label: Gallery items
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: '{fields.title}'
+    fields:
+    - name: id
+      label: Unique ID
+      type: string
+      required: true
+      description: Use a unique permanent lowercase ID, for example crew-workshop-2027. Do not reuse another entry ID.
+      pattern:
+        regex: ^[a-z0-9]+(?:-[a-z0-9]+)*$
+        message: Use lowercase letters/numbers separated by single hyphens.
+    - name: title
+      label: Title / photo description
+      type: string
+      required: true
+    - name: published
+      label: Published
+      type: boolean
+      default: true
+      description: Turn off to hide this entry without deleting its history. Saving to main updates the public website after deployment.
+    - name: type
+      label: Media type
+      type: select
+      options:
+        values:
+        - label: Photo
+          value: photo
+        - label: Video
+          value: video
+      required: true
+      default: photo
+    - name: provider
+      label: Source
+      type: select
+      options:
+        values:
+        - label: Uploaded photo
+          value: local
+        - label: Google Drive video
+          value: google-drive
+        - label: YouTube video
+          value: youtube
+        - label: Instagram video
+          value: instagram
+      required: true
+      default: local
+    - name: thumbnail
+      label: Photo / video thumbnail
+      type: image
+      description: Upload/select the photo or video preview. Prefer WebP, about 1600px on the longest edge and under 500 KB.
+    - name: url
+      label: Original photo path or video URL
+      type: string
+      description: For photos, leave blank to use the selected image. For videos, paste the full share URL, including https://. Google Drive uses /file/d/ID/view; YouTube uses watch, shorts or youtu.be links.
+    - name: featured
+      label: Featured metadata
+      type: boolean
+      hidden: true
+      default: false
+    - name: category
+      label: Category metadata (optional)
+      type: select
+      options:
+        values:
+        - label: Performance
+          value: performance
+        - label: Battle
+          value: battle
+        - label: Workshop
+          value: workshop
+      hidden: true
+    - name: eventId
+      label: Event reference (optional)
+      type: string
+      hidden: true
+    - name: width
+      label: Image width (optional)
+      type: number
+      description: Clear both dimensions when replacing an image, or enter its actual pixel dimensions.
+    - name: height
+      label: Image height (optional)
+      type: number

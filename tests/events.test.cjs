@@ -3,11 +3,14 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const { validate, group, today, safeUrl } = require('../events.js');
 const data = JSON.parse(fs.readFileSync(require('node:path').join(__dirname, '../data/events.json'), 'utf8'));
-const base = data.events[0];
+const base = { title:'Test event', category:'performance', recurring:false, schedule:[], description:[], links:[], gallery:[], youtube:[], instagram:[], participants:[] };
 const event = (id, overrides = {}) => ({ ...base, id, date: '2026-11-11', recurring: false, archived: false, ...overrides });
-test('migrated records have unique valid identities and existing local cover images', () => {
-  assert.equal(validate(data).length, 7);
-  for (const e of data.events) assert.ok(fs.existsSync(require('node:path').join(__dirname, '..', e.cover.src)));
+test('current event records validate and reference existing local cover images', () => {
+  for (const e of validate(data)) {
+    for (const src of [e.cover?.src, ...e.gallery]) {
+      if (src && !/^(?:https?:)?\/\//.test(src)) assert.ok(fs.existsSync(require('node:path').join(__dirname, '..', decodeURIComponent(src))),src);
+    }
+  }
 });
 test('date boundaries and ranges preserve the record order', () => {
   const result = group([event('future', { date: '2026-12-01' }), event('today'), event('range', {date: '2026-11-01', endDate: '2026-11-11'}), event('old', {date:'2026-11-10'})], '2026-11-11');
@@ -41,9 +44,9 @@ test('manually archived records need no invented dates and retain their source o
   assert.deepEqual(group(records, '2026-11-11').past.map(item=>item.id), ['later', 'unknown', 'older']);
   assert.throws(()=>validate({events:[event('bad-archive', {archived:'yes'})]}));
 });
-test('the former date-confirmation listings are archived while regular classes stay on News', () => {
-  const groups=group(validate(data), '2026-11-11');
-  assert.deepEqual(groups.past.map(item=>item.id), ['crossroads','marco-lisa-choreography','three60-hip-hop']);
-  assert.equal(groups.regular.length,4);
-  assert.equal(groups.unconfirmed.length,0);
+test('unpublished events remain stored but are excluded from public sections', () => {
+  const records = validate({events:[event('draft', {published:false}),event('live')]});
+  assert.equal(records.length,2);
+  assert.deepEqual(group(records, '2026-11-11').upcoming.map(item=>item.id), ['live']);
+  assert.throws(()=>validate({events:[event('bad',{published:'yes'})]}));
 });

@@ -21,9 +21,18 @@
     return null;
   }
   function validate(data) {
-    if (!data || !Array.isArray(data.media)) throw new Error('Expected media array.');
+    if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error('Expected a media object.');
+    const records = data.media === undefined && Object.keys(data).length === 0 ? [] : data.media;
+    if (!Array.isArray(records)) throw new Error('Expected media array.');
+    const media = records.map(item => {
+      if (!item || typeof item !== 'object' || Array.isArray(item)) throw new Error('Invalid media.');
+      const normalized = { featured: false, ...item };
+      if (normalized.category === '') delete normalized.category;
+      if (normalized.type === 'photo' && !normalized.url) normalized.url = normalized.thumbnail;
+      return normalized;
+    });
     const ids = new Set();
-    for (const item of data.media) {
+    for (const item of media) {
       if (!item || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(item.id) || ids.has(item.id) ||
           typeof item.title !== 'string' || !item.title.trim() ||
           !['photo', 'video'].includes(item.type) || typeof item.featured !== 'boolean' ||
@@ -38,9 +47,10 @@
         const url = new URL(item.url);
         if (url.protocol !== 'https:' || !['instagram.com', 'www.instagram.com'].includes(url.hostname)) throw new Error('Invalid Instagram URL.');
       }
+      if (item.published != null && typeof item.published !== 'boolean') throw new Error('Invalid published flag.');
       ids.add(item.id);
     }
-    return data.media;
+    return media;
   }
   const api = { validate, embedUrl };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;

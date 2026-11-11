@@ -12,13 +12,32 @@
     return `${get('year')}-${get('month')}-${get('day')}`;
   }
   function validate(data) {
-    if (!data || !Array.isArray(data.events)) throw new Error('Expected an events array.');
+    if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error('Expected an events object.');
+    const records = data.events === undefined && Object.keys(data).length === 0 ? [] : data.events;
+    if (!Array.isArray(records)) throw new Error('Expected an events array.');
+    // CMS saves may omit blank optional fields and empty lists.
+    const events = records.map(event => {
+      if (!event || typeof event !== 'object' || Array.isArray(event)) throw new Error('Invalid event.');
+      const normalized = {
+        recurring: false,
+        ...event,
+        date: event.date === '' || event.date == null ? null : event.date,
+        endDate: event.endDate === '' || event.endDate == null ? null : event.endDate
+      };
+      for (const name of ['schedule', 'description', 'gallery', 'youtube', 'instagram', 'participants', 'links']) {
+        if (normalized[name] == null) normalized[name] = [];
+      }
+      if (normalized.status === '') delete normalized.status;
+      if (normalized.cover?.src && normalized.cover.alt == null) normalized.cover = { ...normalized.cover, alt: normalized.title };
+      return normalized;
+    });
     const ids = new Set();
-    for (const event of data.events) {
+    for (const event of events) {
       if (!event || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(event.id) || ids.has(event.id) ||
           typeof event.title !== 'string' || !event.title.trim() || !categories.includes(event.category) ||
           typeof event.recurring !== 'boolean') throw new Error('Invalid event identity or category.');
       ids.add(event.id);
+      if (event.published != null && typeof event.published !== 'boolean') throw new Error('Invalid published flag.');
       if (event.archived != null && typeof event.archived !== 'boolean') throw new Error('Invalid archive flag.');
       if (event.status != null && !['scheduled', 'completed', 'cancelled'].includes(event.status)) throw new Error('Invalid status.');
       for (const field of ['date', 'endDate']) {
@@ -31,11 +50,12 @@
       if (!Array.isArray(event.links) || !event.links.every(link => link && typeof link.label === 'string' && typeof link.url === 'string')) throw new Error('Invalid links.');
       if (event.cover && (typeof event.cover.src !== 'string' || typeof event.cover.alt !== 'string')) throw new Error('Invalid cover.');
     }
-    return data.events;
+    return events;
   }
   function group(events, day = today()) {
     const groups = { upcoming: [], past: [], regular: [], announcements: [], unconfirmed: [] };
     for (const event of events) {
+      if (event.published === false) continue;
       let key;
       if (event.archived === true || event.status === 'completed') key = 'past';
       else if (event.category === 'announcement') key = 'announcements';

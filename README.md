@@ -129,3 +129,17 @@ JSON failure and JavaScript-disabled messages. The existing Netlify contact form
 is preserved; its declared honeypot now has a matching hidden input. Form delivery
 and third-party video playback need deployment/provider checks and have not been
 asserted from the local static server.
+
+### Admin editing without website accounts
+
+A [Pages CMS](https://app.pagescms.org) configuration is included in `.pages.yml`.
+It provides forms for events/classes, archived events, videos and photos, plus
+image uploads. Use GitHub sign-in to edit; visitors need no accounts and the site
+needs no database or new backend. See [the setup and editing guide](docs/ADMIN_EDITOR.md)
+for the one-time app authorisation, branch/deployment settings, and daily workflow.
+
+`published: false` hides an event or media item without deleting its JSON record.
+An omitted Published property keeps existing content visible. Optional empty fields
+may be omitted by the editor; the site normalises those saves. A photo's `url` may
+be omitted when its uploaded `thumbnail` is also the desired original image.
+New uploads are stored in `uploads/` and should be compressed before uploading.

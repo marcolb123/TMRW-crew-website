@@ -1,0 +1,34 @@
+name: Content checks
+on:
+  push:
+    paths:
+      - 'data/**'
+      - 'uploads/**'
+      - '.pages.yml'
+      - '*.html'
+      - '*.js'
+      - '*.css'
+      - 'tests/**'
+      - '.github/workflows/content-checks.yml'
+  pull_request:
+    paths:
+      - 'data/**'
+      - 'uploads/**'
+      - '.pages.yml'
+      - '*.html'
+      - '*.js'
+      - '*.css'
+      - 'tests/**'
+      - '.github/workflows/content-checks.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Check content and site contracts
+        run: node --test tests/*.test.cjs
