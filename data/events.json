@@ -222,7 +222,13 @@
       ],
       "cover": {
         "src": "screenshot-2026-11-11-155418.png"
-      }
+      },
+      "links": [
+        {
+          "label": "Insta post",
+          "url": "https://www.instagram.com/p/DdtBq9nCF54/?img_index=1"
+        }
+      ]
     }
   ]
 }
