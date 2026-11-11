@@ -1092,3 +1092,77 @@ main:focus { outline: none; }
 .photo-controls button { border: 1px solid #d0d0d0; border-radius: 8px; background: #fff; color: #222; font-size: 0.9rem; }
 .photo-controls button:hover { border-color: #222; background: #f5f5f5; }
 .photo-controls button:disabled { opacity: 0.5; cursor: default; }
+
+/* === Grey concrete theme and white typography === */
+:root {
+    color-scheme: dark;
+    --text-color: #fff;
+    --light-bg: #303437;
+    --muted: #fff;
+    --card-bg: rgba(16, 19, 21, 0.92);
+    --accent: #982929;
+    --theme-border: rgba(255, 255, 255, 0.2);
+}
+body {
+    color: #fff;
+    background-color: var(--light-bg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('uploads/tmrw-header-texture.webp');
+    background-size: auto, 600px auto;
+    background-repeat: repeat;
+}
+a, a:visited { color: #fff; text-underline-offset: 0.2em; }
+.nav { background: rgba(13, 16, 18, 0.94); border-bottom: 1px solid var(--theme-border); }
+.nav a, .nav a:hover, .nav a.active { color: #fff; }
+.nav a.active { background: rgba(255, 255, 255, 0.13); }
+.nav a:hover { text-decoration: underline; }
+.about-section, .news-card, .class-card, .member-card, .contact-form,
+.media-card, .photo-slideshow, .news-empty-state, .media-dialog {
+    color: #fff;
+    background: var(--card-bg);
+    border: 1px solid var(--theme-border);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+.about-title, .about-subtitle, .about-text, .section-title, .member-name, .member-role,
+.news-hero p, .news-title, .news-date, .news-excerpt, .contact-info, .contact-info a,
+.contact-form label, .news-empty-state, .media-card > a, .photo-slideshow > p,
+.thumbnail-unavailable, .footer { color: #fff; }
+.about-divider { border-color: var(--theme-border); }
+.member-card::before { opacity: 0.1; }
+.news-hero { background: linear-gradient(rgba(0, 0, 0, 0.25), transparent); }
+.event-note { border-color: rgba(255, 255, 255, 0.6); }
+.news-empty-state::before { background: #fff; }
+.hero-links a, .hero-links a:hover {
+    color: #fff;
+    background: #862525;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+}
+.card-media, .class-media, .media-card img, .thumbnail-unavailable { background: rgba(0, 0, 0, 0.2); }
+.media-card:hover, .media-card:focus-within { border-color: rgba(255, 255, 255, 0.7); }
+.tickets-btn, .tickets-btn.alt, span.tickets-btn, .media-card .tickets-btn {
+    color: #fff;
+    background: #862525;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+}
+.tickets-btn:hover, .tickets-btn.alt:hover, .media-card .tickets-btn:hover { background: #a12c2c; border-color: #fff; }
+.photo-controls button, .media-dialog button {
+    color: #fff;
+    background: #252a2d;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+}
+.photo-controls button:hover, .media-dialog button:hover { color: #fff; background: #363d41; border-color: #fff; }
+.slideshow-dot::before { background: #747c80; }
+.slideshow-dot[aria-pressed="true"]::before { background: #fff; }
+.contact-form input, .contact-form textarea, select {
+    color: #fff;
+    background: #22272a;
+    border-color: rgba(255, 255, 255, 0.45);
+    caret-color: #fff;
+}
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: #fff; opacity: 1; }
+.contact-info a { text-decoration: underline; }
+.footer { background: rgba(13, 16, 18, 0.88); border-top: 1px solid var(--theme-border); }
+.footer::before { background-image: none; }
+:where(a, button, input, textarea, select):focus-visible { outline-color: #fff; }
+::selection { color: #fff; background: #862525; }

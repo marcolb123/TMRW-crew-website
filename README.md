@@ -154,3 +154,10 @@ Headers, navigation and section spacing are compact. Desktop pages use a wider
 content area: the story flows into two columns, Team and Archive use two-column
 layouts on large screens, and Videos/Photos sit alongside each other. Layouts
 stack on smaller screens and images keep their natural proportions.
+
+### Shared visual theme
+
+All public pages use the header's grey concrete texture with white typography.
+Dark translucent panels, dark form controls and white keyboard focus indicators
+keep content readable. Theme tokens and component colours are defined in the
+final grey-concrete theme section of `tmrw.css`.
