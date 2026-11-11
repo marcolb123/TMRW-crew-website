@@ -3,12 +3,11 @@
     {
       "id": "elevate",
       "title": "Elevate",
+      "published": true,
       "type": "video",
       "provider": "google-drive",
-      "url": "https://drive.google.com/file/d/1MmkhMqEqpI_QhcZJj8iWaiQWi3RElAAj/view",
       "thumbnail": "optimized/media/elevate thumbnail.webp",
-      "category": null,
-      "eventId": null,
+      "url": "https://drive.google.com/file/d/1MmkhMqEqpI_QhcZJj8iWaiQWi3RElAAj/view",
       "featured": false,
       "width": 1438,
       "height": 828
@@ -16,12 +15,11 @@
     {
       "id": "limpbiz",
       "title": "LimpBiz",
+      "published": true,
       "type": "video",
       "provider": "google-drive",
-      "url": "https://drive.google.com/file/d/1wRPJt_JjgNId1IxUTSWQzEvn2Id6CV4C/view",
       "thumbnail": "optimized/media/limpBiz thumbnail.webp",
-      "category": null,
-      "eventId": null,
+      "url": "https://drive.google.com/file/d/1wRPJt_JjgNId1IxUTSWQzEvn2Id6CV4C/view",
       "featured": false,
       "width": 1600,
       "height": 821
@@ -29,12 +27,11 @@
     {
       "id": "crew-video-1",
       "title": "TMRW Crew Video 1",
+      "published": true,
       "type": "video",
       "provider": "google-drive",
-      "url": "https://drive.google.com/file/d/1SOA72xw7qhD2e9uioaiaR1jkV_gel851/view",
       "thumbnail": "optimized/media/tmrw crew video 1 thumbnail.webp",
-      "category": null,
-      "eventId": null,
+      "url": "https://drive.google.com/file/d/1SOA72xw7qhD2e9uioaiaR1jkV_gel851/view",
       "featured": false,
       "width": 1600,
       "height": 964
@@ -42,12 +39,11 @@
     {
       "id": "photo-1",
       "title": "TMRW Crew photo 1",
+      "published": true,
       "type": "photo",
       "provider": "local",
-      "url": "media/header.png",
       "thumbnail": "optimized/media/header.webp",
-      "category": null,
-      "eventId": null,
+      "url": "media/header.png",
       "featured": false,
       "width": 1080,
       "height": 1247
@@ -55,12 +51,11 @@
     {
       "id": "photo-2",
       "title": "TMRW Crew photo 2",
+      "published": true,
       "type": "photo",
       "provider": "local",
-      "url": "tmrw crew/crew photo.jpg",
       "thumbnail": "optimized/tmrw crew/crew photo.webp",
-      "category": null,
-      "eventId": null,
+      "url": "tmrw crew/crew photo.jpg",
       "featured": false,
       "width": 1067,
       "height": 1600
@@ -68,12 +63,11 @@
     {
       "id": "photo-3",
       "title": "TMRW Crew photo 3",
+      "published": true,
       "type": "photo",
       "provider": "local",
-      "url": "media/elevate 2.png",
       "thumbnail": "optimized/media/elevate 2.webp",
-      "category": null,
-      "eventId": null,
+      "url": "media/elevate 2.png",
       "featured": false,
       "width": 1162,
       "height": 1496
@@ -81,12 +75,11 @@
     {
       "id": "photo-4",
       "title": "TMRW Crew photo 4",
+      "published": true,
       "type": "photo",
       "provider": "local",
-      "url": "media/shok spinning.png",
       "thumbnail": "optimized/media/shok spinning.webp",
-      "category": null,
-      "eventId": null,
+      "url": "media/shok spinning.png",
       "featured": false,
       "width": 1174,
       "height": 1528
@@ -94,15 +87,23 @@
     {
       "id": "photo-5",
       "title": "TMRW Crew photo 5",
+      "published": true,
       "type": "photo",
       "provider": "local",
-      "url": "media/needle 1.png",
       "thumbnail": "optimized/media/needle 1.webp",
-      "category": null,
-      "eventId": null,
+      "url": "media/needle 1.png",
       "featured": false,
       "width": 850,
       "height": 1116
+    },
+    {
+      "id": "laughnowcrylater",
+      "title": "Laugh Now Cry Later ",
+      "published": true,
+      "type": "video",
+      "provider": "youtube",
+      "url": "https://www.youtube.com/watch?v=D-e2ekGJk4U",
+      "featured": false
     }
   ]
 }
