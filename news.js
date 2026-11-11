@@ -12,7 +12,6 @@
     const sections = [
       ['upcoming', 'performances', 'Upcoming Events', 'No upcoming events are listed.'],
       ['regular', 'regular-classes', 'Regular Classes', 'No regular classes are listed.'],
-      ['announcements', 'announcements', 'Crew Announcements', 'No announcements are listed.'],
     ];
     for (const [key, id, title, empty] of sections) {
       const section = element('section', 'news-section');
@@ -25,7 +24,7 @@
         const grid = element('div', 'news-grid');
         groups[key].forEach(event => grid.append(renderEvent(event)));
         section.append(grid);
-      } else section.append(element('p', '', empty));
+      } else section.append(element('p', 'news-empty-state', empty));
       fragment.append(section);
     }
     container.replaceChildren(fragment);
