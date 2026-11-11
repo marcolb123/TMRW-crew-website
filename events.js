@@ -66,6 +66,11 @@
     }
     return groups;
   }
+  function sortArchive(events) {
+    // ISO calendar dates sort consistently without timezone conversion.
+    // Unknown dates follow dated events; equal dates keep their existing order.
+    return [...events].sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+  }
   function safeUrl(value) {
     try {
       const url = new URL(value, 'https://tmrwcrew.com/');
@@ -148,7 +153,7 @@
     card.append(body);
     return card;
   }
-  const api = { validate, group, today, safeUrl, renderEvent, element };
+  const api = { validate, group, sortArchive, today, safeUrl, renderEvent, element };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.TMRWEvents = api;
 })(typeof window === 'undefined' ? globalThis : window);

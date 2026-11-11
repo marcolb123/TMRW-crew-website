@@ -20,6 +20,14 @@
     } catch { /* Unsupported URLs remain ordinary links. */ }
     return null;
   }
+  function thumbnailUrl(item) {
+    if (item.thumbnail) return item.thumbnail;
+    if (item.provider !== 'youtube') return null;
+    const embed = embedUrl(item);
+    if (!embed) return null;
+    const id = embed.split('/').pop();
+    return `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+  }
   function validate(data) {
     if (!data || typeof data !== 'object' || Array.isArray(data)) throw new Error('Expected a media object.');
     const records = data.media === undefined && Object.keys(data).length === 0 ? [] : data.media;
@@ -52,7 +60,7 @@
     }
     return media;
   }
-  const api = { validate, embedUrl };
+  const api = { validate, embedUrl, thumbnailUrl };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.TMRWMedia = api;
 })(typeof window === 'undefined' ? globalThis : window);

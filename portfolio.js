@@ -23,13 +23,16 @@
   }
   function card(item) {
     const article = element('article', 'media-card');
-    const image = item.thumbnail && safeUrl(item.thumbnail) ? element('img') : null;
+    const thumbnail = TMRWMedia.thumbnailUrl(item);
+    const image = thumbnail && safeUrl(thumbnail) ? element('img') : null;
     if (image) {
-      image.src = item.thumbnail;
+      image.src = thumbnail;
       if (item.width && item.height) { image.width = item.width; image.height = item.height; }
       image.alt = ''; // The adjacent title labels the same content.
       image.loading = 'lazy';
       image.decoding = 'async';
+      if (!item.thumbnail && item.provider === 'youtube') { image.width = 480; image.height = 360; }
+      image.addEventListener('error', () => image.replaceWith(element('p', 'thumbnail-unavailable', 'Video preview unavailable')), { once: true });
     }
     const link = element('a');
     link.href = item.url;

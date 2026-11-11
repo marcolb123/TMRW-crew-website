@@ -11,7 +11,7 @@
   Videos load only after activation; remove iframe contents when the dialog closes.
 - `tmrw.js` owns the shared back-to-top button. There is no separate workshop gallery or poster section.
   Scripts use `defer`; do not add duplicate script tags or duplicate click handlers.
-- Display newly appended events/media first (reverse JSON order), without date sorting or category-filter controls. Use
+- News/Media show new additions first; Archive uses event dates descending, with unknown dates last. There are no category-filter controls. Use
   `archived: true` for manually archived events. Workshop event records remain in Archive.
 - Do not infer missing event dates or invent content. Existing conflicts are retained
   in public notes. See README.md for schemas, date rules and archive semantics.

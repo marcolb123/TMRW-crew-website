@@ -230,7 +230,7 @@ content:
     - name: thumbnail
       label: Photo / video thumbnail
       type: image
-      description: Upload/select the photo or video preview. Prefer WebP, about 1600px on the longest edge and under 500 KB.
+      description: Upload/select a photo or custom video preview. Leave blank for an automatic YouTube thumbnail. Prefer WebP, about 1600px on the longest edge and under 500 KB.
     - name: url
       label: Original photo path or video URL
       type: string

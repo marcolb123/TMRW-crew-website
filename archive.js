@@ -8,7 +8,7 @@
       return response.json();
     })
     .then(data => {
-      const events = TMRWEvents.group(TMRWEvents.validate(data)).past;
+      const events = TMRWEvents.sortArchive(TMRWEvents.group(TMRWEvents.validate(data)).past);
       container.replaceChildren(...events.map(event => TMRWEvents.renderEvent(event, true)));
       status.textContent = events.length ? '' : 'No archived events are listed yet.';
       const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));

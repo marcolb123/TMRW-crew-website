@@ -1,7 +1,7 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
-const { validate, group, today, safeUrl } = require('../events.js');
+const { validate, group, sortArchive, today, safeUrl } = require('../events.js');
 const data = JSON.parse(fs.readFileSync(require('node:path').join(__dirname, '../data/events.json'), 'utf8'));
 const base = { title:'Test event', category:'performance', recurring:false, schedule:[], description:[], links:[], gallery:[], youtube:[], instagram:[], participants:[] };
 const event = (id, overrides = {}) => ({ ...base, id, date: '2026-11-11', recurring: false, archived: false, ...overrides });
@@ -55,4 +55,10 @@ test('newly appended events appear first without changing stored record order', 
   const records=[event('first',{date:'2026-12-01'}),event('newest',{date:'2026-11-12'})];
   assert.equal(group(records,'2026-11-11').upcoming[0].id,'newest');
   assert.deepEqual(records.map(item=>item.id),['first','newest']);
+});
+
+test('archive uses event dates newest first, with unknown dates last and stable ties', () => {
+  const records=[event('unknown',{date:null}), event('older',{date:'2025-12-13'}), event('latest',{date:'2026-10-18'}), event('tie',{date:'2025-12-13'}), event('oldest',{date:'2025-11-18'})];
+  assert.deepEqual(sortArchive(records).map(item=>item.id),['latest','older','tie','oldest','unknown']);
+  assert.equal(records[0].id,'unknown');
 });

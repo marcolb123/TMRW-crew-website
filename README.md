@@ -44,7 +44,7 @@ are `performance`, `battle`, `workshop`, `class`, and `announcement`.
   without HTML. `schedule` is an array of human-readable schedule lines.
 - `date` and optional `endDate` are verified `YYYY-MM-DD` dates, or `null` when
   unknown. Upcoming includes today and events through their end date, using
-  Europe/London. Earlier events appear in the archive. New additions appear first (reverse JSON order); there is no event-date sorting. This says
+  Europe/London. Earlier events appear in the archive. News shows new additions first; Archive uses event dates, newest first, with unknown dates last. This says
   nothing about whether a past event actually took place.
 - `recurring: true` keeps classes in Regular Classes until a known `endDate` has
   passed. Do not invent dates for a weekly schedule. `scheduleNote` and `dateNote`
@@ -65,8 +65,9 @@ at desktop/mobile widths, including JSON failure and JavaScript-disabled states.
 ### Event archive
 
 `archive.html` reads the same event records and shared card renderer as News.
-The archive is one collection showing previous crew events. There are no category/media filters and no automatic sorting:
-newly appended events appear first.
+The archive is one collection showing previous crew events, ordered by event date
+newest first. Unknown dates follow dated events; equal dates retain newest-addition
+order. There are no category/media filters.
 
 Use `"archived": true` to archive a record without inventing or confirming its
 date. Crossroads, Marco/Lisa and Three60 have been moved there by request. Their
@@ -92,6 +93,9 @@ The Media page contains only **Videos** and **Photos**, with newly appended item
 from all providers share the same section. There are no featured, event archive,
 provider, performance, battle or workshop sections and no sorting controls.
 
+YouTube videos automatically use the standard YouTube thumbnail when no custom
+image is selected. Custom uploaded previews take precedence. Thumbnails load lazily;
+if an image fails, the video title and Play button remain available.
 Google Drive and YouTube players load only on pressing Play. YouTube uses the
 privacy-enhanced player host. Instagram videos remain ordinary external links,
 with no embed script loaded. Closing the native video dialog (including Escape)

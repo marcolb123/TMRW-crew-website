@@ -49,7 +49,7 @@ token or secret value needs to be sent in chat or copied into the website.
    UK calendar dates as `YYYY-MM-DD`; time details stay in the schedule lines.
 5. For a regular class, enable **Regular / recurring class**. For previous work,
    enable **Show in archive**. The archive stays one collection without category
-   filters. Newly added entries appear first. Past dated/completed events also go there.
+   filters. Events are displayed by event date, newest first; unknown dates go last. Past dated/completed events also go there.
 6. In **Poster / cover → Image**, upload or select the poster. Add an image
    description. Uploads default to `uploads/`; existing optimized assets are also
    selectable. Clear optional width/height values if replacing an image of a
@@ -61,8 +61,9 @@ token or secret value needs to be sent in chat or copied into the website.
    Saving on `main` makes the content available to your automatic deployment.
    Check the deployment finishes, then refresh News/Archive to see the result.
 
-New list entries are appended in JSON and displayed first on the website. If you
-reorder entries with the move/drag controls, the last JSON entry appears first.
+New list entries are appended in JSON. News and Media display new additions first.
+Archive uses event dates instead, newest first; entries without a date go last.
+Reordering the list affects News/Media and breaks ties for identical archive dates.
 Unpublished entries remain in
 JSON but are not shown on News or Archive. There is no public draft-preview mode.
 Avoid editing the same JSON file in two browser tabs or editors at once; reload
@@ -95,7 +96,9 @@ later; it is not required for this setup.
    - YouTube: a `youtube.com/watch?v=...`, `youtube.com/shorts/...`, or `youtu.be/...`
      link, including `https://`.
    - Instagram: the full `https://www.instagram.com/reel/.../` or post URL.
-3. Select/upload a thumbnail, set Published, and Save. For Google Drive, ensure
+3. For YouTube, leave the thumbnail blank for an automatic preview, or select a
+   custom image. For other providers, select/upload a thumbnail. Set Published
+   and Save. For Google Drive, ensure
    visitors have permission to view the file. Google Drive/YouTube load only when
    Play is pressed; Instagram remains an external link.
 

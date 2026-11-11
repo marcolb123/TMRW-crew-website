@@ -2,7 +2,7 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { validate, embedUrl } = require('../media.js');
+const { validate, embedUrl, thumbnailUrl } = require('../media.js');
 const data = require('../data/media.json');
 const base = { id:'test-video', title:'Test video', type:'video', provider:'google-drive', url:'https://drive.google.com/file/d/test/view', featured:false };
 test('current media records validate and reference existing local images', () => {
@@ -24,4 +24,13 @@ test('duplicate identities and invalid provider/URL combinations fail validation
   assert.throws(()=>validate({media:[base,base]}));
   assert.throws(()=>validate({media:[{...base,provider:'instagram',url:'https://evil.example'}]}));
   assert.throws(()=>validate({media:[{...base,provider:'local'}]}));
+});
+
+test('YouTube thumbnails are automatic for supported URLs, with custom images taking precedence', () => {
+  for (const url of ['https://youtu.be/abcdefghijk','https://youtube.com/watch?v=abcdefghijk','https://youtube.com/shorts/abcdefghijk']) {
+    assert.equal(thumbnailUrl({provider:'youtube',url}), 'https://i.ytimg.com/vi/abcdefghijk/hqdefault.jpg');
+  }
+  assert.equal(thumbnailUrl({provider:'youtube',url:'https://evil.example/abcdefghijk'}),null);
+  assert.equal(thumbnailUrl({provider:'youtube',url:'https://youtu.be/abcdefghijk',thumbnail:'uploads/custom.webp'}),'uploads/custom.webp');
+  assert.equal(thumbnailUrl(base),null);
 });
