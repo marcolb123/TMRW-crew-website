@@ -62,15 +62,48 @@
     const dots = element('div', 'slideshow-dots');
     const buttons = [];
     let current = 0;
-    function show(index) {
+    let request = 0;
+    const loaded = new Map();
+    function preload(index) {
+      const photo = photos[(index + photos.length) % photos.length];
+      const src = photo.thumbnail || photo.url;
+      if (!loaded.has(src)) {
+        const pending = (async () => {
+          const candidate = new Image();
+          candidate.src = src;
+          await candidate.decode();
+          return src;
+        })();
+        loaded.set(src, pending);
+        // Allow retry after a failed request, including a speculative preload.
+        pending.catch(() => loaded.delete(src));
+      }
+      return loaded.get(src);
+    }
+    async function show(index) {
       current = (index + photos.length) % photos.length;
-      image.src = photos[current].thumbnail || photos[current].url;
-      fullSize.href = photos[current].url;
-      fullSize.setAttribute('aria-label', `Open original ${photos[current].title}`);
-      if (photos[current].width && photos[current].height) { image.width = photos[current].width; image.height = photos[current].height; }
-      image.alt = photos[current].title;
-      caption.textContent = `${photos[current].title} (${current + 1} of ${photos.length})`;
-      buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === current)));
+      const selected = current;
+      const token = ++request;
+      const photo = photos[selected];
+      wrapper.setAttribute('aria-busy', 'true');
+      try {
+        const src = await preload(selected);
+        if (token !== request) return; // Rapid clicks must keep the latest selection.
+        image.src = src;
+        fullSize.href = photo.url;
+        fullSize.setAttribute('aria-label', `Open original ${photo.title}`);
+        if (photo.width && photo.height) { image.width = photo.width; image.height = photo.height; }
+        image.alt = photo.title;
+        caption.textContent = `${photo.title} (${selected + 1} of ${photos.length})`;
+        buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === selected)));
+        // Fetch only the immediate neighbours, rather than the entire collection.
+        preload(selected + 1).catch(() => {});
+        preload(selected - 1).catch(() => {});
+      } catch {
+        if (token === request) caption.textContent = 'This photo could not be loaded. Please try another photo or retry.';
+      } finally {
+        if (token === request) wrapper.setAttribute('aria-busy', 'false');
+      }
     }
     photos.forEach((photo, index) => {
       const button = element('button', 'slideshow-dot');

@@ -98,7 +98,10 @@ Google Drive and YouTube players load only on pressing Play. YouTube uses the
 privacy-enhanced player host. Instagram videos remain ordinary external links,
 with no embed script loaded. Closing the native video dialog (including Escape)
 unloads playback and restores keyboard focus. Photography keeps its slideshow
-and links to full-size originals. The Media page fetches only its media data,
+and links to full-size originals. It preloads the immediate neighbouring photos
+and waits for decoding before replacing the visible image, retaining the current
+photo during slow downloads. Rapid clicks always keep the latest selection.
+The Media page fetches only its media data,
 not the event collection.
 
 Run `node --test tests/*.test.cjs` for all dependency-free data and URL tests.
