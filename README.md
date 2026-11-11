@@ -44,16 +44,16 @@ are `performance`, `battle`, `workshop`, `class`, and `announcement`.
   without HTML. `schedule` is an array of human-readable schedule lines.
 - `date` and optional `endDate` are verified `YYYY-MM-DD` dates, or `null` when
   unknown. Upcoming includes today and events through their end date, using
-  Europe/London. Earlier events appear in Past Events, newest first. This says
+  Europe/London. Earlier events appear in the archive. Records keep their JSON order; there is no automatic date sorting. This says
   nothing about whether a past event actually took place.
 - `recurring: true` keeps classes in Regular Classes until a known `endDate` has
   passed. Do not invent dates for a weekly schedule. `scheduleNote` and `dateNote`
   surface uncertainty. Existing schedules have not been independently reconfirmed.
-- Undated one-off events appear under Dates to Confirm. Announcements stay separate.
+- Use `archived: true` to place an event in the archive even when its date is unknown. Announcements stay separate.
 - `gallery`, `youtube`, `instagram`, and `participants` are string arrays reserved
   for shared archive/media use; there is no separate archive copy of an event.
-- `#event-<id>` links directly to a rendered card. Existing News section links and
-  the workshop gallery remain supported. Commented-out events were not republished.
+- `#event-<id>` links directly to a rendered card. The workshop gallery now lives
+  in the archive. Commented-out events were not republished.
 
 The migrated records retain conflicting source dates in notes rather than choosing
 one. Crossroads, Marco/Lisa, Three60, Popping/Locking and Ursula need organiser
@@ -66,39 +66,40 @@ at desktop/mobile widths, including JSON failure and JavaScript-disabled states.
 ### Event archive
 
 `archive.html` reads the same event records and shared card renderer as News.
-Past dates and an explicitly verified `"status": "completed"` place records in
-its category-filtered archive. Optional status values are `scheduled`, `completed`,
-and `cancelled`; date sorting alone never asserts that an event actually happened.
-An undated recurring class can be explicitly completed to archive it. A cancelled
-future event remains in its date section with a visible cancelled label.
+The archive is one collection showing previous crew events, followed by the
+Workshop Gallery. There are no category/media filters and no automatic sorting:
+events retain their order in `data/events.json`.
 
-Archive cards additionally display the existing record's gallery, YouTube and
-Instagram links, and participants. No third-party embeds load automatically.
-Use `archive.html#event-<id>` for direct event links. Until uncertain source dates
-are confirmed or completion is verified, the archive correctly has no entries.
+Use `"archived": true` to archive a record without inventing or confirming its
+date. Crossroads, Marco/Lisa and Three60 have been moved there by request. Their
+original date notes remain intact. Past dated events and explicitly completed
+records also appear here. The four regular class listings remain on News.
+Optional status values remain `scheduled`, `completed`, and `cancelled`.
+
+Archive cards can display a record's gallery, YouTube and Instagram links, and
+participants together. No third-party embeds load automatically. Use
+`archive.html#event-<id>` for event links and `archive.html#workshops` for the
+workshop posters. The gallery preserves its previous/next controls and dots.
 
 ### Maintaining Portfolio media
 
 `data/media.json` contains the original three Google Drive videos and five
 slideshow photos. Each record has a unique `id`, `title`, `type` (`photo` or
 `video`), `provider` (`local`, `google-drive`, `youtube`, or `instagram`), `url`,
-optional `thumbnail`, `featured` boolean, optional `category` (`performance`,
-`battle`, `workshop`), and optional `eventId` referencing `events.json`.
+optional `thumbnail`, and intrinsic `width`/`height` where known. Existing
+`featured`, `category` and `eventId` metadata is retained for future editing,
+but does not create any sections, filters or event links in the gallery.
 
-Set `featured: true` only for work you choose to feature. Set categories only when
-verified. No categories, featured selections, YouTube URLs, or Instagram video
-URLs were invented for the original media. The corresponding sections remain
-empty until content is supplied. Event-linked media inherits its event category
-when no media category is specified, and its event link leads to News or Archive
-according to the event's dates/status. Unknown event IDs do not create broken links.
+The Media page contains only **Videos** and **Photos**, in JSON order. Videos
+from all providers share the same section. There are no featured, event archive,
+provider, performance, battle or workshop sections and no sorting controls.
 
-The page supports format/category filtering and keeps the photography slideshow.
 Google Drive and YouTube players load only on pressing Play. YouTube uses the
 privacy-enhanced player host. Instagram videos remain ordinary external links,
 with no embed script loaded. Closing the native video dialog (including Escape)
-unloads playback and restores keyboard focus. Original external video links remain
-available alongside Play buttons. External playback still depends on provider
-availability, permissions, and browser/network policy.
+unloads playback and restores keyboard focus. Photography keeps its slideshow
+and links to full-size originals. The Media page fetches only its media data,
+not the event collection.
 
 Run `node --test tests/*.test.cjs` for all dependency-free data and URL tests.
 

@@ -30,7 +30,8 @@
       "youtube": [],
       "instagram": [],
       "participants": [],
-      "dateNote": "Date to confirm: 12 or 13 December 2025. Please check with the organiser."
+      "dateNote": "Date to confirm: 12 or 13 December 2025. Please check with the organiser.",
+      "archived": true
     },
     {
       "id": "marco-lisa-choreography",
@@ -65,7 +66,8 @@
         "Marco",
         "Lisa"
       ],
-      "dateNote": "Date to confirm: 17 or 18 November 2025. Please check with the organiser."
+      "dateNote": "Date to confirm: 17 or 18 November 2025. Please check with the organiser.",
+      "archived": true
     },
     {
       "id": "house-open-level",
@@ -195,7 +197,8 @@
       "youtube": [],
       "instagram": [],
       "participants": [],
-      "dateNote": "Dates to confirm: the listing gives November 13, 27 and December 11, and also 20 November 2025. Please check session dates and year with the organiser."
+      "dateNote": "Dates to confirm: the listing gives November 13, 27 and December 11, and also 20 November 2025. Please check session dates and year with the organiser.",
+      "archived": true
     },
     {
       "id": "ursula-hip-hop",

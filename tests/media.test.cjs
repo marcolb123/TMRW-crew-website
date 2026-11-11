@@ -2,7 +2,7 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { validate, embedUrl, matches } = require('../media.js');
+const { validate, embedUrl } = require('../media.js');
 const data = require('../data/media.json');
 test('all original portfolio media have valid records and local files', () => {
   assert.equal(validate(data).length, 8);
@@ -16,14 +16,6 @@ test('only expected video hosts and video IDs can be embedded', () => {
   }
   for (const url of ['https://evil.example/watch?v=abcdefghijk','javascript:alert(1)','https://youtube.com/watch?v=short']) assert.equal(embedUrl({provider:'youtube',url}),null);
   assert.equal(embedUrl({provider:'google-drive',url:'https://evil.example/file/d/test/view'}),null);
-});
-test('format and category filters compose', () => {
-  const item = {...data.media[0],category:'performance'};
-  assert.ok(matches(item,'performance','google-drive'));
-  assert.ok(matches(item,'all','all'));
-  assert.ok(!matches(item,'battle','all'));
-  assert.ok(!matches(item,'all','photo'));
-  assert.ok(matches(data.media[3],'all','photo'));
 });
 test('duplicate identities and invalid provider/URL combinations fail validation', () => {
   assert.throws(()=>validate({media:[data.media[0],data.media[0]]}));

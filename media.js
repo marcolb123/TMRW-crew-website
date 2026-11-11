@@ -42,11 +42,7 @@
     }
     return data.media;
   }
-  function matches(item, category, format) {
-    return (category === 'all' || item.category === category) &&
-      (format === 'all' || (format === 'photo' ? item.type === 'photo' : item.provider === format));
-  }
-  const api = { validate, embedUrl, matches };
+  const api = { validate, embedUrl };
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   else root.TMRWMedia = api;
 })(typeof window === 'undefined' ? globalThis : window);

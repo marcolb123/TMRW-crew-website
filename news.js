@@ -7,13 +7,12 @@
   const { element, renderEvent } = TMRWEvents;
   function render(events) {
     const groups = TMRWEvents.group(events);
+    groups.upcoming = events.filter(event => groups.upcoming.includes(event) || groups.unconfirmed.includes(event));
     const fragment = document.createDocumentFragment();
     const sections = [
-      ['upcoming', 'performances', 'Upcoming Events', 'No upcoming dated events are listed.'],
+      ['upcoming', 'performances', 'Upcoming Events', 'No upcoming events are listed.'],
       ['regular', 'regular-classes', 'Regular Classes', 'No regular classes are listed.'],
-      ['unconfirmed', 'popup-classes', 'Dates to Confirm', 'No events awaiting dates.'],
       ['announcements', 'announcements', 'Crew Announcements', 'No announcements are listed.'],
-      ['past', 'past-events', 'Past Events', 'No past dated events are listed.']
     ];
     for (const [key, id, title, empty] of sections) {
       const section = element('section', 'news-section');

@@ -35,23 +35,26 @@
         <main id="main-content" class="news-page">
             <section class="news-hero"><div class="wrap">
                 <h1>Event Archive</h1>
-                <p>Past TMRW Crew events, photographs, and collaborations.</p>
+                <p>A look back at TMRW Crew events, workshops, and collaborations.</p>
                 <p><a href="News.html">See news and regular classes</a></p>
             </div></section>
             <section class="news-list wrap" aria-labelledby="archive-heading">
                 <h2 id="archive-heading" class="sr-only">Archived events</h2>
-                <label for="archive-category">Event category</label>
-                <select id="archive-category" disabled>
-                    <option value="all">All categories</option>
-                    <option value="performance">Performances</option>
-                    <option value="battle">Battles</option>
-                    <option value="workshop">Workshops</option>
-                    <option value="class">Classes</option>
-                    <option value="announcement">Announcements</option>
-                </select>
                 <p id="archive-status" role="status">Loading archive…</p>
                 <noscript><p>Enable JavaScript to view the archive, or <a href="contacts.html">contact us for event information</a>.</p></noscript>
                 <div id="archive-events" class="news-grid"></div>
+            <section id="workshops" class="news-section" aria-labelledby="workshops-heading">
+                <h2 id="workshops-heading" class="section-title">Workshop Gallery</h2>
+    <div class="workshop-slideshow-wrapper">
+        <div id="workshop-slideshow-container">
+            <img decoding="async" width="1080" height="1350" id="workshop-slideshow-image" src="optimized/events/2. Page 2.webp" alt="Workshop Photo" loading="lazy">
+            <button onclick="changeWorkshopSlide(-1)" class="slideshow-btn prev" aria-label="Previous workshop image">&#8249;</button>
+            <button onclick="changeWorkshopSlide(1)" class="slideshow-btn next" aria-label="Next workshop image">&#8250;</button>
+        </div>
+        <div id="workshop-slideshow-dots"></div>
+    </div>
+
+            </section>
             </section>
         </main>
 

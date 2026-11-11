@@ -19,6 +19,7 @@
           typeof event.title !== 'string' || !event.title.trim() || !categories.includes(event.category) ||
           typeof event.recurring !== 'boolean') throw new Error('Invalid event identity or category.');
       ids.add(event.id);
+      if (event.archived != null && typeof event.archived !== 'boolean') throw new Error('Invalid archive flag.');
       if (event.status != null && !['scheduled', 'completed', 'cancelled'].includes(event.status)) throw new Error('Invalid status.');
       for (const field of ['date', 'endDate']) {
         if (event[field] != null && !isDate(event[field])) throw new Error(`Invalid ${field}: ${event.id}`);
@@ -36,15 +37,13 @@
     const groups = { upcoming: [], past: [], regular: [], announcements: [], unconfirmed: [] };
     for (const event of events) {
       let key;
-      if (event.status === 'completed') key = 'past';
+      if (event.archived === true || event.status === 'completed') key = 'past';
       else if (event.category === 'announcement') key = 'announcements';
       else if (event.recurring) key = event.endDate && event.endDate < day ? 'past' : 'regular';
       else if (!event.date) key = 'unconfirmed';
       else key = (event.endDate || event.date) < day ? 'past' : 'upcoming';
       groups[key].push(event);
     }
-    groups.upcoming.sort((a, b) => a.date.localeCompare(b.date));
-    groups.past.sort((a, b) => (b.endDate || b.date || '').localeCompare(a.endDate || a.date || ''));
     return groups;
   }
   function safeUrl(value) {
