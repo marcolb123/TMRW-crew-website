@@ -1,9 +1,8 @@
 # GitHub-backed editor for https://app.pagescms.org
 # Setup and daily editing: docs/ADMIN_EDITOR.md
 media:
-  input: ''
-  output: ''
-  path: uploads
+  input: uploads
+  output: uploads
   extensions:
   - webp
   - jpg

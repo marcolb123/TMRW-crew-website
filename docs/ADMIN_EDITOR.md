@@ -51,8 +51,8 @@ token or secret value needs to be sent in chat or copied into the website.
    enable **Show in archive**. The archive stays one collection without category
    filters. Events are displayed by event date, newest first; unknown dates go last. Past dated/completed events also go there.
 6. In **Poster / cover → Image**, upload or select the poster. Add an image
-   description. Uploads default to `uploads/`; existing optimized assets are also
-   selectable. Clear optional width/height values if replacing an image of a
+   description. Uploads default to `uploads/`; existing referenced assets are also
+   selectable under `uploads/library/`. Clear optional width/height values if replacing an image of a
    different size, or enter the new actual pixel dimensions.
 7. Add only known booking/social links. Each link has its own button label and URL.
    The optional archive gallery, YouTube/Instagram links and participants can be
@@ -148,3 +148,16 @@ Local tests cover omitted optional fields/lists, empty collections, draft hiding
 photo upload paths, date validation and existing page behaviour. The authenticated
 hosted dashboard, app installation, GitHub Actions execution and production deploy
 must be confirmed after you connect your account; local tests cannot establish them.
+
+### If Media says “not configured”
+
+The media browser requires a non-empty folder path, even though its configuration
+schema accepts an empty root. The configuration now uses `uploads` for both input
+and output. Existing CMS-selected image files are available in `uploads/library/`,
+and original files remain at their previous paths.
+
+After the fix is on GitHub, refresh Pages CMS, or reselect the repository and
+`main` branch to reload its configuration. Open Media: it should show the uploads
+folder, the `library` subfolder and the new header logo. No manual configuration
+edit or second GitHub App installation is needed. If you selected another branch,
+choose `main` so you load the corrected configuration.

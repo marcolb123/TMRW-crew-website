@@ -14,7 +14,7 @@
         "Where Movement Meets. A platform, showcase, exchange, a moment. Catch TMRW crew showcasing alongside other talented groups and individuals for a night of quality movement."
       ],
       "cover": {
-        "src": "optimized/events/crossroads.webp",
+        "src": "uploads/library/optimized/events/crossroads.webp",
         "alt": "Street dancers performing outdoors",
         "width": 949,
         "height": 306
@@ -40,7 +40,7 @@
         "Expect a smooth and explosive choreography. Int and Adv level."
       ],
       "cover": {
-        "src": "optimized/events/marcoXlisa.webp",
+        "src": "uploads/library/optimized/events/marcoXlisa.webp",
         "alt": "Marco and Lisa choreography collaboration",
         "width": 1408,
         "height": 1426
@@ -65,7 +65,7 @@
         "Join Marco for some high energy and fun house class focusing on foundational steps and social dancing."
       ],
       "cover": {
-        "src": "optimized/tmrw crew/marco.webp",
+        "src": "uploads/library/optimized/tmrw crew/marco.webp",
         "alt": "House open level class",
         "width": 568,
         "height": 568
@@ -92,7 +92,7 @@
         "Learn foundational popping and locking techniques with Oscar. Perfect for dancers looking to expand their funk styles vocabulary. Popping runs on 1st & 3rd (& 5th) Saturday of each month, alternating with Locking class"
       ],
       "cover": {
-        "src": "optimized/tmrw crew/oscar headshot.webp",
+        "src": "uploads/library/optimized/tmrw crew/oscar headshot.webp",
         "alt": "Popping and Locking class",
         "width": 494,
         "height": 614
@@ -118,7 +118,7 @@
         "Come through for a double session designed for dancers of all levels: Hour 1 – Foundations A led session focusing on hip-hop foundations — perfect for beginners or anyone wanting to revisit the basics and sharpen their technique. Hour 2 – Open Training An open space for dancers to train, exchange, and vibe together. All styles, all levels welcome."
       ],
       "cover": {
-        "src": "optimized/events/three60_hiphop.webp",
+        "src": "uploads/library/optimized/events/three60_hiphop.webp",
         "alt": "Hip Hop session with TMRW Crew",
         "width": 1292,
         "height": 1470
@@ -145,7 +145,7 @@
         "Ursula’s Hip-Hop class blends groove, foundation, and musicality, creating a welcoming space for all levels to explore freestyle, build confidence, and connect through movement and rhythm."
       ],
       "cover": {
-        "src": "optimized/tmrw crew/ursula .webp",
+        "src": "uploads/library/optimized/tmrw crew/ursula .webp",
         "alt": "Hip Hop session with TMRW Crew",
         "width": 810,
         "height": 810
@@ -171,7 +171,7 @@
         "TMRW Crew's first ever all-styles battle. With over 40 dancers participating."
       ],
       "cover": {
-        "src": "screenshot-2026-11-11-155418.png"
+        "src": "uploads/library/screenshot-2026-11-11-155418.png"
       },
       "links": [
         {
@@ -190,7 +190,7 @@
       "date": "2025-11-15",
       "location": "Liquid Rooms Edinburgh",
       "cover": {
-        "src": "screenshot-2026-11-11-163531.png"
+        "src": "uploads/library/screenshot-2026-11-11-163531.png"
       }
     }
   ]

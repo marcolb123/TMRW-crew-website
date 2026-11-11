@@ -145,6 +145,8 @@ An omitted Published property keeps existing content visible. Optional empty fie
 may be omitted by the editor; the site normalises those saves. A photo's `url` may
 be omitted when its uploaded `thumbnail` is also the desired original image.
 New uploads are stored in `uploads/` and should be compressed before uploading.
+CMS-selected existing images are copied into `uploads/library/` so they remain
+available in its configured media folder; original assets are preserved.
 
 ### Page layouts
 
