@@ -101,3 +101,27 @@ available alongside Play buttons. External playback still depends on provider
 availability, permissions, and browser/network policy.
 
 Run `node --test tests/*.test.cjs` for all dependency-free data and URL tests.
+
+### Image performance and site checks
+
+Pages use 51 WebP derivatives in `optimized/` (4.3 MB total versus 44.4 MB for
+their original assets). Originals remain in place; Portfolio photography links
+open the original full-size images. These figures measure the asset set, not a
+whole-page network benchmark. Images reserve intrinsic dimensions where known,
+non-header images load lazily, and fonts use `font-display: swap`.
+
+To regenerate derivatives after replacing original images, run
+`python3 scripts/optimise-images.py` with Pillow available in your development
+environment. It keeps orientation, limits dimensions to 1600 × 1600, and writes
+WebP at quality 88 without altering originals. Update data/HTML width and height
+attributes if the new source aspect ratio changes. The deployed site needs only
+committed static files, without Python, Pillow or Node.
+
+Site checks cover local asset paths, navigation consistency, duplicate script
+inclusion, page headings, data, dates and video URL handling. Browser validation
+also covers 320 px, 375 px and desktop layouts, loaded images and their declared
+sizes, keyboard skip links, reduced motion, slideshow controls, dialog Escape/focus,
+JSON failure and JavaScript-disabled messages. The existing Netlify contact form
+is preserved; its declared honeypot now has a matching hidden input. Form delivery
+and third-party video playback need deployment/provider checks and have not been
+asserted from the local static server.

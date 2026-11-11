@@ -13,7 +13,6 @@
     <!-- SEO Meta Tags -->
     <meta name="description" content="TMRW Crew is a Scottish-based street dance collective pushing hip hop, house, krump, and culture. Discover our videos, meet the team, and join the movement.">
     <meta name="robots" content="index, follow">
-    <meta name="msvalidate.01" content="YOUR_BING_VERIFICATION_CODE" />
 
     <!-- Open Graph for link previews (Facebook, etc.) -->
     <meta property="og:title" content="TMRW Crew">
@@ -36,21 +35,22 @@
     <script src="tmrw.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="header">
-        <img src="tmrw crew/TMRW crew text.png" alt="TMRW Crew Logo" class="responsive-logo">
+        <img decoding="async" width="1600" height="1600" src="optimized/tmrw crew/TMRW crew text.webp" alt="TMRW Crew Logo" class="responsive-logo">
     </header>
-    <nav class="nav" style="margin-top: 1.5rem;">
-      <a href="index.html">About</a>
+    <nav aria-label="Main navigation" class="nav" style="margin-top: 1.5rem;">
+      <a href="index.html" class="active" aria-current="page">About</a>
       <a href="team.html">Team</a>
       <a href="News.html">News</a>
       <a href="Portfolio.html">Media</a>
       <a href="archive.html">Archive</a>
       <a href="contacts.html">Contact</a>
     </nav>
-    <main class="main-content">
+    <main id="main-content" class="main-content">
         <section class="about-section" id="about">
-            <h2 class="about-title">Our Story</h2>
-            <h3 class="about-subtitle">"Diversity creates community, Community creates culture"</h3>
+            <h1 class="about-title">Our Story</h1>
+            <h2 class="about-subtitle">"Diversity creates community, Community creates culture"</h2>
             <hr class="about-divider">
             <div class="about-text">
                 <p>
@@ -58,7 +58,7 @@
                 </p>
 
                  <div class="about-image">
-                    <img src="media\about photo 1.png" alt="TMRW Crew In Action" style="width:100%; max-width:800px; margin: 2rem auto; display:block; border-radius: 10px;">
+                    <img decoding="async" loading="lazy" width="1080" height="720" src="optimized/media/about photo 1.webp" alt="TMRW Crew In Action" style="width:100%; max-width:800px; margin: 2rem auto; display:block; border-radius: 10px;">
                 </div>
 
                 <p>
@@ -74,7 +74,7 @@
                 </p>
 
                  <div class="about-image">
-                    <img src="media\about photo 2.png" alt="TMRW Crew In Action" style="width:100%; max-width:800px; margin: 2rem auto; display:block; border-radius: 10px;">
+                    <img decoding="async" loading="lazy" width="1519" height="648" src="optimized/media/about photo 2.webp" alt="TMRW Crew In Action" style="width:100%; max-width:800px; margin: 2rem auto; display:block; border-radius: 10px;">
                 </div>
                 <p>
                     TMRW Crew also has a strong presence in the UK battle scene, with our freestylers competing in hip-hop, house, popping, and waacking categories.
@@ -88,14 +88,14 @@
     <footer class="footer" id="contact">
         <p>Connect with us</p>
         <div class="social-links">
-            <a href="https://www.instagram.com/tmrwcrew2020/" target="_blank" class="social-icon" aria-label="TMRW Crew Instagram">
-                <img src="tmrw crew/instagram logo.png" alt="Instagram" style="width:100px; height:100px;" />
+            <a href="https://www.instagram.com/tmrwcrew2020/" target="_blank" class="social-icon" aria-label="TMRW Crew Instagram" rel="noopener">
+                <img decoding="async" loading="lazy" width="1500" height="1500" src="optimized/tmrw crew/instagram logo.webp" alt="Instagram" style="width:100px; height:100px;" />
             </a>    </div>
         <p>© 2020 TMRW Crew. Celebrating Diversity Through Movement.</p>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="backToTopBtn" onclick="scrollToTop()" title="Back to top">↑</button>
+    <button id="backToTopBtn" aria-label="Back to top" onclick="scrollToTop()" title="Back to top">↑</button>
 
 </body>
 </html>

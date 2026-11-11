@@ -19,11 +19,13 @@
 @font-face {
     font-family: 'Impact';
     src: url('fonts/impact.ttf') format('truetype');
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Tw Cen MT';
     src: url('fonts/Tw Cen MT.ttf') format('truetype');
+    font-display: swap;
 }
 
 /* === 3) Reset / base rules === */
@@ -42,7 +44,7 @@ body {
 
 /* === 4) Header / Hero section === */
 .header {
-    background: var(--primary-color) url('media/header.png') center bottom/cover no-repeat;
+    background: var(--primary-color) url('optimized/media/header.webp') center bottom/cover no-repeat;
     color: white;
     padding: 6rem 1rem 4rem 1rem; /* reduced top/bottom padding */
     min-height: 300px;            /* smaller minimum height */
@@ -383,7 +385,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('tmrw crew/crew photo landscape.jpg');
+    background-image: url('optimized/tmrw crew/crew photo landscape.webp');
     background-size: cover;
     background-position: top center; /* Stick the top of the photo */
     opacity: 0.15;
@@ -574,74 +576,24 @@ body {
 
 /* === 16) Country-specific flag backgrounds (class hooks) === */
 /* Country-specific flag backgrounds */
-.flag-nepal::before { background-image: url('flags/nepal.jpg'); }
-.flag-philippines::before { background-image: url('flags/philippines.jpg'); }
-.flag-china::before { background-image: url('flags/china.jpg'); }
-.flag-hongkong::before { background-image: url('flags/hongkong.jpg'); }
-.flag-india::before { background-image: url('flags/india.jpg'); }
-.flag-italy::before { background-image: url('flags/italy.jpg'); }
-.flag-germany::before { background-image: url('flags/germany.jpg'); }
-.flag-romania::before { background-image: url('flags/romania.jpg'); }
-.flag-greece::before { background-image: url('flags/greece.jpg'); }
-.flag-uk::before { background-image: url('flags/uk.jpg'); }
-.flag-argentina::before { background-image: url('flags/argentina.jpg'); }
-.flag-scotland::before { background-image: url('flags/scotland.jpg'); }
+.flag-nepal::before { background-image: url('optimized/flags/nepal.webp'); }
+.flag-philippines::before { background-image: url('optimized/flags/philippines.webp'); }
+.flag-china::before { background-image: url('optimized/flags/china.webp'); }
+.flag-hongkong::before { background-image: url('optimized/flags/hongkong.webp'); }
+.flag-india::before { background-image: url('optimized/flags/india.webp'); }
+.flag-italy::before { background-image: url('optimized/flags/italy.webp'); }
+.flag-germany::before { background-image: url('optimized/flags/germany.webp'); }
+.flag-romania::before { background-image: url('optimized/flags/romania.webp'); }
+.flag-greece::before { background-image: url('optimized/flags/greece.webp'); }
+.flag-uk::before { background-image: url('optimized/flags/uk.webp'); }
+.flag-argentina::before { background-image: url('optimized/flags/argentina.webp'); }
+.flag-scotland::before { background-image: url('optimized/flags/scotland.webp'); }
 
 /* Ensure image & info stay above flag overlay */
 .member-profile,
 .member-info {
     position: relative;
     z-index: 1;
-}
-
-/* === 17) Media items (gallery / thumbnails) === */
-.media-item {
-  width: 400px;
-  max-width: 100%;
-  height: 225px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  margin: 0 auto 2rem auto;
-}
-
-/* === 18) Video thumbnail & modal styles === */
-.video-thumbnail {
-  width: 100%;
-  max-width: 600px;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.video-thumbnail:hover {
-  transform: scale(1.02);
-}
-
-.video-modal {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.video-frame {
-  position: relative;
-  background: #000;
-  padding: 1rem;
-  border-radius: 10px;
-}
-
-.video-frame .close {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  font-size: 2rem;
-  color: white;
 }
 
 /* Back to Top Button */
@@ -889,21 +841,6 @@ span.tickets-btn:focus {
     margin-bottom: 1rem;
 }
 
-.slideshow-dot {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #ccc;
-    margin: 0 4px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.slideshow-dot.active {
-    background: #333;
-}
-
 /* Responsive: stack on smaller screens */
 @media (max-width: 768px) {
     .workshops-layout {
@@ -995,12 +932,12 @@ span.tickets-btn:focus {
 .media-filters select { font: inherit; padding: 0.5rem; max-width: 100%; }
 .media-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 1.5rem; }
 .media-card { background: #fff; border-radius: 10px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); min-width: 0; overflow-wrap: anywhere; }
-.media-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; }
+.media-card img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; }
 .media-card h3 { margin: 0.75rem 0; }
 .media-card > a { display: block; }
 .media-card button { font: inherit; cursor: pointer; }
 .photo-slideshow { max-width: 600px; margin: auto; }
-.photo-slideshow > img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; border-radius: 10px; }
+.photo-slideshow > a > img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; border-radius: 10px; }
 .photo-controls { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 1rem 0; }
 .photo-controls button, .media-dialog button { font: inherit; padding: 0.5rem 1rem; cursor: pointer; }
 .slideshow-dots, #workshop-slideshow-dots { display: flex; justify-content: center; gap: 0.25rem; flex-wrap: wrap; }
@@ -1012,3 +949,12 @@ span.tickets-btn:focus {
 .media-dialog-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
 .media-dialog-header h2 { overflow-wrap: anywhere; min-width: 0; }
 #video-player iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; display: block; }
+
+/* === Keyboard access and reduced motion === */
+:where(a, button, input, textarea, select):focus-visible { outline: 3px solid #1261a0; outline-offset: 4px; }
+main:focus { outline: none; }
+.news-date { color: #666; }
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+}

@@ -8,24 +8,30 @@
 	<title>Contact — TMRW Crew</title>
 	<link rel="stylesheet" href="tmrw.css">
 	<script src="tmrw.js" defer></script>
+    <meta property="og:title" content="Contact — TMRW Crew">
+    <meta property="og:description" content="Contact TMRW Crew for bookings, workshops, performances or collaborations.">
+    <meta property="og:url" content="https://tmrwcrew.com/contacts.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://tmrwcrew.com/tmrw%20crew/TMRW%20crew%20text.png">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 	<header class="header">
-		<img src="tmrw crew/TMRW crew text.png" alt="TMRW Crew Logo" class="responsive-logo">
+		<img decoding="async" width="1600" height="1600" src="optimized/tmrw crew/TMRW crew text.webp" alt="TMRW Crew Logo" class="responsive-logo">
 	</header>
 
-	<nav class="nav" style="margin-top: 1.5rem;">
+	<nav aria-label="Main navigation" class="nav" style="margin-top: 1.5rem;">
 		<a href="index.html">About</a>
 		<a href="team.html">Team</a>
 		<a href="News.html">News</a>
 		<a href="Portfolio.html">Media</a>
       <a href="archive.html">Archive</a>
-		<a href="contacts.html" class="active">Contact</a>
+		<a href="contacts.html" class="active" aria-current="page">Contact</a>
 	</nav>
 
-	<main class="main-content" style="padding:2rem 1rem;">
+	<main id="main-content" class="main-content" style="padding:2rem 1rem;">
 		<section class="about-section" aria-labelledby="contact-heading">
-			<h2 id="contact-heading" class="about-title">Get in touch</h2>
+			<h1 id="contact-heading" class="about-title">Get in touch</h1>
 			<p class="about-subtitle">Questions, bookings, or collaborations — we’d love to hear from you.</p>
 
 			<div class="contact-grid" style="margin-top:1.5rem;">
@@ -33,12 +39,13 @@
 				<form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
     <!-- Hidden field for spam protection -->
     <input type="hidden" name="form-name" value="contact" />
+    <p hidden><label>Leave this field empty <input name="bot-field" /></label></p>
 
     <label for="name">Name</label>
-    <input id="name" name="name" type="text" required />
+    <input id="name" name="name" type="text" autocomplete="name" required />
 
     <label for="email">Email</label>
-    <input id="email" name="email" type="email" required />
+    <input id="email" name="email" type="email" autocomplete="email" required />
 
     <label for="message">Message</label>
     <textarea id="message" name="message" rows="6" required></textarea>
@@ -48,12 +55,12 @@
 
 				<!-- Contact details -->
 				<aside class="contact-info" aria-labelledby="info-heading">
-					<h3 id="info-heading" style="margin-bottom:.5rem;">Contact details</h3>
+					<h2 id="info-heading" style="margin-bottom:.5rem;">Contact details</h2>
 					<p><strong>Email</strong><br /><a href="mailto:tmwrcrew@gmail.com">tmwrcrew@gmail.com</a></p>
-					<p><strong>Instagram</strong><br />
+					<p><strong>Instagram</strong></p>
 					<div style="margin-top:1.25rem;">
 						<a href="https://www.instagram.com/tmrwcrew2020/" target="_blank" rel="noopener" class="contact-instagram" aria-label="TMRW Crew Instagram" style="display:block; text-align:center;">
-							<img src="tmrw crew/instagram logo.png" alt="TMRW Crew Instagram" style="width:120px; height:120px; object-fit:contain; border-radius:8px; display:inline-block;" />
+							<img decoding="async" loading="lazy" width="1500" height="1500" src="optimized/tmrw crew/instagram logo.webp" alt="TMRW Crew Instagram" style="width:120px; height:120px; object-fit:contain; border-radius:8px; display:inline-block;" />
 						</a>
 					</div>
 
@@ -69,14 +76,14 @@
 	<footer class="footer" id="contact">
 		<p>Connect with us</p>
 		<div class="social-links">
-			<a href="https://www.instagram.com/tmrwcrew2020/" target="_blank" class="social-icon" aria-label="TMRW Crew Instagram">
-				<img src="tmrw crew/instagram logo.png" alt="Instagram" style="width:100px; height:100px;" />
+			<a href="https://www.instagram.com/tmrwcrew2020/" target="_blank" class="social-icon" aria-label="TMRW Crew Instagram" rel="noopener">
+				<img decoding="async" loading="lazy" width="1500" height="1500" src="optimized/tmrw crew/instagram logo.webp" alt="Instagram" style="width:100px; height:100px;" />
 			</a>
 		</div>
 		<p>© 2020 TMRW Crew. Celebrating Diversity Through Movement.</p>
 	</footer>
 
 	<!-- Back to Top Button -->
-	<button id="backToTopBtn" onclick="scrollToTop()" title="Back to top">↑</button>
+	<button id="backToTopBtn" aria-label="Back to top" onclick="scrollToTop()" title="Back to top">↑</button>
 </body>
 </html>

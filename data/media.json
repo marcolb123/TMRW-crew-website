@@ -6,10 +6,12 @@
       "type": "video",
       "provider": "google-drive",
       "url": "https://drive.google.com/file/d/1MmkhMqEqpI_QhcZJj8iWaiQWi3RElAAj/view",
-      "thumbnail": "media/elevate thumbnail.png",
+      "thumbnail": "optimized/media/elevate thumbnail.webp",
       "category": null,
       "eventId": null,
-      "featured": false
+      "featured": false,
+      "width": 1438,
+      "height": 828
     },
     {
       "id": "limpbiz",
@@ -17,10 +19,12 @@
       "type": "video",
       "provider": "google-drive",
       "url": "https://drive.google.com/file/d/1wRPJt_JjgNId1IxUTSWQzEvn2Id6CV4C/view",
-      "thumbnail": "media/limpBiz thumbnail.png",
+      "thumbnail": "optimized/media/limpBiz thumbnail.webp",
       "category": null,
       "eventId": null,
-      "featured": false
+      "featured": false,
+      "width": 1600,
+      "height": 821
     },
     {
       "id": "crew-video-1",
@@ -28,10 +32,12 @@
       "type": "video",
       "provider": "google-drive",
       "url": "https://drive.google.com/file/d/1SOA72xw7qhD2e9uioaiaR1jkV_gel851/view",
-      "thumbnail": "media/tmrw crew video 1 thumbnail.png",
+      "thumbnail": "optimized/media/tmrw crew video 1 thumbnail.webp",
       "category": null,
       "eventId": null,
-      "featured": false
+      "featured": false,
+      "width": 1600,
+      "height": 964
     },
     {
       "id": "photo-1",
@@ -39,10 +45,12 @@
       "type": "photo",
       "provider": "local",
       "url": "media/header.png",
-      "thumbnail": "media/header.png",
+      "thumbnail": "optimized/media/header.webp",
       "category": null,
       "eventId": null,
-      "featured": false
+      "featured": false,
+      "width": 1080,
+      "height": 1247
     },
     {
       "id": "photo-2",
@@ -50,10 +58,12 @@
       "type": "photo",
       "provider": "local",
       "url": "tmrw crew/crew photo.jpg",
-      "thumbnail": "tmrw crew/crew photo.jpg",
+      "thumbnail": "optimized/tmrw crew/crew photo.webp",
       "category": null,
       "eventId": null,
-      "featured": false
+      "featured": false,
+      "width": 1067,
+      "height": 1600
     },
     {
       "id": "photo-3",
@@ -61,10 +71,12 @@
       "type": "photo",
       "provider": "local",
       "url": "media/elevate 2.png",
-      "thumbnail": "media/elevate 2.png",
+      "thumbnail": "optimized/media/elevate 2.webp",
       "category": null,
       "eventId": null,
-      "featured": false
+      "featured": false,
+      "width": 1162,
+      "height": 1496
     },
     {
       "id": "photo-4",
@@ -72,10 +84,12 @@
       "type": "photo",
       "provider": "local",
       "url": "media/shok spinning.png",
-      "thumbnail": "media/shok spinning.png",
+      "thumbnail": "optimized/media/shok spinning.webp",
       "category": null,
       "eventId": null,
-      "featured": false
+      "featured": false,
+      "width": 1174,
+      "height": 1528
     },
     {
       "id": "photo-5",
@@ -83,10 +97,12 @@
       "type": "photo",
       "provider": "local",
       "url": "media/needle 1.png",
-      "thumbnail": "media/needle 1.png",
+      "thumbnail": "optimized/media/needle 1.webp",
       "category": null,
       "eventId": null,
-      "featured": false
+      "featured": false,
+      "width": 850,
+      "height": 1116
     }
   ]
 }

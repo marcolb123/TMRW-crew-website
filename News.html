@@ -10,18 +10,23 @@
     <script src="tmrw.js" defer></script>
     <script src="events.js" defer></script>
     <script src="news.js" defer></script>
+    <meta property="og:title" content="TMRW Crew - Edinburgh Dance Collective">
+    <meta property="og:description" content="Latest news, performances, workshops and highlights from TMRW Crew in Edinburgh.">
+    <meta property="og:url" content="https://tmrwcrew.com/News.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://tmrwcrew.com/tmrw%20crew/TMRW%20crew%20text.png">
 </head>
 <body>
         <a class="skip-link" href="#main-content">Skip to news content</a>
 
         <header class="header">
-                <img src="tmrw crew/TMRW crew text.png" alt="TMRW Crew Logo" class="responsive-logo">
+                <img decoding="async" width="1600" height="1600" src="optimized/tmrw crew/TMRW crew text.webp" alt="TMRW Crew Logo" class="responsive-logo">
         </header>
 
-        <nav class="nav" style="margin-top: 1.5rem;">
+        <nav aria-label="Main navigation" class="nav" style="margin-top: 1.5rem;">
                 <a href="index.html">About</a>
                 <a href="team.html">Team</a>
-                <a href="News.html" class="active">News</a>
+                <a href="News.html" class="active" aria-current="page">News</a>
                 <a href="Portfolio.html">Media</a>
       <a href="archive.html">Archive</a>
                 <a href="contacts.html">Contact</a>
@@ -51,7 +56,7 @@
                 <h2 id="workshops-heading" class="section-title">Workshop Gallery</h2>
     <div class="workshop-slideshow-wrapper">
         <div id="workshop-slideshow-container">
-            <img id="workshop-slideshow-image" src="events/fall workshops/1. Page 1 with location.png" alt="Workshop Photo" loading="lazy">
+            <img decoding="async" width="1080" height="1350" id="workshop-slideshow-image" src="optimized/events/2. Page 2.webp" alt="Workshop Photo" loading="lazy">
             <button onclick="changeWorkshopSlide(-1)" class="slideshow-btn prev" aria-label="Previous workshop image">&#8249;</button>
             <button onclick="changeWorkshopSlide(1)" class="slideshow-btn next" aria-label="Next workshop image">&#8250;</button>
         </div>
@@ -70,15 +75,15 @@
     <footer class="footer" id="contact">
         <p>Connect with us</p>
         <div class="social-links">
-            <a href="https://www.instagram.com/tmrwcrew2020/" target="_blank" class="social-icon" aria-label="TMRW Crew Instagram">
-                <img src="tmrw crew/instagram logo.png" alt="Instagram logo" style="width:100px; height:100px;" />
+            <a href="https://www.instagram.com/tmrwcrew2020/" target="_blank" class="social-icon" aria-label="TMRW Crew Instagram" rel="noopener">
+                <img decoding="async" loading="lazy" width="1500" height="1500" src="optimized/tmrw crew/instagram logo.webp" alt="Instagram logo" style="width:100px; height:100px;" />
             </a>
         </div>
         <p>© 2020 TMRW Crew. Celebrating Diversity Through Movement.</p>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="backToTopBtn" onclick="scrollToTop()" title="Back to top">↑</button>
+    <button id="backToTopBtn" aria-label="Back to top" onclick="scrollToTop()" title="Back to top">↑</button>
 
     <!-- Inline script removed - now in tmrw.js -->
 

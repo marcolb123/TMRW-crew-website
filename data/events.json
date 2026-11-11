@@ -15,8 +15,10 @@
         "Where Movement Meets. A platform, showcase, exchange, a moment. Catch TMRW crew showcasing alongside other talented groups and individuals for a night of quality movement."
       ],
       "cover": {
-        "src": "events/crossroads.png",
-        "alt": "Street dancers performing outdoors"
+        "src": "optimized/events/crossroads.webp",
+        "alt": "Street dancers performing outdoors",
+        "width": 949,
+        "height": 306
       },
       "links": [
         {
@@ -28,7 +30,7 @@
       "youtube": [],
       "instagram": [],
       "participants": [],
-      "dateNote": "Date to confirm: existing page displays 13 December 2025; its machine-readable date says 12 December 2025."
+      "dateNote": "Date to confirm: 12 or 13 December 2025. Please check with the organiser."
     },
     {
       "id": "marco-lisa-choreography",
@@ -45,8 +47,10 @@
         "Expect a smooth and explosive choreography. Int and Adv level."
       ],
       "cover": {
-        "src": "events/marcoXlisa.png",
-        "alt": "Marco and Lisa choreography collaboration"
+        "src": "optimized/events/marcoXlisa.webp",
+        "alt": "Marco and Lisa choreography collaboration",
+        "width": 1408,
+        "height": 1426
       },
       "links": [
         {
@@ -61,7 +65,7 @@
         "Marco",
         "Lisa"
       ],
-      "dateNote": "Date to confirm: existing page says 17 November 2025; booking link mentions 18 November."
+      "dateNote": "Date to confirm: 17 or 18 November 2025. Please check with the organiser."
     },
     {
       "id": "house-open-level",
@@ -78,8 +82,10 @@
         "Join Marco for some high energy and fun house class focusing on foundational steps and social dancing."
       ],
       "cover": {
-        "src": "tmrw crew/marco.jpg",
-        "alt": "House open level class"
+        "src": "optimized/tmrw crew/marco.webp",
+        "alt": "House open level class",
+        "width": 568,
+        "height": 568
       },
       "links": [
         {
@@ -91,7 +97,7 @@
       "youtube": [],
       "instagram": [],
       "participants": [],
-      "scheduleNote": "Schedule carried over from the existing site; check with the organiser before attending."
+      "scheduleNote": "Schedule not reconfirmed. Please check with the organiser before attending."
     },
     {
       "id": "cypher-saturdays",
@@ -109,15 +115,17 @@
         "Free Entry"
       ],
       "cover": {
-        "src": "media/shok spinning.png",
-        "alt": "Open Freestyle class"
+        "src": "optimized/media/shok spinning.webp",
+        "alt": "Open Freestyle class",
+        "width": 1174,
+        "height": 1528
       },
       "links": [],
       "gallery": [],
       "youtube": [],
       "instagram": [],
       "participants": [],
-      "scheduleNote": "Schedule carried over from the existing site; check with the organiser before attending."
+      "scheduleNote": "Schedule not reconfirmed. Please check with the organiser before attending."
     },
     {
       "id": "popping-locking",
@@ -134,8 +142,10 @@
         "Learn foundational popping and locking techniques with Oscar. Perfect for dancers looking to expand their funk styles vocabulary. Popping runs on 1st & 3rd (& 5th) Saturday of each month, alternating with Locking class"
       ],
       "cover": {
-        "src": "tmrw crew/oscar headshot.png",
-        "alt": "Popping and Locking class"
+        "src": "optimized/tmrw crew/oscar headshot.webp",
+        "alt": "Popping and Locking class",
+        "width": 494,
+        "height": 614
       },
       "links": [
         {
@@ -147,7 +157,7 @@
       "youtube": [],
       "instagram": [],
       "participants": [],
-      "scheduleNote": "Schedule carried over from the existing site; check with the organiser before attending.",
+      "scheduleNote": "Schedule not reconfirmed. Please check with the organiser before attending.",
       "dateNote": "Schedule to confirm: the existing heading says Sundays, while the description says Saturdays."
     },
     {
@@ -166,8 +176,10 @@
         "Come through for a double session designed for dancers of all levels: Hour 1 – Foundations A led session focusing on hip-hop foundations — perfect for beginners or anyone wanting to revisit the basics and sharpen their technique. Hour 2 – Open Training An open space for dancers to train, exchange, and vibe together. All styles, all levels welcome."
       ],
       "cover": {
-        "src": "events/three60_hiphop.png",
-        "alt": "Hip Hop session with TMRW Crew"
+        "src": "optimized/events/three60_hiphop.webp",
+        "alt": "Hip Hop session with TMRW Crew",
+        "width": 1292,
+        "height": 1470
       },
       "links": [
         {
@@ -183,7 +195,7 @@
       "youtube": [],
       "instagram": [],
       "participants": [],
-      "dateNote": "Dates to confirm: session heading lists November 13, 27 and December 11; machine-readable date says 20 November 2025."
+      "dateNote": "Dates to confirm: the listing gives November 13, 27 and December 11, and also 20 November 2025. Please check session dates and year with the organiser."
     },
     {
       "id": "ursula-hip-hop",
@@ -202,8 +214,10 @@
         "Ursula’s Hip-Hop class blends groove, foundation, and musicality, creating a welcoming space for all levels to explore freestyle, build confidence, and connect through movement and rhythm."
       ],
       "cover": {
-        "src": "tmrw crew/ursula .jpg",
-        "alt": "Hip Hop session with TMRW Crew"
+        "src": "optimized/tmrw crew/ursula .webp",
+        "alt": "Hip Hop session with TMRW Crew",
+        "width": 810,
+        "height": 810
       },
       "links": [
         {
@@ -219,7 +233,7 @@
       "youtube": [],
       "instagram": [],
       "participants": [],
-      "scheduleNote": "Schedule carried over from the existing site; check with the organiser before attending.",
+      "scheduleNote": "Schedule not reconfirmed. Please check with the organiser before attending.",
       "dateNote": "Friday times differ in the original listing; confirm with the organiser."
     }
   ]

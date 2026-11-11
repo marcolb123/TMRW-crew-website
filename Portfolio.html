@@ -11,19 +11,24 @@
   <script src="events.js" defer></script>
   <script src="media.js" defer></script>
   <script src="portfolio.js" defer></script>
+    <meta property="og:title" content="TMRW Crew Media Gallery">
+    <meta property="og:description" content="TMRW Crew media gallery featuring videos and photos from performances and projects.">
+    <meta property="og:url" content="https://tmrwcrew.com/Portfolio.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://tmrwcrew.com/tmrw%20crew/TMRW%20crew%20text.png">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to media content</a>
 
    <header class="header">
-        <img src="tmrw crew/TMRW crew text.png" alt="TMRW Crew Logo" class="responsive-logo">
+        <img decoding="async" width="1600" height="1600" src="optimized/tmrw crew/TMRW crew text.webp" alt="TMRW Crew Logo" class="responsive-logo">
     </header>
   
-    <nav class="nav" style="margin-top: 1.5rem;">
+    <nav aria-label="Main navigation" class="nav" style="margin-top: 1.5rem;">
       <a href="index.html">About</a>
       <a href="team.html">Team</a>
       <a href="News.html">News</a>
-      <a href="Portfolio.html" class="active">Media</a>
+      <a href="Portfolio.html" class="active" aria-current="page">Media</a>
       <a href="archive.html">Archive</a>
       <a href="contacts.html">Contact</a>
     </nav>
@@ -69,14 +74,14 @@
    <footer class="footer" id="contact">
         <p>Connect with us</p>
         <div class="social-links">
-            <a href="https://www.instagram.com/tmrwcrew2020/" target="_blank" class="social-icon" aria-label="TMRW Crew Instagram">
-                <img src="tmrw crew/instagram logo.png" alt="Instagram" style="width:100px; height:100px;" />
+            <a href="https://www.instagram.com/tmrwcrew2020/" target="_blank" class="social-icon" aria-label="TMRW Crew Instagram" rel="noopener">
+                <img decoding="async" loading="lazy" width="1500" height="1500" src="optimized/tmrw crew/instagram logo.webp" alt="Instagram" style="width:100px; height:100px;" />
             </a>    </div>
         <p>© 2020 TMRW Crew. Celebrating Diversity Through Movement.</p>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="backToTopBtn" onclick="scrollToTop()" title="Back to top">↑</button>
+    <button id="backToTopBtn" aria-label="Back to top" onclick="scrollToTop()" title="Back to top">↑</button>
 </body>
 </html>
 

@@ -32,6 +32,7 @@
     const image = item.thumbnail && safeUrl(item.thumbnail) ? element('img') : null;
     if (image) {
       image.src = item.thumbnail;
+      if (item.width && item.height) { image.width = item.width; image.height = item.height; }
       image.alt = ''; // The adjacent title labels the same content.
       image.loading = 'lazy';
       image.decoding = 'async';
@@ -60,6 +61,8 @@
     image.id = 'slideshow-image';
     image.loading = 'lazy';
     image.decoding = 'async';
+    const fullSize = element('a');
+    fullSize.append(image);
     const caption = element('p');
     caption.setAttribute('aria-live', 'polite');
     const controls = element('div', 'photo-controls');
@@ -72,7 +75,10 @@
     let current = 0;
     function show(index) {
       current = (index + photos.length) % photos.length;
-      image.src = photos[current].url;
+      image.src = photos[current].thumbnail || photos[current].url;
+      fullSize.href = photos[current].url;
+      fullSize.setAttribute('aria-label', `Open original ${photos[current].title}`);
+      if (photos[current].width && photos[current].height) { image.width = photos[current].width; image.height = photos[current].height; }
       image.alt = photos[current].title;
       caption.textContent = `${photos[current].title} (${current + 1} of ${photos.length})`;
       buttons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === current)));
@@ -88,7 +94,7 @@
     next.addEventListener('click', () => show(current + 1));
     previous.disabled = next.disabled = photos.length < 2;
     controls.append(previous, next);
-    wrapper.append(image, caption, controls, dots);
+    wrapper.append(fullSize, caption, controls, dots);
     show(0);
     return wrapper;
   }

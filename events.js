@@ -69,6 +69,7 @@
       const image = element('img', 'news-image');
       image.src = event.cover.src;
       image.alt = event.cover.alt;
+      if (event.cover.width && event.cover.height) { image.width = event.cover.width; image.height = event.cover.height; }
       image.loading = 'lazy';
       image.decoding = 'async';
       media.append(image);

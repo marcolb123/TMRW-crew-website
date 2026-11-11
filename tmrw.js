@@ -6,12 +6,12 @@
     window.scrollTo({ top: 0, behavior: reducedMotion() ? 'auto' : 'smooth' });
   };
   const photos = [
-    'events/2. Page 2.png',
-    'events/3. Shok Page 3.png',
-    'events/4. WAAKING page 4.png',
-    'events/9. OSC & LEI.png',
-    'events/6. HIP HOP Nevil.png',
-    'events/7. REGGAETON Leila.png'
+    'optimized/events/2. Page 2.webp',
+    'optimized/events/3. Shok Page 3.webp',
+    'optimized/events/4. WAAKING page 4.webp',
+    'optimized/events/9. OSC & LEI.webp',
+    'optimized/events/6. HIP HOP Nevil.webp',
+    'optimized/events/7. REGGAETON Leila.webp'
   ];
   let current = 0;
   const image = document.getElementById('workshop-slideshow-image');
