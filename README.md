@@ -161,3 +161,7 @@ All public pages use the header's grey concrete texture with white typography.
 Dark translucent panels, dark form controls and white keyboard focus indicators
 keep content readable. Theme tokens and component colours are defined in the
 final grey-concrete theme section of `tmrw.css`.
+
+Video thumbnails, titles and Play buttons open the same on-page player for
+YouTube/Google Drive videos. Footer icons link to TMRW Crew's YouTube channel
+and Instagram profile on every page.

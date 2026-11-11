@@ -1166,3 +1166,7 @@ a, a:visited { color: #fff; text-underline-offset: 0.2em; }
 .footer::before { background-image: none; }
 :where(a, button, input, textarea, select):focus-visible { outline-color: #fff; }
 ::selection { color: #fff; background: #862525; }
+
+/* Footer channel icons share a consistent size without stretching the artwork. */
+.footer .social-icon { min-width: 48px; min-height: 48px; justify-content: center; }
+.footer .social-icon img { width: 48px; height: 48px; object-fit: contain; margin: 0; }

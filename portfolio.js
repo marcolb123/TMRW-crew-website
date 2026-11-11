@@ -35,7 +35,15 @@
       image.addEventListener('error', () => image.replaceWith(element('p', 'thumbnail-unavailable', 'Video preview unavailable')), { once: true });
     }
     const link = element('a');
-    link.href = item.url;
+    if (TMRWMedia.embedUrl(item)) {
+      link.href = '#videoModal';
+      link.setAttribute('aria-haspopup', 'dialog');
+      link.setAttribute('aria-controls', 'videoModal');
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        play(item);
+      });
+    } else link.href = item.url;
     if (image) link.append(image);
     link.append(element('h3', '', item.title));
     article.append(link);
