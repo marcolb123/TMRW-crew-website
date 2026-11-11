@@ -971,3 +971,12 @@ span.tickets-btn:focus {
     }
 }
 
+
+/* === News event data rendering === */
+.event-note {
+    font-size: 0.9rem;
+    border-left: 3px solid currentColor;
+    padding-left: 0.75rem;
+}
+#event-sections .news-card { min-width: 0; }
+#event-sections .card-body { overflow-wrap: anywhere; }

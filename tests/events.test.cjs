@@ -1,0 +1,32 @@
+const { test } = require('node:test');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const { validate, group, today, safeUrl } = require('../events.js');
+const data = JSON.parse(fs.readFileSync(require('node:path').join(__dirname, '../data/events.json'), 'utf8'));
+const base = data.events[0];
+const event = (id, overrides = {}) => ({ ...base, id, date: '2026-11-11', recurring: false, ...overrides });
+test('migrated records have unique valid identities and existing local cover images', () => {
+  assert.equal(validate(data).length, 7);
+  for (const e of data.events) assert.ok(fs.existsSync(require('node:path').join(__dirname, '..', e.cover.src)));
+});
+test('date boundaries, ranges and chronological ordering', () => {
+  const result = group([event('future', { date: '2026-12-01' }), event('today'), event('range', {date: '2026-11-01', endDate: '2026-11-11'}), event('old', {date:'2026-11-10'})], '2026-11-11');
+  assert.deepEqual(result.upcoming.map(e => e.id), ['range', 'today', 'future']);
+  assert.deepEqual(result.past.map(e => e.id), ['old']);
+});
+test('unknown dates, recurring classes, expired classes and announcements stay distinct', () => {
+  const result = group([event('unknown', {date:null}), event('regular', {date:null, recurring:true}), event('expired', {recurring:true, endDate:'2026-11-10', date:'2026-01-01'}), event('notice', {category:'announcement'})], '2026-11-11');
+  for (const [key, id] of [['unconfirmed','unknown'],['regular','regular'],['past','expired'],['announcements','notice']]) assert.equal(result[key][0].id,id);
+});
+test('reject impossible dates, reversed ranges and duplicate records', () => {
+  for (const records of [[event('bad',{date:'2026-02-30'})],[event('bad',{endDate:'2026-01-01'})],[event('same'),event('same')]]) assert.throws(()=>validate({events:records}));
+});
+test('London midnight and daylight saving determine the calendar day', () => {
+  assert.equal(today(new Date('2026-07-01T23:30:00Z')), '2026-07-02');
+  assert.equal(today(new Date('2026-11-11T23:30:00Z')), '2026-11-11');
+});
+test('unsafe URL protocols are rejected', () => {
+  assert.equal(safeUrl('javascript:alert(1)'),null);
+  assert.equal(safeUrl('data:text/html,test'),null);
+  assert.ok(safeUrl('contacts.html'));
+});

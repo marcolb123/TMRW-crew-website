@@ -1,0 +1,226 @@
+{
+  "events": [
+    {
+      "id": "crossroads",
+      "title": "Crossroads",
+      "category": "performance",
+      "date": null,
+      "endDate": null,
+      "recurring": false,
+      "location": "The Yard, Coatbridge",
+      "schedule": [
+        "13 December 2025 • 7:00pm • The Yard,Coatbridge"
+      ],
+      "description": [
+        "Where Movement Meets. A platform, showcase, exchange, a moment. Catch TMRW crew showcasing alongside other talented groups and individuals for a night of quality movement."
+      ],
+      "cover": {
+        "src": "events/crossroads.png",
+        "alt": "Street dancers performing outdoors"
+      },
+      "links": [
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/_xrossroads/"
+        }
+      ],
+      "gallery": [],
+      "youtube": [],
+      "instagram": [],
+      "participants": [],
+      "dateNote": "Date to confirm: existing page displays 13 December 2025; its machine-readable date says 12 December 2025."
+    },
+    {
+      "id": "marco-lisa-choreography",
+      "title": "Choreography Collab with Marco and Lisa",
+      "category": "workshop",
+      "date": null,
+      "endDate": null,
+      "recurring": false,
+      "location": "The Dancehouse, Ocean Terminal, Edinburgh",
+      "schedule": [
+        "17 November 2025 • 8-9pm • The Dancehouse, Ocean Terminal, Edinburgh"
+      ],
+      "description": [
+        "Expect a smooth and explosive choreography. Int and Adv level."
+      ],
+      "cover": {
+        "src": "events/marcoXlisa.png",
+        "alt": "Marco and Lisa choreography collaboration"
+      },
+      "links": [
+        {
+          "label": "Book Now",
+          "url": "https://www.dancehousescotland.com/shop-book/Open-Choreo-Class-Int-Adv-Level-8-9-pm-Tues-18th-November-with-Marco-&-Lisa-p236524424"
+        }
+      ],
+      "gallery": [],
+      "youtube": [],
+      "instagram": [],
+      "participants": [
+        "Marco",
+        "Lisa"
+      ],
+      "dateNote": "Date to confirm: existing page says 17 November 2025; booking link mentions 18 November."
+    },
+    {
+      "id": "house-open-level",
+      "title": "House open level",
+      "category": "class",
+      "date": null,
+      "endDate": null,
+      "recurring": true,
+      "location": "The Dancehouse, Ocean Terminal, Edinburgh",
+      "schedule": [
+        "Tuesdays • 6pm • The Dancehouse, Ocean Terminal, Edinburgh"
+      ],
+      "description": [
+        "Join Marco for some high energy and fun house class focusing on foundational steps and social dancing."
+      ],
+      "cover": {
+        "src": "tmrw crew/marco.jpg",
+        "alt": "House open level class"
+      },
+      "links": [
+        {
+          "label": "Book Now",
+          "url": "https://www.dancehousescotland.com/shop-book/Adults-Class-Bookings-c57887017"
+        }
+      ],
+      "gallery": [],
+      "youtube": [],
+      "instagram": [],
+      "participants": [],
+      "scheduleNote": "Schedule carried over from the existing site; check with the organiser before attending."
+    },
+    {
+      "id": "cypher-saturdays",
+      "title": "Cypher Saturdays",
+      "category": "class",
+      "date": null,
+      "endDate": null,
+      "recurring": true,
+      "location": "The Dancehouse, Ocean Terminal, Edinburgh",
+      "schedule": [
+        "Saturdays • 6-9pm • The Dancehouse, Ocean Terminal, Edinburgh"
+      ],
+      "description": [
+        "Drop-in freestyle session suitable for all levels. Alternating between Oscar and Nevil leading the sessions.",
+        "Free Entry"
+      ],
+      "cover": {
+        "src": "media/shok spinning.png",
+        "alt": "Open Freestyle class"
+      },
+      "links": [],
+      "gallery": [],
+      "youtube": [],
+      "instagram": [],
+      "participants": [],
+      "scheduleNote": "Schedule carried over from the existing site; check with the organiser before attending."
+    },
+    {
+      "id": "popping-locking",
+      "title": "Popping/Locking",
+      "category": "class",
+      "date": null,
+      "endDate": null,
+      "recurring": true,
+      "location": "The Dancehouse, Ocean Terminal, Edinburgh",
+      "schedule": [
+        "Sundays • 5pm • The Dancehouse, Ocean Terminal, Edinburgh"
+      ],
+      "description": [
+        "Learn foundational popping and locking techniques with Oscar. Perfect for dancers looking to expand their funk styles vocabulary. Popping runs on 1st & 3rd (& 5th) Saturday of each month, alternating with Locking class"
+      ],
+      "cover": {
+        "src": "tmrw crew/oscar headshot.png",
+        "alt": "Popping and Locking class"
+      },
+      "links": [
+        {
+          "label": "Book Now",
+          "url": "https://www.dancehousescotland.com/shop-book/Adults-Class-Bookings-c57887017"
+        }
+      ],
+      "gallery": [],
+      "youtube": [],
+      "instagram": [],
+      "participants": [],
+      "scheduleNote": "Schedule carried over from the existing site; check with the organiser before attending.",
+      "dateNote": "Schedule to confirm: the existing heading says Sundays, while the description says Saturdays."
+    },
+    {
+      "id": "three60-hip-hop",
+      "title": "Three60 x TMRW Crew Hip Hop Session Glasgow",
+      "category": "workshop",
+      "date": null,
+      "endDate": null,
+      "recurring": false,
+      "location": "60 / 80 Washington Street, Glasgow",
+      "schedule": [
+        "November 13, 27, December 11 (year to confirm)",
+        "7-9pm • 60 / 80 Washington Street Glasgow"
+      ],
+      "description": [
+        "Come through for a double session designed for dancers of all levels: Hour 1 – Foundations A led session focusing on hip-hop foundations — perfect for beginners or anyone wanting to revisit the basics and sharpen their technique. Hour 2 – Open Training An open space for dancers to train, exchange, and vibe together. All styles, all levels welcome."
+      ],
+      "cover": {
+        "src": "events/three60_hiphop.png",
+        "alt": "Hip Hop session with TMRW Crew"
+      },
+      "links": [
+        {
+          "label": "Contact to Book",
+          "url": "contacts.html"
+        },
+        {
+          "label": "How to Find the Studio",
+          "url": "https://www.instagram.com/p/DPJVdzhDEKk/?__pwa=1"
+        }
+      ],
+      "gallery": [],
+      "youtube": [],
+      "instagram": [],
+      "participants": [],
+      "dateNote": "Dates to confirm: session heading lists November 13, 27 and December 11; machine-readable date says 20 November 2025."
+    },
+    {
+      "id": "ursula-hip-hop",
+      "title": "Hip-hop with Ursula",
+      "category": "class",
+      "date": null,
+      "endDate": null,
+      "recurring": true,
+      "location": "",
+      "schedule": [
+        "Thursdays • 7–8pm • The Dancehouse, Ocean Terminal, Edinburgh",
+        "Fridays • 7–7:45pm • Pleasance Courtyard, Edinburgh, Quaker Studio",
+        "Beginner hip hop 6–6.50pm; Advance hip hop 6.55–7.45pm"
+      ],
+      "description": [
+        "Ursula’s Hip-Hop class blends groove, foundation, and musicality, creating a welcoming space for all levels to explore freestyle, build confidence, and connect through movement and rhythm."
+      ],
+      "cover": {
+        "src": "tmrw crew/ursula .jpg",
+        "alt": "Hip Hop session with TMRW Crew"
+      },
+      "links": [
+        {
+          "label": "Book Now",
+          "url": "https://www.dancehousescotland.com/shop-book/Adults-Class-Bookings-c57887017"
+        },
+        {
+          "label": "Contact to book",
+          "url": "contacts.html"
+        }
+      ],
+      "gallery": [],
+      "youtube": [],
+      "instagram": [],
+      "participants": [],
+      "scheduleNote": "Schedule carried over from the existing site; check with the organiser before attending.",
+      "dateNote": "Friday times differ in the original listing; confirm with the organiser."
+    }
+  ]
+}
